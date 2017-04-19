@@ -1,0 +1,8 @@
+platform :ios, '8.0'
+
+target 'BWiOSUIComponents' do
+  
+pod 'Masonry'
+pod 'pop'
+
+end
