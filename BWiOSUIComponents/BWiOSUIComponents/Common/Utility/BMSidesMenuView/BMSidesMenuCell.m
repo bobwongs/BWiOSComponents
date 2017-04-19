@@ -33,8 +33,13 @@
     titleLabel.numberOfLines = 1;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont systemFontOfSize:14.0];
-    titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x0057f0);
     [self.contentView addSubview:titleLabel];
+    
+    UIView *selectedTagView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3.0, 20)];
+    self.selectedTagView = selectedTagView;
+    selectedTagView.center = CGPointMake(CGRectGetMidX(selectedTagView.frame), CGRectGetMidY(titleLabel.frame));  // Center with the title label
+    selectedTagView.backgroundColor = BM_SIDES_MENU_UIColorFromRGB(0x0057f0);
+    [self.contentView addSubview:selectedTagView];
     
     UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMinX(titleLabel.frame), BM_SIDES_MENU_CELL_HEIGHT - 1, CGRectGetWidth(titleLabel.frame), 1)];
     self.lineImageView = lineImageView;
@@ -43,5 +48,27 @@
 }
 
 #pragma mark - Getter and Setter
+
+- (void)setShowType:(BMSidesMenuShowType)showType {
+    _showType = showType;
+    
+    switch (showType) {
+        case BMSidesMenuShowTypeNone:
+        {
+            self.selectedTagView.hidden = YES;
+            self.titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x333333);
+        }
+        case BMSidesMenuShowTypeNotSelected:
+        {
+            self.selectedTagView.hidden = YES;
+            self.titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x999999);
+        }
+        case BMSidesMenuShowTypeSelected:
+        {
+            self.selectedTagView.hidden = NO;
+            self.titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x0057f0);
+        }
+    }
+}
 
 @end

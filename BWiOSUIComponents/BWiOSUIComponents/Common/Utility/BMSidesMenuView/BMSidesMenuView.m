@@ -28,6 +28,8 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
  Data
  */
 @property (strong, nonatomic) NSArray *dataSource;  ///< Data source
+@property (assign, nonatomic) BOOL hasSelectionStatus;  ///< Has selection status
+@property (assign, nonatomic) NSInteger selectedIndex;  ///< Selected index
 
 @property (copy, nonatomic) void(^didSelectBlock)(NSInteger);  ///< Did select menu item block
 
@@ -46,13 +48,15 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 
 #pragma mark - Public Method
 
-+ (void)showRightSideMenuViewWithDataSource:(NSArray *)array didSelectBlock:(void (^)(NSInteger))selectedBlock {
-    [[BMSidesMenuView new] showWithDataSource:array didSelectBlock:selectedBlock];
++ (void)showNewRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
+    [[BMSidesMenuView new] showRightSideMenuViewWithDataSource:array hasSelectionStatus:hasSelectionStatus selectedIndex:selectedIndex didSelectBlock:selectedBlock];;
 }
 
-- (void)showWithDataSource:(NSArray *)array didSelectBlock:(void (^)(NSInteger))selectedBlock {
+- (void)showRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
     if (!array) return;
     self.dataSource = array;
+    self.hasSelectionStatus = hasSelectionStatus;
+    self.selectedIndex = selectedIndex;
     if (selectedBlock) self.didSelectBlock = selectedBlock;
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
@@ -74,8 +78,9 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         self.maskView.alpha = 0.0;
     
         [[self class] reframeView:self.tableView withX:BM_SIDES_MENU_SCREEN_WIDTH];
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
     }];
-    [self removeFromSuperview];
 }
 
 #pragma mark - System Delegate
@@ -93,7 +98,13 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.titleLabel.text = @"Title";
+    if (!self.hasSelectionStatus) {
+        cell.showType = BMSidesMenuShowTypeNone;
+    } else {
+        cell.showType = (indexPath.row == self.selectedIndex) ? BMSidesMenuShowTypeSelected : BMSidesMenuShowTypeNotSelected;
+    }
+    
+    cell.titleLabel.text = self.dataSource[indexPath.row];
     
     return cell;
 }
@@ -120,7 +131,7 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 
 - (UIView *)maskView {
     if (!_maskView) {
-        _maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, BM_SIDES_MENU_SCREEN_WIDTH - BM_SIDES_MENU_WIDTH, BM_SIDES_MENU_SCREEN_HEIGHT)];
+        _maskView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _maskView.backgroundColor = BM_SIDES_MENU_UIColorFromRGB(0x333333);
         _maskView.alpha = 0.0;
         
@@ -138,6 +149,8 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         _tableView.delegate = self;
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+        _tableView.sectionHeaderHeight = 24.0;
     }
     return _tableView;
 }

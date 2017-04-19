@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BWResearchViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    BWResearchViewController *reseachVC = [[BWResearchViewController alloc] init];
+    UINavigationController *nvgtVC = [[UINavigationController alloc] initWithRootViewController:reseachVC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = nvgtVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

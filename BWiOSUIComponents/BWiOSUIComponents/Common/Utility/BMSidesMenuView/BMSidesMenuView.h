@@ -12,8 +12,9 @@ extern const NSTimeInterval BMSidesMenuAnimationDefaultTime;
 
 @interface BMSidesMenuView : UIView
 
-+ (void)showRightSideMenuViewWithDataSource:(NSArray *)array didSelectBlock:(void (^)(NSInteger))selectedBlock;
++ (void)showNewRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger selectedIndex))selectedBlock;
 
-- (void)showWithDataSource:(NSArray *)array didSelectBlock:(void (^)(NSInteger))selectedBlock;
+- (void)showRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger selectedIndex))selectedBlock;
+
 
 @end
