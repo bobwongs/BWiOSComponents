@@ -57,16 +57,19 @@
         {
             self.selectedTagView.hidden = YES;
             self.titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x333333);
+            break;
         }
         case BMSidesMenuShowTypeNotSelected:
         {
             self.selectedTagView.hidden = YES;
             self.titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x999999);
+            break;
         }
         case BMSidesMenuShowTypeSelected:
         {
             self.selectedTagView.hidden = NO;
             self.titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x0057f0);
+            break;
         }
     }
 }

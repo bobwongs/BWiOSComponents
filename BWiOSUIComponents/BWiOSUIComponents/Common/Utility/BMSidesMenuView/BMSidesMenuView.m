@@ -59,6 +59,10 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
     self.selectedIndex = selectedIndex;
     if (selectedBlock) self.didSelectBlock = selectedBlock;
     
+    [self showRightSideMenuView];
+}
+
+- (void)showRightSideMenuView {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self];
     
@@ -110,6 +114,9 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedIndex = indexPath.row;
+    [self.tableView reloadData];
+    
     if (self.didSelectBlock) self.didSelectBlock(indexPath.row);
     
     [self dismissRightSideMenuView];
