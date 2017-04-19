@@ -27,7 +27,7 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 /*
  Data
  */
-@property (strong, nonatomic) NSArray *dataSource;  ///< Data source
+@property (strong, nonatomic) NSArray<NSString *> *dataSource;  ///< Data source
 @property (assign, nonatomic) BOOL hasSelectionStatus;  ///< Has selection status
 @property (assign, nonatomic) NSInteger selectedIndex;  ///< Selected index
 
