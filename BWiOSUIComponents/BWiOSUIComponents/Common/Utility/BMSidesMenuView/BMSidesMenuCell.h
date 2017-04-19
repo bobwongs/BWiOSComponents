@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define BM_SIDES_MENU_WIDTH 100.0  // Menu width
+#define BM_SIDES_MENU_CELL_HEIGHT 50.0  // Menu cell height
 
 #define BM_SIDES_MENU_UIColorFromRGB(rgbValue) \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \

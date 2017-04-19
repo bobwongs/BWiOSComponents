@@ -28,7 +28,7 @@
 
 - (void)setUI
 {
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, BM_SIDES_MENU_WIDTH, 50)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, BM_SIDES_MENU_WIDTH - 15 * 2, BM_SIDES_MENU_CELL_HEIGHT)];
     self.titleLabel = titleLabel;
     titleLabel.numberOfLines = 1;
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -36,10 +36,10 @@
     titleLabel.textColor = BM_SIDES_MENU_UIColorFromRGB(0x0057f0);
     [self.contentView addSubview:titleLabel];
     
-    UIImageView *<#imageView#> = [[UIImageView alloc] initWithFrame:<#CGRect#>];
-    <#imageView#>.image = UIImage;
-    <#imageView#>.contentMode = UIViewContentMode;
-    [<#superview#> addSubview:<#imageView#>];
+    UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMinX(titleLabel.frame), BM_SIDES_MENU_CELL_HEIGHT - 1, CGRectGetWidth(titleLabel.frame), 1)];
+    self.lineImageView = lineImageView;
+    lineImageView.image = [UIImage imageNamed:@"bm_sides_menu_separated_line"];
+    [self.contentView addSubview:lineImageView];
 }
 
 #pragma mark - Getter and Setter

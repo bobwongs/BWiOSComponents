@@ -18,6 +18,8 @@
 		B4566BEF1EA713C10092F1B9 /* BWResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BEE1EA713C10092F1B9 /* BWResearchViewController.m */; };
 		B4566BF51EA7144C0092F1B9 /* BMSidesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BF41EA7144C0092F1B9 /* BMSidesMenuView.m */; };
 		B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */; };
+		B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */; };
+		B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */; };
 		C791DAF54AF011827B9C48BA /* libPods-BWiOSUIComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C412DFB3DDB2B7D8C181222 /* libPods-BWiOSUIComponents.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		B4566BF41EA7144C0092F1B9 /* BMSidesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuView.m; sourceTree = "<group>"; };
 		B4566BF61EA71A990092F1B9 /* BMSidesMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSidesMenuCell.h; sourceTree = "<group>"; };
 		B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuCell.m; sourceTree = "<group>"; };
+		B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@2x.png"; sourceTree = "<group>"; };
+		B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,8 +210,18 @@
 				B4566BF41EA7144C0092F1B9 /* BMSidesMenuView.m */,
 				B4566BF61EA71A990092F1B9 /* BMSidesMenuCell.h */,
 				B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */,
+				B4566BF91EA747FF0092F1B9 /* Resource */,
 			);
 			path = BMSidesMenuView;
+			sourceTree = "<group>";
+		};
+		B4566BF91EA747FF0092F1B9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */,
+				B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		BEECB2BFAC51E26E49081DBE /* Frameworks */ = {
@@ -340,6 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4566BC41EA7105C0092F1B9 /* LaunchScreen.storyboard in Resources */,
+				B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */,
+				B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */,
 				B4566BC11EA7105C0092F1B9 /* Assets.xcassets in Resources */,
 				B4566BBF1EA7105C0092F1B9 /* Main.storyboard in Resources */,
 			);
