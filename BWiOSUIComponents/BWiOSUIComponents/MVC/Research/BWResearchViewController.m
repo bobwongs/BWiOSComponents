@@ -22,18 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor greenColor];
+//    self.view.backgroundColor = [UIColor greenColor];
     self.show = YES;
     
-    self.sidesMenuView = [BMSidesMenuView new];
+    self.sidesMenuView = [BMSidesMenuView rightSideMenuViewWithDataSource:@[@"1", @"2", @"3"] hasSelectionStatus:YES selectedIndex:-1 didSelectBlock:^(NSInteger selectedIndex) {
+        NSLog(@"selected index is %@", @(selectedIndex).stringValue);
+    }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%@", [UIApplication sharedApplication].keyWindow.subviews);
     
-    [BMSidesMenuView showNewRightSideMenuViewWithDataSource:@[@"1", @"2", @"3"] hasSelectionStatus:YES selectedIndex:1 didSelectBlock:^(NSInteger selectedIndex) {
-        NSLog(@"selected index is %@", @(selectedIndex).stringValue);
-    }];
+//    [BMSidesMenuView showNewRightSideMenuViewWithDataSource:@[@"1", @"2", @"3"] hasSelectionStatus:YES selectedIndex:-1 didSelectBlock:^(NSInteger selectedIndex) {
+//        NSLog(@"selected index is %@", @(selectedIndex).stringValue);
+//    }];
+    
+    [self.sidesMenuView showRightSideMenuView];
 }
 
 @end

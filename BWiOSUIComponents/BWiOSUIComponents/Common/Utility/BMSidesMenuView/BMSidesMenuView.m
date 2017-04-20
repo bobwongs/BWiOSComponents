@@ -37,29 +37,27 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 
 @implementation BMSidesMenuView
 
-#pragma mark - Life Cycle
-
-- (instancetype)init {
-    if (self = [super init]) {
-        
-    }
-    return self;
-}
-
 #pragma mark - Public Method
 
 + (void)showNewRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
-    [[BMSidesMenuView new] showRightSideMenuViewWithDataSource:array hasSelectionStatus:hasSelectionStatus selectedIndex:selectedIndex didSelectBlock:selectedBlock];;
+    id menuView = [[self alloc] initRightSideMenuViewWithDataSource:array hasSelectionStatus:hasSelectionStatus selectedIndex:selectedIndex didSelectBlock:selectedBlock];
+    [menuView showRightSideMenuView];
 }
 
-- (void)showRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
-    if (!array) return;
-    self.dataSource = array;
-    self.hasSelectionStatus = hasSelectionStatus;
-    self.selectedIndex = selectedIndex;
-    if (selectedBlock) self.didSelectBlock = selectedBlock;
-    
-    [self showRightSideMenuView];
++ (instancetype)rightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
+    id menuView = [[self alloc] initRightSideMenuViewWithDataSource:array hasSelectionStatus:hasSelectionStatus selectedIndex:selectedIndex didSelectBlock:selectedBlock];
+    return menuView;
+}
+
+- (instancetype)initRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
+    if (self = [super init]) {
+        if (!array) return self;
+        self.dataSource = array;
+        self.hasSelectionStatus = hasSelectionStatus;
+        self.selectedIndex = selectedIndex;
+        if (selectedBlock) self.didSelectBlock = selectedBlock;
+    }
+    return self;
 }
 
 - (void)showRightSideMenuView {
@@ -109,6 +107,7 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
     }
     
     cell.titleLabel.text = self.dataSource[indexPath.row];
+    cell.lineImageView.hidden = (indexPath.row == self.dataSource.count - 1) ? YES : NO;  // Hide the last one bottom line
     
     return cell;
 }
@@ -157,7 +156,15 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        _tableView.sectionHeaderHeight = 24.0;
+        // Shadow
+        _tableView.layer.shadowColor = BM_SIDES_MENU_UIColorFromRGB(0x333333).CGColor;
+        _tableView.layer.shadowOffset = CGSizeMake(0.0, 2.0);
+        _tableView.layer.shadowRadius = 6.0;
+        _tableView.layer.shadowOpacity = 0.3;
+        
+        // Set header view to top distance
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, BM_SIDES_MENU_WIDTH, 24.0)];
+        _tableView.tableHeaderView = headerView;
     }
     return _tableView;
 }
