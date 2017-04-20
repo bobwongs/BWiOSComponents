@@ -31,7 +31,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@", [UIApplication sharedApplication].keyWindow.subviews);
+//    NSLog(@"%@", [UIApplication sharedApplication].keyWindow.subviews);
     
 //    [BMSidesMenuView showNewRightSideMenuViewWithDataSource:@[@"1", @"2", @"3"] hasSelectionStatus:YES selectedIndex:-1 didSelectBlock:^(NSInteger selectedIndex) {
 //        NSLog(@"selected index is %@", @(selectedIndex).stringValue);

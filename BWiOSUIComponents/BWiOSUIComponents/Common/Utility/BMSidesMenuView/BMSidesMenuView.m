@@ -56,6 +56,8 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         self.hasSelectionStatus = hasSelectionStatus;
         self.selectedIndex = selectedIndex;
         if (selectedBlock) self.didSelectBlock = selectedBlock;
+        
+        self.frame = [UIScreen mainScreen].bounds;  // Set the frame.
     }
     return self;
 }
@@ -64,7 +66,6 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self];
     
-    self.frame = [UIScreen mainScreen].bounds;
     [self addSubview:self.maskView];
     [self addSubview:self.tableView];
     
@@ -144,6 +145,7 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         // Tap to dismiss the view
         _maskView.userInteractionEnabled = YES;
         [_maskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissRightSideMenuView)]];
+        [_maskView addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(dismissRightSideMenuView)]];
     }
     return _maskView;
 }
