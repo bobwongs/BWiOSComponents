@@ -51,10 +51,10 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 - (instancetype)initRightSideMenuViewWithDataSource:(NSArray<NSString *> *)array hasSelectionStatus:(BOOL)hasSelectionStatus selectedIndex:(NSInteger)selectedIndex didSelectBlock:(void (^)(NSInteger))selectedBlock {
     if (self = [super init]) {
         if (!array) return self;
-        self.dataSource = array;
-        self.hasSelectionStatus = hasSelectionStatus;
-        self.selectedIndex = selectedIndex;
-        if (selectedBlock) self.didSelectBlock = selectedBlock;
+        _dataSource = array;
+        _hasSelectionStatus = hasSelectionStatus;
+        _selectedIndex = selectedIndex;
+        if (selectedBlock) _didSelectBlock = selectedBlock;
         
         self.frame = [UIScreen mainScreen].bounds;  // Set the frame.
     }
@@ -143,7 +143,7 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         // Tap to dismiss the view
         _maskView.userInteractionEnabled = YES;
         [_maskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissRightSideMenuView)]];
-        [_maskView addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(dismissRightSideMenuView)]];
+        [_maskView addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(dismissRightSideMenuView)]];  // Default direction is UISwipeGestureRecognizerDirectionRight
     }
     return _maskView;
 }
