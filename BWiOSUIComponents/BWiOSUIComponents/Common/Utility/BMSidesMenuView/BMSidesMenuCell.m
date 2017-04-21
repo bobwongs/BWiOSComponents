@@ -28,6 +28,8 @@
 
 - (void)setUI
 {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, BM_SIDES_MENU_WIDTH - 15 * 2, BM_SIDES_MENU_CELL_HEIGHT)];
     self.titleLabel = titleLabel;
     titleLabel.numberOfLines = 1;

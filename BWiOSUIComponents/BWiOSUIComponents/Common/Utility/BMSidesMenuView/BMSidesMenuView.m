@@ -95,10 +95,6 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BMSidesMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdSidesMenu];
-    if (!cell) {
-        cell = [[BMSidesMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdSidesMenu];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
     
     if (!self.hasSelectionStatus) {
         cell.showType = BMSidesMenuShowTypeNone;
@@ -155,6 +151,7 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         _tableView.delegate = self;
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[BMSidesMenuCell class] forCellReuseIdentifier:kCellIdSidesMenu];
         
         // Shadow
         _tableView.layer.shadowColor = BM_SIDES_MENU_UIColorFromRGB(0x333333).CGColor;
