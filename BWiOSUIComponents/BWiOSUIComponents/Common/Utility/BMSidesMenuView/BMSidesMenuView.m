@@ -63,6 +63,12 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 
 - (void)showRightSideMenuView {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    for (UIView *subView in window.subviews) {
+        if ([subView isKindOfClass:[self class]]) {
+            return;  // 已有，则不再显示
+        }
+    }
+    
     [window addSubview:self];
     
     [self addSubview:self.maskView];
