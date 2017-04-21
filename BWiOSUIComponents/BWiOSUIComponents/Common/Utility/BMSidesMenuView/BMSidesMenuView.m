@@ -29,7 +29,6 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
  */
 @property (strong, nonatomic) NSArray<NSString *> *dataSource;  ///< Data source
 @property (assign, nonatomic) BOOL hasSelectionStatus;  ///< Has selection status
-@property (assign, nonatomic) NSInteger selectedIndex;  ///< Selected index
 
 @property (copy, nonatomic) void(^didSelectBlock)(NSInteger);  ///< Did select menu item block
 
@@ -115,7 +114,6 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedIndex = indexPath.row;
-    [self.tableView reloadData];
     
     if (self.didSelectBlock) self.didSelectBlock(indexPath.row);
     
@@ -169,6 +167,11 @@ NSString *const kCellIdSidesMenu = @"kCellIdSidesMenu";
         _tableView.tableHeaderView = headerView;
     }
     return _tableView;
+}
+
+- (void)setSelectedIndex:(NSInteger)selectedIndex {
+    _selectedIndex = selectedIndex;
+    [self.tableView reloadData];
 }
 
 @end

@@ -44,4 +44,6 @@
  */
 - (void)showRightSideMenuView;
 
+@property (assign, nonatomic) NSInteger selectedIndex;  ///< Set this value to change selected index
+
 @end
