@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40E90E01EB8751000463496 /* icon_arrow_right_gray_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40E90DE1EB8751000463496 /* icon_arrow_right_gray_light@2x.png */; };
+		B40E90E11EB8751000463496 /* icon_arrow_right_gray_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40E90DF1EB8751000463496 /* icon_arrow_right_gray_light@3x.png */; };
 		B4566BB61EA7105C0092F1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BB51EA7105C0092F1B9 /* main.m */; };
 		B4566BB91EA7105C0092F1B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BB81EA7105C0092F1B9 /* AppDelegate.m */; };
 		B4566BBF1EA7105C0092F1B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4566BBD1EA7105C0092F1B9 /* Main.storyboard */; };
@@ -20,6 +22,9 @@
 		B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */; };
 		B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */; };
 		B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */; };
+		B4A6981B1ED923280055329F /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698161ED923280055329F /* BMNewAddressPickerCell.m */; };
+		B4A6981C1ED923280055329F /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698181ED923280055329F /* BMNewAddressPickerManager.m */; };
+		B4A6981D1ED923280055329F /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A6981A1ED923280055329F /* BMNewAddressPickerView.m */; };
 		C791DAF54AF011827B9C48BA /* libPods-BWiOSUIComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C412DFB3DDB2B7D8C181222 /* libPods-BWiOSUIComponents.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,8 @@
 		2DBEA6E833CDAE1018F2325D /* Pods-BWiOSUIComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSUIComponents.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSUIComponents/Pods-BWiOSUIComponents.release.xcconfig"; sourceTree = "<group>"; };
 		3C412DFB3DDB2B7D8C181222 /* libPods-BWiOSUIComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSUIComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87A5E98C5D9E5E26434D8DB /* Pods-BWiOSUIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSUIComponents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSUIComponents/Pods-BWiOSUIComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		B40E90DE1EB8751000463496 /* icon_arrow_right_gray_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right_gray_light@2x.png"; sourceTree = "<group>"; };
+		B40E90DF1EB8751000463496 /* icon_arrow_right_gray_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right_gray_light@3x.png"; sourceTree = "<group>"; };
 		B4566BB11EA7105C0092F1B9 /* BWiOSUIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSUIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4566BB51EA7105C0092F1B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4566BB71EA7105C0092F1B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +75,12 @@
 		B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuCell.m; sourceTree = "<group>"; };
 		B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@2x.png"; sourceTree = "<group>"; };
 		B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@3x.png"; sourceTree = "<group>"; };
+		B4A698151ED923280055329F /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
+		B4A698161ED923280055329F /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
+		B4A698171ED923280055329F /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
+		B4A698181ED923280055329F /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
+		B4A698191ED923280055329F /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
+		B4A6981A1ED923280055329F /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B40E90DD1EB874F700463496 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B40E90DE1EB8751000463496 /* icon_arrow_right_gray_light@2x.png */,
+				B40E90DF1EB8751000463496 /* icon_arrow_right_gray_light@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		B4566BA81EA7105C0092F1B9 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +147,7 @@
 				B4566BB81EA7105C0092F1B9 /* AppDelegate.m */,
 				B4566BE71EA710770092F1B9 /* MVC */,
 				B4566BF01EA713D70092F1B9 /* Common */,
+				B40E90DD1EB874F700463496 /* Resource */,
 				B4566BC01EA7105C0092F1B9 /* Assets.xcassets */,
 				B4566BB41EA7105C0092F1B9 /* Supporting Files */,
 			);
@@ -198,6 +221,7 @@
 		B4566BF11EA713D70092F1B9 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B4A698141ED923280055329F /* BMNewAddressPickerView */,
 				B4566BF21EA714430092F1B9 /* BMSidesMenuView */,
 			);
 			path = Utility;
@@ -222,6 +246,19 @@
 				B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		B4A698141ED923280055329F /* BMNewAddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B4A698151ED923280055329F /* BMNewAddressPickerCell.h */,
+				B4A698161ED923280055329F /* BMNewAddressPickerCell.m */,
+				B4A698171ED923280055329F /* BMNewAddressPickerManager.h */,
+				B4A698181ED923280055329F /* BMNewAddressPickerManager.m */,
+				B4A698191ED923280055329F /* BMNewAddressPickerView.h */,
+				B4A6981A1ED923280055329F /* BMNewAddressPickerView.m */,
+			);
+			path = BMNewAddressPickerView;
 			sourceTree = "<group>";
 		};
 		BEECB2BFAC51E26E49081DBE /* Frameworks */ = {
@@ -356,7 +393,9 @@
 				B4566BC41EA7105C0092F1B9 /* LaunchScreen.storyboard in Resources */,
 				B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */,
 				B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */,
+				B40E90E11EB8751000463496 /* icon_arrow_right_gray_light@3x.png in Resources */,
 				B4566BC11EA7105C0092F1B9 /* Assets.xcassets in Resources */,
+				B40E90E01EB8751000463496 /* icon_arrow_right_gray_light@2x.png in Resources */,
 				B4566BBF1EA7105C0092F1B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,8 +472,11 @@
 				B4566BB91EA7105C0092F1B9 /* AppDelegate.m in Sources */,
 				B4566BB61EA7105C0092F1B9 /* main.m in Sources */,
 				B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */,
+				B4A6981B1ED923280055329F /* BMNewAddressPickerCell.m in Sources */,
 				B4566BF51EA7144C0092F1B9 /* BMSidesMenuView.m in Sources */,
 				B4566BEF1EA713C10092F1B9 /* BWResearchViewController.m in Sources */,
+				B4A6981C1ED923280055329F /* BMNewAddressPickerManager.m in Sources */,
+				B4A6981D1ED923280055329F /* BMNewAddressPickerView.m in Sources */,
 				B4566BEC1EA7114C0092F1B9 /* BWBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
