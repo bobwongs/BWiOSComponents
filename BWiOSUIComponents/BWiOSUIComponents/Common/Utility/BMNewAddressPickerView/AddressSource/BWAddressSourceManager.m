@@ -10,9 +10,9 @@
 #import <FMDB.h>
 #import "BMAddressModel.h"
 
-NSString *const BMAddressTypeProvince = @"BMAddressTypeProvince";
-NSString *const BMAddressTypeCity = @"BMAddressTypeCity";
-NSString *const BMAddressTypeCounty = @"BMAddressTypeCounty";
+NSString *const BMAddressTypeProvince = @"province";
+NSString *const BMAddressTypeCity = @"city";
+NSString *const BMAddressTypeCounty = @"county";
 
 @interface BWAddressSourceManager ()
 
@@ -54,7 +54,7 @@ NSString *const BMAddressTypeCounty = @"BMAddressTypeCounty";
     }
     [self.database close];
     
-    return [NSArray new];
+    return arrayM;
 }
 
 #pragma mark - Setter and Getter

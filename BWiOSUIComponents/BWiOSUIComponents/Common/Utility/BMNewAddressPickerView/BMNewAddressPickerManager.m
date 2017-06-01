@@ -78,6 +78,7 @@
 
 - (void)setData {
     self.addressArray = [NSMutableArray new];
+    self.addressSourceManager = [BWAddressSourceManager new];
     
     _pickerView = [BMNewAddressPickerView new];
     __weak typeof(self) weakSelf = self;
@@ -97,7 +98,7 @@
 }
 
 - (void)getRegionDataWithParentModel:(BMAddressModel *)model {
-    NSArray *typeArray = @[@"province", @"city", @"county"];
+    NSArray *typeArray = @[BMAddressTypeProvince, BMAddressTypeCity, BMAddressTypeCounty];
     NSInteger typeIndex = _addressArray.count;
     if (typeIndex > typeArray.count - 1) return;
     
