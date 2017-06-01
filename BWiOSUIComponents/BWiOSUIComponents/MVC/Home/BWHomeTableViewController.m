@@ -21,21 +21,14 @@ NSString *const BWCellId = @"BWCellId";
 
 @implementation BWHomeTableViewController
 
-- (instancetype)init {
-    if (self = [super init]) {
-        NSDictionary *addressPickerDict = @{
-                                            BWKeyTitle: @"AddressPicker",
-                                            BWKeySegueId: @"home_to_address_picker"
-                                            };
-        
-        _dataSource = @[addressPickerDict];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSDictionary *addressPickerDict = @{BWKeyTitle: @"AddressPicker",
+                                        BWKeySegueId: @"home_to_address_picker"};
+    _dataSource = @[addressPickerDict];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -43,7 +36,6 @@ NSString *const BWCellId = @"BWCellId";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataSource.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:BWCellId];

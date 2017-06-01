@@ -17,14 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    BWResearchViewController *reseachVC = [[BWResearchViewController alloc] init];
-    UINavigationController *nvgtVC = [[UINavigationController alloc] initWithRootViewController:reseachVC];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = nvgtVC;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

@@ -14,13 +14,3 @@
 - (void)dismiss;
 
 @end
-
-
-@interface BMNewAddressModel : NSObject
-
-@property (strong, nonatomic) NSString *dcode;  ///< 区域编码
-@property (strong, nonatomic) NSString *dname;  ///< 区域名称
-@property (strong, nonatomic) NSString *pcode;  ///< 上级区域编码
-@property (strong, nonatomic) NSString *type;  ///< 区域类型
-
-@end
