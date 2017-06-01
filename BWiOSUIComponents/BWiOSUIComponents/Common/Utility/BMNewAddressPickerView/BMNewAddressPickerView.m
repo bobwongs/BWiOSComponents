@@ -7,7 +7,7 @@
 //
 
 #import "BMNewAddressPickerView.h"
-#import "BMNewAddressPickerCell.h"
+#import "BMAddressPickerCell.h"
 
 #define BM_NEW_ADDRESS_PICKER_LINE_WIDTH (1 / [UIScreen mainScreen].scale)
 #define BM_NEW_ADDRESS_PICKER_TIME_ANIMATION 0.25
@@ -18,12 +18,12 @@
 CGFloat const BMNewAddressPickerTopViewHeight = 35.0;  // Top view height
 CGFloat const BMNewAddressPickerBottomViewHeight = 240.0;   // Bottom table view height
 CGFloat const BMNewAddressPickerHeight = BMNewAddressPickerTopViewHeight + BMNewAddressPickerBottomViewHeight;
-CGFloat const BMNewAddressPickerCellHeight = 40.0;   // Cell height
+CGFloat const BMAddressPickerCellHeight = 40.0;   // Cell height
 CGFloat const BMNewAddressPickerVerticalInset = 20.0;  // Button inset
 
 NSInteger const BMNewAddressPickerSelectableCount = 3;  // 最多选三级
 
-NSString *const BMNewAddressPickerCellId = @"BMNewAddressPickerCellId";
+NSString *const BMAddressPickerCellId = @"BMAddressPickerCellId";
 
 NSString *const BMNewAddressPickerTextToSelect = @"请选择";
 
@@ -118,7 +118,7 @@ NSInteger const BMNewAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BMNewAddressPickerCell *cell = [tableView dequeueReusableCellWithIdentifier:BMNewAddressPickerCellId];
+    BMAddressPickerCell *cell = [tableView dequeueReusableCellWithIdentifier:BMAddressPickerCellId];
     
     NSInteger row = indexPath.row;
     NSInteger tableViewIndex = tableView.tag - BMNewAddressPickerFirstTableViewTag;
@@ -333,7 +333,7 @@ NSInteger const BMNewAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag
     tableView.delegate = self;
     tableView.rowHeight = 40;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [tableView registerClass:[BMNewAddressPickerCell class] forCellReuseIdentifier:BMNewAddressPickerCellId];
+    [tableView registerClass:[BMAddressPickerCell class] forCellReuseIdentifier:BMAddressPickerCellId];
     [_bottomScrollView addSubview:tableView];
     
     _bottomScrollView.contentSize = CGSizeMake(CGRectGetMaxX(tableView.frame), _bottomScrollView.contentSize.height);

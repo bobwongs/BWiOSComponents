@@ -1,9 +1,9 @@
 //
-//  BMNewAddressPickerCell.h
-//  BMWash
+//  BMAddressPickerCell.h
+//  BWiOSUIComponents
 //
-//  Created by BobWong on 2017/5/26.
-//  Copyright © 2017年 月亮小屋（中国）有限公司. All rights reserved.
+//  Created by BobWong on 2017/6/1.
+//  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,9 +16,9 @@ alpha:1.0]
 
 #define BM_NEW_ADDRESS_PICKER_333333 BM_NEW_ADDRESS_PICKER_UIColorFromRGB(0x333333)
 
-@interface BMNewAddressPickerCell : UITableViewCell
+@interface BMAddressPickerCell : UITableViewCell
 
-@property (strong, nonatomic) UILabel *titleLabel;  ///< Text
-@property (strong, nonatomic) UIImageView *iconImageView;  ///< Icon
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 
 @end

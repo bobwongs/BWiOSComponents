@@ -6,8 +6,8 @@
 //  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
-#import "BWBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface BWResearchViewController : BWBaseViewController
+@interface BWResearchViewController : UIViewController
 
 @end
