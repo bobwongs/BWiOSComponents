@@ -10,8 +10,6 @@
 
 @interface BMNewAddressPickerCell ()
 
-@property (strong, nonatomic) UIImageView *iconImageView;  ///< Icon
-
 @end
 
 @implementation BMNewAddressPickerCell
@@ -42,7 +40,7 @@
     _titleLabel.font = [UIFont systemFontOfSize:15.0];
     _titleLabel.textColor = BM_NEW_ADDRESS_PICKER_333333;
     
-    self.iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+    self.iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"checkcircle_selected"]];
     _iconImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     [self.contentView addSubview:_titleLabel];
@@ -67,11 +65,5 @@
 }
 
 #pragma mark - Getter and Setter
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    
-    _iconImageView.hidden = !selected;
-}
 
 @end

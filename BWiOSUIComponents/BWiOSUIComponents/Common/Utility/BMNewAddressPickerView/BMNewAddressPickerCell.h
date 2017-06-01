@@ -19,5 +19,6 @@ alpha:1.0]
 @interface BMNewAddressPickerCell : UITableViewCell
 
 @property (strong, nonatomic) UILabel *titleLabel;  ///< Text
+@property (strong, nonatomic) UIImageView *iconImageView;  ///< Icon
 
 @end

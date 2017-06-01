@@ -22,27 +22,11 @@
 		B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */; };
 		B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */; };
 		B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */; };
-		B491A5611EDE685C00E38FF8 /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B491A55C1EDE685C00E38FF8 /* BMNewAddressPickerCell.m */; };
-		B491A5621EDE685C00E38FF8 /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B491A55E1EDE685C00E38FF8 /* BMNewAddressPickerManager.m */; };
-		B491A5631EDE685C00E38FF8 /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B491A5601EDE685C00E38FF8 /* BMNewAddressPickerView.m */; };
-		B491A56B1EDEA28F00E38FF8 /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B491A5661EDEA28F00E38FF8 /* BMNewAddressPickerCell.m */; };
-		B491A56C1EDEA28F00E38FF8 /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B491A5681EDEA28F00E38FF8 /* BMNewAddressPickerManager.m */; };
-		B491A56D1EDEA28F00E38FF8 /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B491A56A1EDEA28F00E38FF8 /* BMNewAddressPickerView.m */; };
-		B4A6981B1ED923280055329F /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698161ED923280055329F /* BMNewAddressPickerCell.m */; };
-		B4A6981C1ED923280055329F /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698181ED923280055329F /* BMNewAddressPickerManager.m */; };
-		B4A6981D1ED923280055329F /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A6981A1ED923280055329F /* BMNewAddressPickerView.m */; };
-		B4A698251ED953840055329F /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698201ED953840055329F /* BMNewAddressPickerCell.m */; };
-		B4A698261ED953840055329F /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698221ED953840055329F /* BMNewAddressPickerManager.m */; };
-		B4A698271ED953840055329F /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698241ED953840055329F /* BMNewAddressPickerView.m */; };
-		B4A6982F1ED963B30055329F /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A6982A1ED963B30055329F /* BMNewAddressPickerCell.m */; };
-		B4A698301ED963B30055329F /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A6982C1ED963B30055329F /* BMNewAddressPickerManager.m */; };
-		B4A698311ED963B30055329F /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A6982E1ED963B30055329F /* BMNewAddressPickerView.m */; };
-		B4A698391ED97F390055329F /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698341ED97F390055329F /* BMNewAddressPickerCell.m */; };
-		B4A6983A1ED97F390055329F /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698361ED97F390055329F /* BMNewAddressPickerManager.m */; };
-		B4A6983B1ED97F390055329F /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A698381ED97F390055329F /* BMNewAddressPickerView.m */; };
-		B4B3ECF41EDFBCE900861AEC /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECEF1EDFBCE900861AEC /* BMNewAddressPickerCell.m */; };
-		B4B3ECF51EDFBCE900861AEC /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECF11EDFBCE900861AEC /* BMNewAddressPickerManager.m */; };
-		B4B3ECF61EDFBCE900861AEC /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECF31EDFBCE900861AEC /* BMNewAddressPickerView.m */; };
+		B4B3ED011EDFE04000861AEC /* BMNewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECF91EDFE04000861AEC /* BMNewAddressPickerCell.m */; };
+		B4B3ED021EDFE04000861AEC /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECFB1EDFE04000861AEC /* BMNewAddressPickerManager.m */; };
+		B4B3ED031EDFE04000861AEC /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECFD1EDFE04000861AEC /* BMNewAddressPickerView.m */; };
+		B4B3ED041EDFE04000861AEC /* checkcircle_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B3ECFF1EDFE04000861AEC /* checkcircle_selected@2x.png */; };
+		B4B3ED051EDFE04000861AEC /* checkcircle_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B3ED001EDFE04000861AEC /* checkcircle_selected@3x.png */; };
 		C791DAF54AF011827B9C48BA /* libPods-BWiOSUIComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C412DFB3DDB2B7D8C181222 /* libPods-BWiOSUIComponents.a */; };
 /* End PBXBuildFile section */
 
@@ -93,48 +77,14 @@
 		B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuCell.m; sourceTree = "<group>"; };
 		B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@2x.png"; sourceTree = "<group>"; };
 		B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@3x.png"; sourceTree = "<group>"; };
-		B491A55B1EDE685C00E38FF8 /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B491A55C1EDE685C00E38FF8 /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B491A55D1EDE685C00E38FF8 /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B491A55E1EDE685C00E38FF8 /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B491A55F1EDE685C00E38FF8 /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B491A5601EDE685C00E38FF8 /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B491A5651EDEA28F00E38FF8 /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B491A5661EDEA28F00E38FF8 /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B491A5671EDEA28F00E38FF8 /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B491A5681EDEA28F00E38FF8 /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B491A5691EDEA28F00E38FF8 /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B491A56A1EDEA28F00E38FF8 /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B4A698151ED923280055329F /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B4A698161ED923280055329F /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B4A698171ED923280055329F /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B4A698181ED923280055329F /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B4A698191ED923280055329F /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B4A6981A1ED923280055329F /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B4A6981F1ED953840055329F /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B4A698201ED953840055329F /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B4A698211ED953840055329F /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B4A698221ED953840055329F /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B4A698231ED953840055329F /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B4A698241ED953840055329F /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B4A698291ED963B30055329F /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B4A6982A1ED963B30055329F /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B4A6982B1ED963B30055329F /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B4A6982C1ED963B30055329F /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B4A6982D1ED963B30055329F /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B4A6982E1ED963B30055329F /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B4A698331ED97F390055329F /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B4A698341ED97F390055329F /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B4A698351ED97F390055329F /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B4A698361ED97F390055329F /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B4A698371ED97F390055329F /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B4A698381ED97F390055329F /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
-		B4B3ECEE1EDFBCE900861AEC /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
-		B4B3ECEF1EDFBCE900861AEC /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
-		B4B3ECF01EDFBCE900861AEC /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B4B3ECF11EDFBCE900861AEC /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B4B3ECF21EDFBCE900861AEC /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B4B3ECF31EDFBCE900861AEC /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
+		B4B3ECF81EDFE04000861AEC /* BMNewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerCell.h; sourceTree = "<group>"; };
+		B4B3ECF91EDFE04000861AEC /* BMNewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerCell.m; sourceTree = "<group>"; };
+		B4B3ECFA1EDFE04000861AEC /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
+		B4B3ECFB1EDFE04000861AEC /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
+		B4B3ECFC1EDFE04000861AEC /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
+		B4B3ECFD1EDFE04000861AEC /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
+		B4B3ECFF1EDFE04000861AEC /* checkcircle_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkcircle_selected@2x.png"; sourceTree = "<group>"; };
+		B4B3ED001EDFE04000861AEC /* checkcircle_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkcircle_selected@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,14 +225,8 @@
 		B4566BF11EA713D70092F1B9 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B4B3ECED1EDFBCE900861AEC /* BMNewAddressPickerView7 */,
-				B491A5641EDEA28F00E38FF8 /* BMNewAddressPickerView6 */,
-				B491A55A1EDE685C00E38FF8 /* BMNewAddressPickerView5 */,
-				B4A698321ED97F390055329F /* BMNewAddressPickerView4 */,
-				B4A698281ED963B30055329F /* BMNewAddressPickerView3 */,
-				B4A6981E1ED953840055329F /* BMNewAddressPickerView2 */,
-				B4A698141ED923280055329F /* BMNewAddressPickerView */,
 				B4566BF21EA714430092F1B9 /* BMSidesMenuView */,
+				B4B3ECF71EDFE04000861AEC /* BMNewAddressPickerView */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -308,95 +252,27 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		B491A55A1EDE685C00E38FF8 /* BMNewAddressPickerView5 */ = {
+		B4B3ECF71EDFE04000861AEC /* BMNewAddressPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				B491A55B1EDE685C00E38FF8 /* BMNewAddressPickerCell.h */,
-				B491A55C1EDE685C00E38FF8 /* BMNewAddressPickerCell.m */,
-				B491A55D1EDE685C00E38FF8 /* BMNewAddressPickerManager.h */,
-				B491A55E1EDE685C00E38FF8 /* BMNewAddressPickerManager.m */,
-				B491A55F1EDE685C00E38FF8 /* BMNewAddressPickerView.h */,
-				B491A5601EDE685C00E38FF8 /* BMNewAddressPickerView.m */,
-			);
-			path = BMNewAddressPickerView5;
-			sourceTree = "<group>";
-		};
-		B491A5641EDEA28F00E38FF8 /* BMNewAddressPickerView6 */ = {
-			isa = PBXGroup;
-			children = (
-				B491A5651EDEA28F00E38FF8 /* BMNewAddressPickerCell.h */,
-				B491A5661EDEA28F00E38FF8 /* BMNewAddressPickerCell.m */,
-				B491A5671EDEA28F00E38FF8 /* BMNewAddressPickerManager.h */,
-				B491A5681EDEA28F00E38FF8 /* BMNewAddressPickerManager.m */,
-				B491A5691EDEA28F00E38FF8 /* BMNewAddressPickerView.h */,
-				B491A56A1EDEA28F00E38FF8 /* BMNewAddressPickerView.m */,
-			);
-			path = BMNewAddressPickerView6;
-			sourceTree = "<group>";
-		};
-		B4A698141ED923280055329F /* BMNewAddressPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				B4A698151ED923280055329F /* BMNewAddressPickerCell.h */,
-				B4A698161ED923280055329F /* BMNewAddressPickerCell.m */,
-				B4A698171ED923280055329F /* BMNewAddressPickerManager.h */,
-				B4A698181ED923280055329F /* BMNewAddressPickerManager.m */,
-				B4A698191ED923280055329F /* BMNewAddressPickerView.h */,
-				B4A6981A1ED923280055329F /* BMNewAddressPickerView.m */,
+				B4B3ECF81EDFE04000861AEC /* BMNewAddressPickerCell.h */,
+				B4B3ECF91EDFE04000861AEC /* BMNewAddressPickerCell.m */,
+				B4B3ECFA1EDFE04000861AEC /* BMNewAddressPickerManager.h */,
+				B4B3ECFB1EDFE04000861AEC /* BMNewAddressPickerManager.m */,
+				B4B3ECFC1EDFE04000861AEC /* BMNewAddressPickerView.h */,
+				B4B3ECFD1EDFE04000861AEC /* BMNewAddressPickerView.m */,
+				B4B3ECFE1EDFE04000861AEC /* Resource */,
 			);
 			path = BMNewAddressPickerView;
 			sourceTree = "<group>";
 		};
-		B4A6981E1ED953840055329F /* BMNewAddressPickerView2 */ = {
+		B4B3ECFE1EDFE04000861AEC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				B4A6981F1ED953840055329F /* BMNewAddressPickerCell.h */,
-				B4A698201ED953840055329F /* BMNewAddressPickerCell.m */,
-				B4A698211ED953840055329F /* BMNewAddressPickerManager.h */,
-				B4A698221ED953840055329F /* BMNewAddressPickerManager.m */,
-				B4A698231ED953840055329F /* BMNewAddressPickerView.h */,
-				B4A698241ED953840055329F /* BMNewAddressPickerView.m */,
+				B4B3ECFF1EDFE04000861AEC /* checkcircle_selected@2x.png */,
+				B4B3ED001EDFE04000861AEC /* checkcircle_selected@3x.png */,
 			);
-			path = BMNewAddressPickerView2;
-			sourceTree = "<group>";
-		};
-		B4A698281ED963B30055329F /* BMNewAddressPickerView3 */ = {
-			isa = PBXGroup;
-			children = (
-				B4A698291ED963B30055329F /* BMNewAddressPickerCell.h */,
-				B4A6982A1ED963B30055329F /* BMNewAddressPickerCell.m */,
-				B4A6982B1ED963B30055329F /* BMNewAddressPickerManager.h */,
-				B4A6982C1ED963B30055329F /* BMNewAddressPickerManager.m */,
-				B4A6982D1ED963B30055329F /* BMNewAddressPickerView.h */,
-				B4A6982E1ED963B30055329F /* BMNewAddressPickerView.m */,
-			);
-			path = BMNewAddressPickerView3;
-			sourceTree = "<group>";
-		};
-		B4A698321ED97F390055329F /* BMNewAddressPickerView4 */ = {
-			isa = PBXGroup;
-			children = (
-				B4A698331ED97F390055329F /* BMNewAddressPickerCell.h */,
-				B4A698341ED97F390055329F /* BMNewAddressPickerCell.m */,
-				B4A698351ED97F390055329F /* BMNewAddressPickerManager.h */,
-				B4A698361ED97F390055329F /* BMNewAddressPickerManager.m */,
-				B4A698371ED97F390055329F /* BMNewAddressPickerView.h */,
-				B4A698381ED97F390055329F /* BMNewAddressPickerView.m */,
-			);
-			path = BMNewAddressPickerView4;
-			sourceTree = "<group>";
-		};
-		B4B3ECED1EDFBCE900861AEC /* BMNewAddressPickerView7 */ = {
-			isa = PBXGroup;
-			children = (
-				B4B3ECEE1EDFBCE900861AEC /* BMNewAddressPickerCell.h */,
-				B4B3ECEF1EDFBCE900861AEC /* BMNewAddressPickerCell.m */,
-				B4B3ECF01EDFBCE900861AEC /* BMNewAddressPickerManager.h */,
-				B4B3ECF11EDFBCE900861AEC /* BMNewAddressPickerManager.m */,
-				B4B3ECF21EDFBCE900861AEC /* BMNewAddressPickerView.h */,
-				B4B3ECF31EDFBCE900861AEC /* BMNewAddressPickerView.m */,
-			);
-			path = BMNewAddressPickerView7;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		BEECB2BFAC51E26E49081DBE /* Frameworks */ = {
@@ -528,6 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B3ED041EDFE04000861AEC /* checkcircle_selected@2x.png in Resources */,
+				B4B3ED051EDFE04000861AEC /* checkcircle_selected@3x.png in Resources */,
 				B4566BC41EA7105C0092F1B9 /* LaunchScreen.storyboard in Resources */,
 				B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */,
 				B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */,
@@ -607,32 +485,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A698391ED97F390055329F /* BMNewAddressPickerCell.m in Sources */,
-				B4A6982F1ED963B30055329F /* BMNewAddressPickerCell.m in Sources */,
-				B4B3ECF41EDFBCE900861AEC /* BMNewAddressPickerCell.m in Sources */,
-				B491A5621EDE685C00E38FF8 /* BMNewAddressPickerManager.m in Sources */,
 				B4566BB91EA7105C0092F1B9 /* AppDelegate.m in Sources */,
-				B4A698301ED963B30055329F /* BMNewAddressPickerManager.m in Sources */,
 				B4566BB61EA7105C0092F1B9 /* main.m in Sources */,
-				B4A698251ED953840055329F /* BMNewAddressPickerCell.m in Sources */,
 				B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */,
-				B4A6983B1ED97F390055329F /* BMNewAddressPickerView.m in Sources */,
-				B4B3ECF51EDFBCE900861AEC /* BMNewAddressPickerManager.m in Sources */,
-				B4A6981B1ED923280055329F /* BMNewAddressPickerCell.m in Sources */,
-				B491A56B1EDEA28F00E38FF8 /* BMNewAddressPickerCell.m in Sources */,
-				B491A5631EDE685C00E38FF8 /* BMNewAddressPickerView.m in Sources */,
-				B4A6983A1ED97F390055329F /* BMNewAddressPickerManager.m in Sources */,
-				B491A56C1EDEA28F00E38FF8 /* BMNewAddressPickerManager.m in Sources */,
-				B4B3ECF61EDFBCE900861AEC /* BMNewAddressPickerView.m in Sources */,
+				B4B3ED011EDFE04000861AEC /* BMNewAddressPickerCell.m in Sources */,
 				B4566BF51EA7144C0092F1B9 /* BMSidesMenuView.m in Sources */,
 				B4566BEF1EA713C10092F1B9 /* BWResearchViewController.m in Sources */,
-				B4A698271ED953840055329F /* BMNewAddressPickerView.m in Sources */,
-				B4A6981C1ED923280055329F /* BMNewAddressPickerManager.m in Sources */,
-				B4A6981D1ED923280055329F /* BMNewAddressPickerView.m in Sources */,
-				B491A56D1EDEA28F00E38FF8 /* BMNewAddressPickerView.m in Sources */,
-				B4A698261ED953840055329F /* BMNewAddressPickerManager.m in Sources */,
-				B491A5611EDE685C00E38FF8 /* BMNewAddressPickerCell.m in Sources */,
-				B4A698311ED963B30055329F /* BMNewAddressPickerView.m in Sources */,
+				B4B3ED021EDFE04000861AEC /* BMNewAddressPickerManager.m in Sources */,
+				B4B3ED031EDFE04000861AEC /* BMNewAddressPickerView.m in Sources */,
 				B4566BEC1EA7114C0092F1B9 /* BWBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
