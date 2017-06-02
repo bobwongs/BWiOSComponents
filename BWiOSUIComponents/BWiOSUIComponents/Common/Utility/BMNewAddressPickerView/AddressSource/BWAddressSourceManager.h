@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@class BMAddressModel;
+@class BWAddressModel;
 
-extern NSString *const BMAddressTypeProvince;
-extern NSString *const BMAddressTypeCity;
-extern NSString *const BMAddressTypeCounty;
+extern NSString *const BWAddressTypeProvince;
+extern NSString *const BWAddressTypeCity;
+extern NSString *const BWAddressTypeCounty;
 
 @interface BWAddressSourceManager : NSObject
 
@@ -22,6 +22,6 @@ extern NSString *const BMAddressTypeCounty;
  *  @param addressType 要获取的地址类型
  *  @return 地址数据源
  */
-- (NSArray<BMAddressModel *> *)addressSourceArrayWithParentCode:(NSInteger)parentCode addressType:(NSString *)addressType;
+- (NSArray<BWAddressModel *> *)addressSourceArrayWithParentCode:(NSInteger)parentCode addressType:(NSString *)addressType;
 
 @end

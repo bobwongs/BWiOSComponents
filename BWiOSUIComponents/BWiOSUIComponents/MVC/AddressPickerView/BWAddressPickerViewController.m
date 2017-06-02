@@ -7,38 +7,47 @@
 //
 
 #import "BWAddressPickerViewController.h"
-#import "BMNewAddressPickerManager.h"
-#import "BMAddressModel.h"
+#import "BWAddressPickerManager.h"
+#import "BWAddressModel.h"
 
 @interface BWAddressPickerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
-@property (strong, nonatomic) BMNewAddressPickerManager *addressPickerManager;  ///< Address picker manager
+@property (strong, nonatomic) BWAddressPickerManager *addressPickerManager;  ///< Address picker manager
 
 @end
 
 @implementation BWAddressPickerViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
+
+- (void)dealloc {
+    NSLog(@"Dealloc %@", NSStringFromClass([self class]));
+}
+
+#pragma mark - Action
 
 - (IBAction)pickAddressAction:(id)sender {
     [self.addressPickerManager show];
 }
 
-- (BMNewAddressPickerManager *)addressPickerManager {
+#pragma mark - Setter and Getter
+
+- (BWAddressPickerManager *)addressPickerManager {
     if (!_addressPickerManager) {
-        _addressPickerManager = [BMNewAddressPickerManager new];
+        _addressPickerManager = [BWAddressPickerManager new];
         
         __weak typeof(self) weakSelf = self;
-        _addressPickerManager.didSelectBlock = ^(NSArray<BMAddressModel *> *selectedArray) {
+        _addressPickerManager.didSelectBlock = ^(NSArray<BWAddressModel *> *selectedArray) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             
             NSMutableString *addressStr = [NSMutableString new];
-            [selectedArray enumerateObjectsUsingBlock:^(BMAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+            [selectedArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
                 [addressStr appendString:model.name];
             }];
             

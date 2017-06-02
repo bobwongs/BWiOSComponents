@@ -1,20 +1,20 @@
 //
-//  BMNewAddressPickerManager.m
+//  BWAddressPickerManager.m
 //  BMWash
 //
 //  Created by BobWong on 2017/5/26.
 //  Copyright © 2017年 月亮小屋（中国）有限公司. All rights reserved.
 //
 
-#import "BMNewAddressPickerManager.h"
-#import "BMNewAddressPickerView.h"
+#import "BWAddressPickerManager.h"
+#import "BWAddressPickerView.h"
 #import "BWAddressSourceManager.h"
-#import "BMAddressModel.h"
+#import "BWAddressModel.h"
 
-@interface BMNewAddressPickerManager ()
+@interface BWAddressPickerManager ()
 
 /* UI */
-@property (strong, nonatomic) BMNewAddressPickerView *pickerView;
+@property (strong, nonatomic) BWAddressPickerView *pickerView;
 
 /* Data */
 @property (strong, nonatomic) BWAddressSourceManager *addressSourceManager;  ///< address source manager
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation BMNewAddressPickerManager
+@implementation BWAddressPickerManager
 
 #pragma mark - Life Cycle
 
@@ -55,13 +55,13 @@
     self.addressArray = [NSMutableArray new];
     self.addressSourceManager = [BWAddressSourceManager new];
     
-    _pickerView = [BMNewAddressPickerView new];
+    _pickerView = [BWAddressPickerView new];
     
     __weak typeof(self) weakSelf = self;
     _pickerView.getDataBlock = ^(NSUInteger selectedSection, NSUInteger selectedRow) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
-        BMAddressModel *model = strongSelf.addressArray[selectedSection][selectedRow];
+        BWAddressModel *model = strongSelf.addressArray[selectedSection][selectedRow];
         [strongSelf getRegionDataWithParentModel:model];
     };
     
@@ -74,7 +74,7 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         NSLog(@"selected index array is %@", selectedIndexArray);
         
-        // 选中的BMAddressModel添加进数组
+        // 选中的BWAddressModel添加进数组
         NSMutableArray *arrayM = [NSMutableArray new];
         [strongSelf.addressArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull selectedAddressSourceArray, NSUInteger idx, BOOL * _Nonnull stop) {
             NSInteger selectedIndex = [selectedIndexArray[idx] integerValue];
@@ -86,18 +86,18 @@
     };
 }
 
-- (void)getRegionDataWithParentModel:(BMAddressModel *)parentModel {
-    NSArray *typeArray = @[BMAddressTypeProvince, BMAddressTypeCity, BMAddressTypeCounty];
+- (void)getRegionDataWithParentModel:(BWAddressModel *)parentModel {
+    NSArray *typeArray = @[BWAddressTypeProvince, BWAddressTypeCity, BWAddressTypeCounty];
     NSInteger typeIndex = _addressArray.count;
     if (typeIndex > typeArray.count - 1) return;
     
     // 用数据去刷新pickerView
     NSInteger parentCode = parentModel ? parentModel.code : 0;
-    NSArray<BMAddressModel *> *array = [self.addressSourceManager addressSourceArrayWithParentCode:parentCode addressType:typeArray[typeIndex]];
+    NSArray<BWAddressModel *> *array = [self.addressSourceManager addressSourceArrayWithParentCode:parentCode addressType:typeArray[typeIndex]];
     [self.addressArray addObject:array];
     
     NSMutableArray *nameArray = [NSMutableArray new];
-    [array enumerateObjectsUsingBlock:^(BMAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+    [array enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
         [nameArray addObject:model.name];
     }];
     

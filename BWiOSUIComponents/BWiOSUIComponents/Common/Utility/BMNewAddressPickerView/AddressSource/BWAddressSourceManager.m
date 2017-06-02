@@ -8,11 +8,11 @@
 
 #import "BWAddressSourceManager.h"
 #import <FMDB.h>
-#import "BMAddressModel.h"
+#import "BWAddressModel.h"
 
-NSString *const BMAddressTypeProvince = @"province";
-NSString *const BMAddressTypeCity = @"city";
-NSString *const BMAddressTypeCounty = @"county";
+NSString *const BWAddressTypeProvince = @"province";
+NSString *const BWAddressTypeCity = @"city";
+NSString *const BWAddressTypeCounty = @"county";
 
 @interface BWAddressSourceManager ()
 
@@ -22,7 +22,7 @@ NSString *const BMAddressTypeCounty = @"county";
 
 @implementation BWAddressSourceManager
 
-- (NSArray<BMAddressModel *> *)addressSourceArrayWithParentCode:(NSInteger)parentCode addressType:(NSString *)addressType {
+- (NSArray<BWAddressModel *> *)addressSourceArrayWithParentCode:(NSInteger)parentCode addressType:(NSString *)addressType {
     NSMutableArray *arrayM = [NSMutableArray new];
     if (![self.database open]) {
         NSLog(@"数据库打开失败");
@@ -30,13 +30,13 @@ NSString *const BMAddressTypeCounty = @"county";
     }
     
     NSString *sqlString;
-    if ([addressType isEqualToString:BMAddressTypeProvince]) {
+    if ([addressType isEqualToString:BWAddressTypeProvince]) {
         sqlString = [NSString stringWithFormat:@"select * from province"];
     }
-    else if ([addressType isEqualToString:BMAddressTypeCity]) {
+    else if ([addressType isEqualToString:BWAddressTypeCity]) {
         sqlString = [NSString stringWithFormat:@"select * from city where pcode = %ld", (long)parentCode];
     }
-    else if ([addressType isEqualToString:BMAddressTypeCounty]) {
+    else if ([addressType isEqualToString:BWAddressTypeCounty]) {
         sqlString = [NSString stringWithFormat:@"select * from county where pcode = %ld", (long)parentCode];
     }
     else {
@@ -45,7 +45,7 @@ NSString *const BMAddressTypeCounty = @"county";
     
     FMResultSet *set = [self.database executeQuery:sqlString];
     while ([set next]) {
-        BMAddressModel *model = [BMAddressModel new];
+        BWAddressModel *model = [BWAddressModel new];
         model.code = [set intForColumn:@"dcode"];
         model.name = [set stringForColumn:@"dname"];
         model.type = [set stringForColumn:@"type"];

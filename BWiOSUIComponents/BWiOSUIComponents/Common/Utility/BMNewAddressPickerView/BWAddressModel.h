@@ -1,5 +1,5 @@
 //
-//  BMAddressModel.h
+//  BWAddressModel.h
 //  BWiOSUIComponents
 //
 //  Created by BobWong on 2017/6/1.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BMAddressModel : NSObject
+@interface BWAddressModel : NSObject
 
 @property (assign, nonatomic) NSInteger code;  ///< 区域编码
 @property (strong, nonatomic) NSString *name;  ///< 区域名称

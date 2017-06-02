@@ -21,16 +21,16 @@
 		B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */; };
 		B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */; };
 		B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */; };
-		B4B3ED021EDFE04000861AEC /* BMNewAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECFB1EDFE04000861AEC /* BMNewAddressPickerManager.m */; };
-		B4B3ED031EDFE04000861AEC /* BMNewAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECFD1EDFE04000861AEC /* BMNewAddressPickerView.m */; };
+		B49D9F061EE1014800F6371B /* BWAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B49D9F021EE1014800F6371B /* BWAddressPickerCell.m */; };
+		B49D9F071EE1014800F6371B /* BWAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49D9F031EE1014800F6371B /* BWAddressPickerCell.xib */; };
+		B49D9F081EE1014800F6371B /* BWAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49D9F051EE1014800F6371B /* BWAddressPickerView.m */; };
+		B4B3ED021EDFE04000861AEC /* BWAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ECFB1EDFE04000861AEC /* BWAddressPickerManager.m */; };
 		B4B3ED041EDFE04000861AEC /* checkcircle_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B3ECFF1EDFE04000861AEC /* checkcircle_selected@2x.png */; };
 		B4B3ED051EDFE04000861AEC /* checkcircle_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B3ED001EDFE04000861AEC /* checkcircle_selected@3x.png */; };
 		B4B3ED0F1EDFE1CC00861AEC /* BWHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ED0E1EDFE1CC00861AEC /* BWHomeTableViewController.m */; };
 		B4B3ED161EDFE59B00861AEC /* BWAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ED151EDFE59B00861AEC /* BWAddressPickerViewController.m */; };
-		B4B3ED1A1EDFEA7B00861AEC /* BMAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ED181EDFEA7B00861AEC /* BMAddressPickerCell.m */; };
-		B4B3ED1B1EDFEA7B00861AEC /* BMAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B3ED191EDFEA7B00861AEC /* BMAddressPickerCell.xib */; };
 		B4B3ED241EDFEE6300861AEC /* BWAddressSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ED231EDFEE6300861AEC /* BWAddressSourceManager.m */; };
-		B4B3ED271EDFFD2200861AEC /* BMAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ED261EDFFD2200861AEC /* BMAddressModel.m */; };
+		B4B3ED271EDFFD2200861AEC /* BWAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B3ED261EDFFD2200861AEC /* BWAddressModel.m */; };
 		B4B3ED301EE0163200861AEC /* address.db in Resources */ = {isa = PBXBuildFile; fileRef = B4B3ED1C1EDFED1C00861AEC /* address.db */; };
 		C791DAF54AF011827B9C48BA /* libPods-BWiOSUIComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C412DFB3DDB2B7D8C181222 /* libPods-BWiOSUIComponents.a */; };
 /* End PBXBuildFile section */
@@ -80,24 +80,24 @@
 		B4566BF71EA71A990092F1B9 /* BMSidesMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuCell.m; sourceTree = "<group>"; };
 		B4566BFA1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@2x.png"; sourceTree = "<group>"; };
 		B4566BFB1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@3x.png"; sourceTree = "<group>"; };
-		B4B3ECFA1EDFE04000861AEC /* BMNewAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerManager.h; sourceTree = "<group>"; };
-		B4B3ECFB1EDFE04000861AEC /* BMNewAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerManager.m; sourceTree = "<group>"; };
-		B4B3ECFC1EDFE04000861AEC /* BMNewAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMNewAddressPickerView.h; sourceTree = "<group>"; };
-		B4B3ECFD1EDFE04000861AEC /* BMNewAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMNewAddressPickerView.m; sourceTree = "<group>"; };
+		B49D9F011EE1014800F6371B /* BWAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerCell.h; sourceTree = "<group>"; };
+		B49D9F021EE1014800F6371B /* BWAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerCell.m; sourceTree = "<group>"; };
+		B49D9F031EE1014800F6371B /* BWAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWAddressPickerCell.xib; sourceTree = "<group>"; };
+		B49D9F041EE1014800F6371B /* BWAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerView.h; sourceTree = "<group>"; };
+		B49D9F051EE1014800F6371B /* BWAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerView.m; sourceTree = "<group>"; };
+		B4B3ECFA1EDFE04000861AEC /* BWAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerManager.h; sourceTree = "<group>"; };
+		B4B3ECFB1EDFE04000861AEC /* BWAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerManager.m; sourceTree = "<group>"; };
 		B4B3ECFF1EDFE04000861AEC /* checkcircle_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkcircle_selected@2x.png"; sourceTree = "<group>"; };
 		B4B3ED001EDFE04000861AEC /* checkcircle_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkcircle_selected@3x.png"; sourceTree = "<group>"; };
 		B4B3ED0D1EDFE1CC00861AEC /* BWHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHomeTableViewController.h; sourceTree = "<group>"; };
 		B4B3ED0E1EDFE1CC00861AEC /* BWHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHomeTableViewController.m; sourceTree = "<group>"; };
 		B4B3ED141EDFE59B00861AEC /* BWAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerViewController.h; sourceTree = "<group>"; };
 		B4B3ED151EDFE59B00861AEC /* BWAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerViewController.m; sourceTree = "<group>"; };
-		B4B3ED171EDFEA7B00861AEC /* BMAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAddressPickerCell.h; sourceTree = "<group>"; };
-		B4B3ED181EDFEA7B00861AEC /* BMAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAddressPickerCell.m; sourceTree = "<group>"; };
-		B4B3ED191EDFEA7B00861AEC /* BMAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMAddressPickerCell.xib; sourceTree = "<group>"; };
 		B4B3ED1C1EDFED1C00861AEC /* address.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = address.db; sourceTree = "<group>"; };
 		B4B3ED221EDFEE6300861AEC /* BWAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressSourceManager.h; sourceTree = "<group>"; };
 		B4B3ED231EDFEE6300861AEC /* BWAddressSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressSourceManager.m; sourceTree = "<group>"; };
-		B4B3ED251EDFFD2200861AEC /* BMAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAddressModel.h; sourceTree = "<group>"; };
-		B4B3ED261EDFFD2200861AEC /* BMAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAddressModel.m; sourceTree = "<group>"; };
+		B4B3ED251EDFFD2200861AEC /* BWAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressModel.h; sourceTree = "<group>"; };
+		B4B3ED261EDFFD2200861AEC /* BWAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,18 +257,26 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B49D9F001EE1014800F6371B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B49D9F041EE1014800F6371B /* BWAddressPickerView.h */,
+				B49D9F051EE1014800F6371B /* BWAddressPickerView.m */,
+				B49D9F011EE1014800F6371B /* BWAddressPickerCell.h */,
+				B49D9F021EE1014800F6371B /* BWAddressPickerCell.m */,
+				B49D9F031EE1014800F6371B /* BWAddressPickerCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B4B3ECF71EDFE04000861AEC /* BMNewAddressPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				B4B3ECFA1EDFE04000861AEC /* BMNewAddressPickerManager.h */,
-				B4B3ECFB1EDFE04000861AEC /* BMNewAddressPickerManager.m */,
-				B4B3ECFC1EDFE04000861AEC /* BMNewAddressPickerView.h */,
-				B4B3ECFD1EDFE04000861AEC /* BMNewAddressPickerView.m */,
-				B4B3ED171EDFEA7B00861AEC /* BMAddressPickerCell.h */,
-				B4B3ED181EDFEA7B00861AEC /* BMAddressPickerCell.m */,
-				B4B3ED191EDFEA7B00861AEC /* BMAddressPickerCell.xib */,
-				B4B3ED251EDFFD2200861AEC /* BMAddressModel.h */,
-				B4B3ED261EDFFD2200861AEC /* BMAddressModel.m */,
+				B4B3ECFA1EDFE04000861AEC /* BWAddressPickerManager.h */,
+				B4B3ECFB1EDFE04000861AEC /* BWAddressPickerManager.m */,
+				B4B3ED251EDFFD2200861AEC /* BWAddressModel.h */,
+				B4B3ED261EDFFD2200861AEC /* BWAddressModel.m */,
+				B49D9F001EE1014800F6371B /* View */,
 				B4B3ED211EDFEE6300861AEC /* AddressSource */,
 				B4B3ECFE1EDFE04000861AEC /* Resource */,
 			);
@@ -445,13 +453,13 @@
 				B4B3ED041EDFE04000861AEC /* checkcircle_selected@2x.png in Resources */,
 				B4B3ED051EDFE04000861AEC /* checkcircle_selected@3x.png in Resources */,
 				B4566BC41EA7105C0092F1B9 /* LaunchScreen.storyboard in Resources */,
+				B49D9F071EE1014800F6371B /* BWAddressPickerCell.xib in Resources */,
 				B4566BFC1EA747FF0092F1B9 /* bm_sides_menu_separated_line@2x.png in Resources */,
 				B4566BFD1EA747FF0092F1B9 /* bm_sides_menu_separated_line@3x.png in Resources */,
 				B40E90E11EB8751000463496 /* icon_arrow_right_gray_light@3x.png in Resources */,
 				B4566BC11EA7105C0092F1B9 /* Assets.xcassets in Resources */,
 				B40E90E01EB8751000463496 /* icon_arrow_right_gray_light@2x.png in Resources */,
 				B4566BBF1EA7105C0092F1B9 /* Main.storyboard in Resources */,
-				B4B3ED1B1EDFEA7B00861AEC /* BMAddressPickerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,17 +533,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4566BB91EA7105C0092F1B9 /* AppDelegate.m in Sources */,
-				B4B3ED271EDFFD2200861AEC /* BMAddressModel.m in Sources */,
+				B4B3ED271EDFFD2200861AEC /* BWAddressModel.m in Sources */,
 				B4B3ED0F1EDFE1CC00861AEC /* BWHomeTableViewController.m in Sources */,
 				B4B3ED161EDFE59B00861AEC /* BWAddressPickerViewController.m in Sources */,
 				B4566BB61EA7105C0092F1B9 /* main.m in Sources */,
 				B4566BF81EA71A990092F1B9 /* BMSidesMenuCell.m in Sources */,
 				B4566BF51EA7144C0092F1B9 /* BMSidesMenuView.m in Sources */,
+				B49D9F081EE1014800F6371B /* BWAddressPickerView.m in Sources */,
 				B4566BEF1EA713C10092F1B9 /* BWResearchViewController.m in Sources */,
-				B4B3ED021EDFE04000861AEC /* BMNewAddressPickerManager.m in Sources */,
+				B4B3ED021EDFE04000861AEC /* BWAddressPickerManager.m in Sources */,
 				B4B3ED241EDFEE6300861AEC /* BWAddressSourceManager.m in Sources */,
-				B4B3ED031EDFE04000861AEC /* BMNewAddressPickerView.m in Sources */,
-				B4B3ED1A1EDFEA7B00861AEC /* BMAddressPickerCell.m in Sources */,
+				B49D9F061EE1014800F6371B /* BWAddressPickerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
