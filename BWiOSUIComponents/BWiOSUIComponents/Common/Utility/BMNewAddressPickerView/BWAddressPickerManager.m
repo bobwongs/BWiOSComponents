@@ -1,9 +1,9 @@
 //
 //  BWAddressPickerManager.m
-//  BMWash
+//  BWiOSUIComponents
 //
 //  Created by BobWong on 2017/5/26.
-//  Copyright © 2017年 月亮小屋（中国）有限公司. All rights reserved.
+//  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
 #import "BWAddressPickerManager.h"
@@ -17,7 +17,7 @@
 @property (strong, nonatomic) BWAddressPickerView *pickerView;
 
 /* Data */
-@property (strong, nonatomic) BWAddressSourceManager *addressSourceManager;  ///< address source manager
+@property (strong, nonatomic) BWAddressSourceManager *addressSourceManager;  ///< Address source manager
 
 @property (strong, nonatomic) NSMutableArray<NSArray *> *addressArray;  ///< 地址数据源
 
@@ -65,7 +65,7 @@
         [strongSelf getRegionDataWithParentModel:model];
     };
     
-    _pickerView.removeAddressArrayObjectBlock = ^(NSRange range) {
+    _pickerView.removeAddressSourceArrayObjectBlock = ^(NSRange range) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf.addressArray removeObjectsInRange:range];
     };

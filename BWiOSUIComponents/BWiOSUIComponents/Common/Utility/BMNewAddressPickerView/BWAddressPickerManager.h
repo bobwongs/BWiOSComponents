@@ -1,19 +1,17 @@
 //
 //  BWAddressPickerManager.h
-//  BMWash
+//  BWiOSUIComponents
 //
 //  Created by BobWong on 2017/5/26.
-//  Copyright © 2017年 月亮小屋（中国）有限公司. All rights reserved.
+//  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 @class BWAddressModel;
 
-typedef void(^BWAddressPickerManagerDidSelectBlock)(NSArray<BWAddressModel *> *);
-
 @interface BWAddressPickerManager : NSObject
 
-@property (copy, nonatomic) BWAddressPickerManagerDidSelectBlock didSelectBlock;
+@property (copy, nonatomic) void(^didSelectBlock)(NSArray<BWAddressModel *> *selectedModelArray);  ///< Finish select callback block.
 
 - (void)show;
 - (void)dismiss;

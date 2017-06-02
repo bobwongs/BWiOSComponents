@@ -1,9 +1,9 @@
 //
 //  BWAddressPickerView.m
-//  BMWash
+//  BWiOSUIComponents
 //
 //  Created by BobWong on 2017/5/26.
-//  Copyright © 2017年 月亮小屋（中国）有限公司. All rights reserved.
+//  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
 #import "BWAddressPickerView.h"
@@ -44,6 +44,9 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 @property (strong, nonatomic) UIScrollView *bottomScrollView;  ///< Bottom scroll view
 
 /* Data */
+@property (strong, nonatomic) NSMutableArray<NSArray<NSString *> *> *addressArrayM;  ///< Address array，成员对象为字符串数组类型
+@property (strong, nonatomic) NSMutableArray<NSNumber *> *selectedIndexArray;  ///< 各级选中序列号的Array
+
 @property (strong, nonatomic) NSMutableArray<NSString *> *selectedTitleMutableArray;  ///< Selected array
 @property (strong, nonatomic) NSMutableArray *tableViewMutableArray;  ///< Table view array
 
@@ -164,7 +167,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
         [_selectedIndexArray removeObjectsInRange:removedRange];
         [_selectedTitleMutableArray removeObjectsInRange:removedRange];
         [_addressArrayM removeObjectsInRange:addressArrayRemovedRange];
-        if (_removeAddressArrayObjectBlock) _removeAddressArrayObjectBlock(addressArrayRemovedRange);
+        if (_removeAddressSourceArrayObjectBlock) _removeAddressSourceArrayObjectBlock(addressArrayRemovedRange);
         
         // 重设Title
         [self refreshUIWithCurrentSelectedIndex];
