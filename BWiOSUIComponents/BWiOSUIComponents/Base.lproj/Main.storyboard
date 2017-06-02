@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Table View Controller-->
+        <!--iOS UI Components-->
         <scene sceneID="Tsd-pi-E9U">
             <objects>
                 <tableViewController id="tRn-ax-uhg" customClass="BWHomeTableViewController" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="tRn-ax-uhg" id="0yD-B1-SBm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="u2P-XI-vV6"/>
+                    <navigationItem key="navigationItem" title="iOS UI Components" id="u2P-XI-vV6"/>
                     <connections>
                         <segue destination="h4s-qK-bO9" kind="show" identifier="home_to_address_picker" id="pMx-q5-voV"/>
                     </connections>

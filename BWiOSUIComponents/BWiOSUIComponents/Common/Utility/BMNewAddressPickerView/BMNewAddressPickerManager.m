@@ -97,13 +97,13 @@
     };
 }
 
-- (void)getRegionDataWithParentModel:(BMAddressModel *)model {
+- (void)getRegionDataWithParentModel:(BMAddressModel *)parentModel {
     NSArray *typeArray = @[BMAddressTypeProvince, BMAddressTypeCity, BMAddressTypeCounty];
     NSInteger typeIndex = _addressArray.count;
     if (typeIndex > typeArray.count - 1) return;
     
     // 用数据去刷新pickerView
-    NSInteger parentCode = model ? model.parentCode : 0;
+    NSInteger parentCode = parentModel ? parentModel.code : 0;
     NSArray<BMAddressModel *> *array = [self.addressSourceManager addressSourceArrayWithParentCode:parentCode addressType:typeArray[typeIndex]];
     [self.addressArray addObject:array];
     

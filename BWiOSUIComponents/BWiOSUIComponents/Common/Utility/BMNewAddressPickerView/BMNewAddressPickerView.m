@@ -333,7 +333,7 @@ NSInteger const BMNewAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag
     tableView.delegate = self;
     tableView.rowHeight = 40;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [tableView registerClass:[BMAddressPickerCell class] forCellReuseIdentifier:BMAddressPickerCellId];
+    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BMAddressPickerCell class]) bundle:nil] forCellReuseIdentifier:BMAddressPickerCellId];
     [_bottomScrollView addSubview:tableView];
     
     _bottomScrollView.contentSize = CGSizeMake(CGRectGetMaxX(tableView.frame), _bottomScrollView.contentSize.height);
