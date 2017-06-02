@@ -109,6 +109,4 @@
     }
 }
 
-#pragma mark - Setter and Getter
-
 @end

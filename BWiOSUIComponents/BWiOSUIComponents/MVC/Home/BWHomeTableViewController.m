@@ -24,7 +24,7 @@ NSString *const BWCellId = @"BWCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *addressPickerDict = @{BWKeyTitle: @"AddressPicker",
+    NSDictionary *addressPickerDict = @{BWKeyTitle: @"BWAddressPicker",
                                         BWKeySegueId: @"home_to_address_picker"};
     _dataSource = @[addressPickerDict];
     
