@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        
+    self.button.layer.cornerRadius = 10.0;
 }
 
 - (void)dealloc {

@@ -50,7 +50,11 @@ NSString *const BWCellId = @"BWCellId";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:_dataSource[indexPath.row][BWKeySegueId] sender:nil];
+    [self performSegueWithIdentifier:_dataSource[indexPath.row][BWKeySegueId] sender:@(indexPath.row)];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    segue.destinationViewController.title = _dataSource[[sender integerValue]][BWKeyTitle];
 }
 
 @end

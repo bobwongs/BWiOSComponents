@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--iOS UI Components-->
+        <!--Components-->
         <scene sceneID="Tsd-pi-E9U">
             <objects>
                 <tableViewController id="tRn-ax-uhg" customClass="BWHomeTableViewController" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="tRn-ax-uhg" id="0yD-B1-SBm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="iOS UI Components" id="u2P-XI-vV6"/>
+                    <navigationItem key="navigationItem" title="Components" id="u2P-XI-vV6"/>
                     <connections>
                         <segue destination="h4s-qK-bO9" kind="show" identifier="home_to_address_picker" id="pMx-q5-voV"/>
                     </connections>
@@ -45,12 +45,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqN-A0-djO">
                                 <rect key="frame" x="20" y="244" width="335" height="50"/>
-                                <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.58823529411764708" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="k3s-La-NAZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Pick Address"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Pick Address">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pickAddressAction:" destination="h4s-qK-bO9" eventType="touchUpInside" id="aEB-vm-Gxn"/>
                                 </connections>
@@ -69,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYo-4W-VSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="117"/>
+            <point key="canvasLocation" x="892" y="51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HrE-7u-XF8">

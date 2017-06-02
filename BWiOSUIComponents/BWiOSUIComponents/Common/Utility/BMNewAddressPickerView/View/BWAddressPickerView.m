@@ -241,7 +241,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     
     CGFloat height_block_view = 2;
     self.hightlightedBlockView = [[UIView alloc] initWithFrame:CGRectMake(0, BWAddressPickerTopViewHeight - height_block_view, 0, height_block_view)];
-    self.hightlightedBlockView.backgroundColor = [UIColor blueColor];
+    self.hightlightedBlockView.backgroundColor = BW_ADDRESS_PICKER_UIColorFromRGB(0x1296db);
     
     self.bottomScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.leftScrollView.frame), CGRectGetWidth(self.selectionView.frame), BWAddressPickerBottomViewHeight)];
     self.bottomScrollView.delegate = self;
