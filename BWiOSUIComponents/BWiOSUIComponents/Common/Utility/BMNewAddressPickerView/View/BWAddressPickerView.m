@@ -74,7 +74,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 }
 
 - (void)dismiss {
-    [self showSelectionView:YES completion:^(BOOL finished) {
+    [self showSelectionView:NO completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
 }
