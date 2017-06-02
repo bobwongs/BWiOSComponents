@@ -12,13 +12,14 @@
 #import "BMAddressModel.h"
 
 @interface BMNewAddressPickerManager ()
+
 /* UI */
 @property (strong, nonatomic) BMNewAddressPickerView *pickerView;
 
 /* Data */
 @property (strong, nonatomic) BWAddressSourceManager *addressSourceManager;  ///< address source manager
 
-@property (strong, nonatomic) NSMutableArray *addressArray;  ///< 地址数据源
+@property (strong, nonatomic) NSMutableArray<NSArray *> *addressArray;  ///< 地址数据源
 
 @end
 
@@ -48,32 +49,6 @@
     [_pickerView dismiss];
 }
 
-#pragma mark - Custom Delegate
-
-/*
-- (void)managerCallApiDidSuccess:(BMBaseAPIManager *)manager
-{
-    [BMShowHUD dismiss:self.pickerView];
-    NSDictionary *responseData = [manager fetchDataWithReformer:nil];
-    
-    // 用数据去刷新pickerView
-    NSArray<BMAddressModel *> *array = [BMAddressModel mj_objectArrayWithKeyValuesArray:responseData[@"lists"]];
-    [self.addressArray addObject:array];
-    
-    NSMutableArray *nameArray = [NSMutableArray new];
-    [array enumerateObjectsUsingBlock:^(BMAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
-        [nameArray addObject:model.dname];
-    }];
-    
-    [_pickerView addNextAddressDataWithNewAddressArray:nameArray];
-    
-    // 第一次显示
-    if (_addressArray.count == 1) {
-        [_pickerView show];
-    }
-}
- */
-
 #pragma mark - Private Method
 
 - (void)setData {
@@ -81,6 +56,7 @@
     self.addressSourceManager = [BWAddressSourceManager new];
     
     _pickerView = [BMNewAddressPickerView new];
+    
     __weak typeof(self) weakSelf = self;
     _pickerView.getDataBlock = ^(NSUInteger selectedSection, NSUInteger selectedRow) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -88,12 +64,25 @@
         BMAddressModel *model = strongSelf.addressArray[selectedSection][selectedRow];
         [strongSelf getRegionDataWithParentModel:model];
     };
-    _pickerView.didSelectBlock = ^(NSMutableArray *selectedIndexArray) {
-        NSLog(@"selected index array is %@", selectedIndexArray);
-    };
+    
     _pickerView.removeAddressArrayObjectBlock = ^(NSRange range) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf.addressArray removeObjectsInRange:range];
+    };
+    
+    _pickerView.didSelectBlock = ^(NSMutableArray *selectedIndexArray) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        NSLog(@"selected index array is %@", selectedIndexArray);
+        
+        // 选中的BMAddressModel添加进数组
+        NSMutableArray *arrayM = [NSMutableArray new];
+        [strongSelf.addressArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull selectedAddressSourceArray, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSInteger selectedIndex = [selectedIndexArray[idx] integerValue];
+            [arrayM addObject:selectedAddressSourceArray[selectedIndex]];
+        }];
+        
+        if (strongSelf.didSelectBlock) strongSelf.didSelectBlock(arrayM);
+        [strongSelf dismiss];
     };
 }
 

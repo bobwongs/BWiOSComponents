@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class BMAddressModel;
+
+typedef void(^BMAddressPickerManagerDidSelectBlock)(NSArray<BMAddressModel *> *);
 
 @interface BMNewAddressPickerManager : NSObject
+
+@property (copy, nonatomic) BMAddressPickerManagerDidSelectBlock didSelectBlock;
 
 - (void)show;
 - (void)dismiss;
