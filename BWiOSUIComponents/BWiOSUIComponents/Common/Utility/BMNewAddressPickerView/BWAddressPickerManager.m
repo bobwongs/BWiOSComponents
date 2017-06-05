@@ -64,7 +64,6 @@
     
     // ---------- 添加省以下的 ----------
     [addressArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull addressModel, NSUInteger idx, BOOL * _Nonnull stop) {
-        [selectedNumberArray addObject:@(addressModel.code)];
         
         if (idx == addressArray.count - 1) return;  // 最后一个不用添加其下一级区域数据
         
@@ -77,6 +76,14 @@
     }];
     
     self.addressArray = selectedAddressArray;
+    
+    [selectedAddressArray enumerateObjectsUsingBlock:^(NSArray<BWAddressModel *> * _Nonnull modelArray, NSUInteger arrayIdx, BOOL * _Nonnull arrayStop) {
+        [modelArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger modelIdx, BOOL * _Nonnull modelStop) {
+            if (model.code == addressArray[arrayIdx].code) {
+                [selectedNumberArray addObject:@(modelIdx)];
+            }
+        }];
+    }];
     
     [_pickerView setAddressWithAddressArray:namesArray selectedIndexArray:selectedNumberArray];
 }
