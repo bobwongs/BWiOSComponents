@@ -269,6 +269,11 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     
     __block CGFloat x_last = 0;
     [self.selectedTitleMutableArray enumerateObjectsUsingBlock:^(NSString * _Nonnull string, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (idx > BWAddressPickerSelectableCount - 1) {
+            // 限制可选择的层级数
+            *stop = YES;
+            return;
+        }
         
         UIFont *font = [UIFont systemFontOfSize:12.0];
         CGFloat width_text = [[self class] widthForString:string font:font] + BWAddressPickerVerticalInset * 2;
