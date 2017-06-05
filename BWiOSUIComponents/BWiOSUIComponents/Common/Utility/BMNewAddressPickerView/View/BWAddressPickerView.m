@@ -89,7 +89,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     
     [self.addressArrayM removeAllObjects];
     [self.selectedIndexArray removeAllObjects];
-    [self.selectedTitleMutableArray removeAllObjects];
+    [self initSelectedTitleMutableArray];
     // 使用此方式遍历增加，以addressArray的数量为标准，防止addressArray和selectedIndexArray成员对象不统一致使数据不和逻辑
     [addressArray enumerateObjectsUsingBlock:^(NSArray<NSString *> * _Nonnull titleArray, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.addressArrayM addObject:titleArray];
@@ -107,7 +107,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 // 添加选中的地址和下一级地址数组
 - (void)addNextAddressDataWithNewAddressArray:(NSArray *)newAddressArray {
     if (_selectedTitleMutableArray.count == 0) {
-        [_selectedTitleMutableArray addObject:BWAddressPickerTextToSelect];
+        [self initSelectedTitleMutableArray];
     }
     
     [_addressArrayM addObject:newAddressArray];
@@ -393,6 +393,11 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
         // 重设Title
         [self refreshUIWithCurrentSelectedIndex];
     }
+}
+
+- (void)initSelectedTitleMutableArray {
+    [_selectedTitleMutableArray removeAllObjects];
+    [_selectedTitleMutableArray addObject:BWAddressPickerTextToSelect];
 }
 
 #pragma mark - Getter and Setter
