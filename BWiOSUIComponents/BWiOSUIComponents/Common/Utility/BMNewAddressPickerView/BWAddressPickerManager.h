@@ -16,4 +16,7 @@
 - (void)show;
 - (void)dismiss;
 
+/** 设置选中地址 */
+- (void)setAddressWithSelectedAddressArray:(NSArray<BWAddressModel *> *)addressArray;
+
 @end

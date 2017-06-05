@@ -11,6 +11,8 @@
 #import "BWAddressSourceManager.h"
 #import "BWAddressModel.h"
 
+#define BW_ADDRESS_TYPE_ARRAY @[BWAddressTypeProvince, BWAddressTypeCity, BWAddressTypeCounty]  // 类型数组
+
 @interface BWAddressPickerManager ()
 
 /* UI */
@@ -19,7 +21,7 @@
 /* Data */
 @property (strong, nonatomic) BWAddressSourceManager *addressSourceManager;  ///< Address source manager
 
-@property (strong, nonatomic) NSMutableArray<NSArray *> *addressArray;  ///< 地址数据源
+@property (strong, nonatomic) NSMutableArray<NSArray<BWAddressModel *> *> *addressArray;  ///< 地址数据源
 
 @end
 
@@ -47,6 +49,36 @@
 
 - (void)dismiss {
     [_pickerView dismiss];
+}
+
+- (void)setAddressWithSelectedAddressArray:(NSArray<BWAddressModel *> *)addressArray {
+    NSMutableArray<NSArray<BWAddressModel *> *> *selectedAddressArray = [NSMutableArray new];
+    NSMutableArray<NSArray<NSString *> *> *namesArray = [NSMutableArray new];
+    NSMutableArray<NSNumber *> *selectedNumberArray = [NSMutableArray new];
+    NSArray *typeArray = BW_ADDRESS_TYPE_ARRAY;
+    
+    // ---------- 先添加一定有的省数据 ----------
+    NSArray *provinceModelArray = [self.addressSourceManager addressSourceArrayWithParentCode:0 addressType:BWAddressTypeProvince];
+    [selectedAddressArray addObject:provinceModelArray];
+    [namesArray addObject:[[self class] getNameArrayWithModelArray:provinceModelArray]];
+    
+    // ---------- 添加省以下的 ----------
+    [addressArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull addressModel, NSUInteger idx, BOOL * _Nonnull stop) {
+        [selectedNumberArray addObject:@(addressModel.code)];
+        
+        if (idx == addressArray.count - 1) return;  // 最后一个不用添加其下一级区域数据
+        
+        // 添加数据
+        NSArray<BWAddressModel *> *array = [self.addressSourceManager addressSourceArrayWithParentCode:addressModel.code addressType:typeArray[idx + 1]];
+        [selectedAddressArray addObject:array];
+        
+        // 获取给View显示用的数据
+        [namesArray addObject:[[self class] getNameArrayWithModelArray:array]];
+    }];
+    
+    self.addressArray = selectedAddressArray;
+    
+    [_pickerView setAddressWithAddressArray:namesArray selectedIndexArray:selectedNumberArray];
 }
 
 #pragma mark - Private Method
@@ -87,7 +119,7 @@
 }
 
 - (void)getRegionDataWithParentModel:(BWAddressModel *)parentModel {
-    NSArray *typeArray = @[BWAddressTypeProvince, BWAddressTypeCity, BWAddressTypeCounty];
+    NSArray *typeArray = BW_ADDRESS_TYPE_ARRAY;
     NSInteger typeIndex = _addressArray.count;
     if (typeIndex > typeArray.count - 1) return;
     
@@ -107,6 +139,14 @@
     if (_addressArray.count == 1) {
         [_pickerView show];
     }
+}
+
++ (NSArray<NSString *> *)getNameArrayWithModelArray:(NSArray<BWAddressModel *> *)modelArray {
+    NSMutableArray<NSString *> *nameArray = [NSMutableArray new];
+    [modelArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+        [nameArray addObject:model.name];
+    }];
+    return nameArray;
 }
 
 @end

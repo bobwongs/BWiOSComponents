@@ -17,9 +17,10 @@
 - (void)show;
 - (void)dismiss;
 
-/**
- *  Add next level showed address array to select.
- */
+/** Add next level showed address array to select. */
 - (void)addNextAddressDataWithNewAddressArray:(NSArray *)newAddressArray;
+
+/** 设置选中地址 */
+- (void)setAddressWithAddressArray:(NSArray<NSArray<NSString *> *> *)addressArray selectedIndexArray:(NSArray<NSNumber *> *)selectedIndexArray;
 
 @end

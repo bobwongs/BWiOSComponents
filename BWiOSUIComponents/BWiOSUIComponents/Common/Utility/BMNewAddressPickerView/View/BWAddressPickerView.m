@@ -82,6 +82,28 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     }];
 }
 
+- (void)setAddressWithAddressArray:(NSArray<NSArray<NSString *> *> *)addressArray selectedIndexArray:(NSArray<NSNumber *> *)selectedIndexArray {
+    if (!addressArray || addressArray.count == 0 || !selectedIndexArray || selectedIndexArray.count == 0 || addressArray.count < selectedIndexArray.count) return;  // 传入数组不能为空，选中的数组成员对象数量不能大于addressArray的成员数量
+    
+    [self.bottomScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    [self.addressArrayM removeAllObjects];
+    [self.selectedIndexArray removeAllObjects];
+    [self.selectedTitleMutableArray removeAllObjects];
+    // 使用此方式遍历增加，以addressArray的数量为标准，防止addressArray和selectedIndexArray成员对象不统一致使数据不和逻辑
+    [addressArray enumerateObjectsUsingBlock:^(NSArray<NSString *> * _Nonnull titleArray, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.addressArrayM addObject:titleArray];
+        
+        NSNumber *selectedIndexNumber = selectedIndexArray[idx];
+        [self.selectedIndexArray addObject:selectedIndexNumber];
+        [self.selectedTitleMutableArray addObject:titleArray[[selectedIndexNumber integerValue]]];
+        [self addNextTableView];
+    }];
+    
+    self.currentAddressIndex = self.addressArrayM.count - 1;
+    [self refreshUIWithCurrentSelectedIndex];
+}
+
 // 添加选中的地址和下一级地址数组
 - (void)addNextAddressDataWithNewAddressArray:(NSArray *)newAddressArray {
     if (_selectedTitleMutableArray.count == 0) {
@@ -138,40 +160,7 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     NSInteger row = indexPath.row;
     NSInteger tableViewIndex = tableView.tag - BWAddressPickerFirstTableViewTag;
     
-    // ---------- 最后一级的选择 && 选择序列已经选满，先做移除操作 ----------
-    if (tableViewIndex == BWAddressPickerSelectableCount - 1 && _selectedIndexArray.count == BWAddressPickerSelectableCount) {
-        [_selectedIndexArray removeLastObject];  // 移除最后一个序列
-        [_selectedTitleMutableArray removeObjectAtIndex:_selectedTitleMutableArray.count - 2];  // 移除倒数第二个Title
-    }
-    // ---------- 若选择为已选中，则跳转到下一页（按这种逻辑设计，下一页肯定是有数据的，如果为最后一页，则已经在上一个流程处理过了）；这里保险起见，再判断一次下一页的数据 ----------
-    else if (tableViewIndex < _selectedIndexArray.count && row == _selectedIndexArray[tableViewIndex].integerValue && _addressArrayM.count > tableViewIndex + 1) {
-        [self makeBarScrollToIndex:tableViewIndex + 1];
-        [self makeTableViewScrollToIndex:tableViewIndex + 1];
-        return;  // 下一页已有数据，直接做界面跳转操作即可
-    }
-    // ---------- 若为重新选择，而且选择不为已选中，则移除当前选择序列之后的所有原来已选择的，增加新的 ----------
-    else if (tableViewIndex < _selectedIndexArray.count) {
-        NSRange removedRange = NSMakeRange(tableViewIndex, _selectedIndexArray.count - tableViewIndex);
-        NSRange addressArrayRemovedRange = NSMakeRange(tableViewIndex + 1, _addressArrayM.count - tableViewIndex - 1);  // 地址数据源的移除序列为从下一个开始，addressArrayM的成员对象个数来计数
-        
-        // 移除和重设bottomScrollView
-        [_bottomScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull subview, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (NSLocationInRange(subview.tag - BWAddressPickerFirstTableViewTag, addressArrayRemovedRange)) {
-                [subview removeFromSuperview];
-            }
-        }];
-        [_bottomScrollView setContentOffset:CGPointMake(tableViewIndex * CGRectGetWidth(_bottomScrollView.frame), 0) animated:YES];
-        _bottomScrollView.contentSize = CGSizeMake((tableViewIndex + 1) * CGRectGetWidth(_bottomScrollView.frame), _bottomScrollView.contentSize.height);
-        
-        // 移除Data
-        [_selectedIndexArray removeObjectsInRange:removedRange];
-        [_selectedTitleMutableArray removeObjectsInRange:removedRange];
-        [_addressArrayM removeObjectsInRange:addressArrayRemovedRange];
-        if (_removeAddressSourceArrayObjectBlock) _removeAddressSourceArrayObjectBlock(addressArrayRemovedRange);
-        
-        // 重设Title
-        [self refreshUIWithCurrentSelectedIndex];
-    }
+    [self reselectAddressWithTableViewIndex:tableViewIndex selectedRow:row];  // 若为重选，则先进行移除
     
     [_selectedIndexArray addObject:@(row)];
     [self reloadTableViewWithIndex:tableViewIndex];
@@ -366,6 +355,44 @@ NSInteger const BWAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     if (newCurrentIndex == _currentAddressIndex) return;
     self.currentAddressIndex = newCurrentIndex;
     [self makeBarScrollToIndex:newCurrentIndex];
+}
+
+/** 重新选择已选的，先对之前的选择的数据做移除操作 */
+- (void)reselectAddressWithTableViewIndex:(NSInteger)tableViewIndex selectedRow:(NSInteger)selectedRow {
+    // ---------- 最后一级的选择 && 选择序列已经选满，先做移除操作 ----------
+    if (tableViewIndex == BWAddressPickerSelectableCount - 1 && _selectedIndexArray.count == BWAddressPickerSelectableCount) {
+        [_selectedIndexArray removeLastObject];  // 移除最后一个序列
+        [_selectedTitleMutableArray removeObjectAtIndex:_selectedTitleMutableArray.count - 2];  // 移除倒数第二个Title
+    }
+    // ---------- 若选择为已选中，则跳转到下一页（按这种逻辑设计，下一页肯定是有数据的，如果为最后一页，则已经在上一个流程处理过了）；这里保险起见，再判断一次下一页的数据 ----------
+    else if (tableViewIndex < _selectedIndexArray.count && selectedRow == _selectedIndexArray[tableViewIndex].integerValue && _addressArrayM.count > tableViewIndex + 1) {
+        [self makeBarScrollToIndex:tableViewIndex + 1];
+        [self makeTableViewScrollToIndex:tableViewIndex + 1];
+        return;  // 下一页已有数据，直接做界面跳转操作即可
+    }
+    // ---------- 若为重新选择，而且选择不为已选中，则移除当前选择序列之后的所有原来已选择的，增加新的 ----------
+    else if (tableViewIndex < _selectedIndexArray.count) {
+        NSRange removedRange = NSMakeRange(tableViewIndex, _selectedIndexArray.count - tableViewIndex);
+        NSRange addressArrayRemovedRange = NSMakeRange(tableViewIndex + 1, _addressArrayM.count - tableViewIndex - 1);  // 地址数据源的移除序列为从下一个开始，addressArrayM的成员对象个数来计数
+        
+        // 移除和重设bottomScrollView
+        [_bottomScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull subview, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (NSLocationInRange(subview.tag - BWAddressPickerFirstTableViewTag, addressArrayRemovedRange)) {
+                [subview removeFromSuperview];
+            }
+        }];
+        [_bottomScrollView setContentOffset:CGPointMake(tableViewIndex * CGRectGetWidth(_bottomScrollView.frame), 0) animated:YES];
+        _bottomScrollView.contentSize = CGSizeMake((tableViewIndex + 1) * CGRectGetWidth(_bottomScrollView.frame), _bottomScrollView.contentSize.height);
+        
+        // 移除Data
+        [_selectedIndexArray removeObjectsInRange:removedRange];
+        [_selectedTitleMutableArray removeObjectsInRange:removedRange];
+        [_addressArrayM removeObjectsInRange:addressArrayRemovedRange];
+        if (_removeAddressSourceArrayObjectBlock) _removeAddressSourceArrayObjectBlock(addressArrayRemovedRange);
+        
+        // 重设Title
+        [self refreshUIWithCurrentSelectedIndex];
+    }
 }
 
 #pragma mark - Getter and Setter
