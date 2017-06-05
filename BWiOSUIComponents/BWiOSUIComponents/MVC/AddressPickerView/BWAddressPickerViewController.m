@@ -26,9 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    
     self.button.layer.cornerRadius = 10.0;
     self.secondButton.layer.cornerRadius = 10.0;
+    
+    [self initSelectedAddressPickerManager];
 }
 
 - (void)dealloc {
@@ -66,40 +68,40 @@
     return _addressPickerManager;
 }
 
-- (BWAddressPickerManager *)selectedAddressPickerManager {
-    if (!_selectedAddressPickerManager) {
-        _selectedAddressPickerManager = [BWAddressPickerManager new];
+- (void)initSelectedAddressPickerManager {
+    self.selectedAddressPickerManager = [BWAddressPickerManager new];
+    
+    __weak typeof(self) weakSelf = self;
+    _selectedAddressPickerManager.didSelectBlock = ^(NSArray<BWAddressModel *> *selectedArray) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         
-        __weak typeof(self) weakSelf = self;
-        _selectedAddressPickerManager.didSelectBlock = ^(NSArray<BWAddressModel *> *selectedArray) {
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            
-            NSMutableString *addressStr = [NSMutableString new];
-            [selectedArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
-                [addressStr appendString:model.name];
-            }];
-            
-            [strongSelf.secondButton setTitle:addressStr forState:UIControlStateNormal];
-        };
+        NSMutableString *addressStr = [NSMutableString new];
+        [selectedArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+            [addressStr appendString:model.name];
+        }];
         
-        BWAddressModel *provinceModel = [BWAddressModel new];
-        provinceModel.code = 44;
-        provinceModel.type = @"province";
-        provinceModel.name = @"广东";
-        
-        BWAddressModel *cityModel = [BWAddressModel new];
-        cityModel.code = 4401;
-        cityModel.type = @"city";
-        cityModel.name = @"广州";
-        
-        BWAddressModel *countyModel = [BWAddressModel new];
-        countyModel.code = 440106;
-        countyModel.type = @"county";
-        countyModel.name = @"天河区";
-        
-        [_selectedAddressPickerManager setAddressWithSelectedAddressArray:@[provinceModel, cityModel, countyModel]];
-    }
-    return _selectedAddressPickerManager;
+        [strongSelf.secondButton setTitle:addressStr forState:UIControlStateNormal];
+    };
+    
+    BWAddressModel *provinceModel = [BWAddressModel new];
+    provinceModel.code = 44;
+    provinceModel.type = @"province";
+    provinceModel.name = @"广东";
+    
+    BWAddressModel *cityModel = [BWAddressModel new];
+    cityModel.code = 4401;
+    cityModel.type = @"city";
+    cityModel.name = @"广州";
+    
+    BWAddressModel *countyModel = [BWAddressModel new];
+    countyModel.code = 440106;
+    countyModel.type = @"county";
+    countyModel.name = @"天河区";
+    
+    [_selectedAddressPickerManager setAddressWithSelectedAddressArray:@[provinceModel, cityModel, countyModel]];
+    
+    NSString *secondTitle = [NSString stringWithFormat:@"%@%@%@", provinceModel.name, cityModel.name, countyModel.name];
+    [_secondButton setTitle:secondTitle forState:UIControlStateNormal];
 }
 
 @end
