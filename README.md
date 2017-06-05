@@ -46,7 +46,7 @@ Github: https://github.com/bobwongs/BWiOSUIComponents
 
 ### 效果
 
-![demo_address_selection](README/demo_address_selection.gif)
+![demo_address_selection](http://om6ybddkq.bkt.clouddn.com/demo_address_selection.gif)
 
 ### 设计
 
