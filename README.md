@@ -8,6 +8,7 @@ Github: https://github.com/bobwongs/BWiOSUIComponents
 - 概述
 - UI组件的开发经验
 - 仿京东地址选择器
+- Reference
 
 ## 概述
 
@@ -178,3 +179,14 @@ BWAddressSourceManager 负责从数据库获取数据源，本项目用本地获
 #### 优化方向
 
 提升UI设计和用户体验效果，例如：使用伪3D做Title的显示效果
+
+## Reference
+
+Blog: http://www.bobwongs.com
+
+Github: https://github.com/bobwongs
+
+简书: http://www.jianshu.com/u/9d21ec83358a
+
+新浪微博: http://weibo.com/bobwongs
+
