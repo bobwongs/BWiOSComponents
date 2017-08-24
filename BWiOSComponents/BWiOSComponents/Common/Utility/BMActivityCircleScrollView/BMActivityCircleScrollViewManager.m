@@ -28,6 +28,12 @@
     // Finish downloading, set images to circleScrollView, implement block to target page.
     
     // Show
+    UIImage *image0 = [UIImage imageNamed:@"img_circle0"];
+    UIImage *image1 = [UIImage imageNamed:@"img_circle1"];
+    UIImage *image2 = [UIImage imageNamed:@"img_circle2"];
+    [self.circleScrollView setViewWithImages:@[image0, image1, image2] selection:^(NSInteger index) {
+        NSLog(@"index: %ld", (long)index);
+    }];
 }
 
 - (BMActivityCircleScrollView *)circleScrollView {

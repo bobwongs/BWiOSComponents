@@ -39,6 +39,9 @@
 		B4C5D8591F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */; };
 		B4C5D85D1F4E89B900387B50 /* icon_delete_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */; };
 		B4C5D85E1F4E89B900387B50 /* icon_delete_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */; };
+		B4C5D8621F4EC17000387B50 /* img_circle0.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85F1F4EC17000387B50 /* img_circle0.png */; };
+		B4C5D8631F4EC17000387B50 /* img_circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8601F4EC17000387B50 /* img_circle2.png */; };
+		B4C5D8641F4EC17000387B50 /* img_circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8611F4EC17000387B50 /* img_circle1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollViewManager.m; sourceTree = "<group>"; };
 		B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@2x.png"; sourceTree = "<group>"; };
 		B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@3x.png"; sourceTree = "<group>"; };
+		B4C5D85F1F4EC17000387B50 /* img_circle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle0.png; sourceTree = "<group>"; };
+		B4C5D8601F4EC17000387B50 /* img_circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle2.png; sourceTree = "<group>"; };
+		B4C5D8611F4EC17000387B50 /* img_circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle1.png; sourceTree = "<group>"; };
 		BDF69820B5631A9D91B5E2B1 /* Pods-BWiOSComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.release.xcconfig"; sourceTree = "<group>"; };
 		F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -353,6 +359,9 @@
 			children = (
 				B4C1DA8A1F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png */,
 				B4C1DA8B1F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png */,
+				B4C5D85F1F4EC17000387B50 /* img_circle0.png */,
+				B4C5D8601F4EC17000387B50 /* img_circle2.png */,
+				B4C5D8611F4EC17000387B50 /* img_circle1.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -502,11 +511,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C1DA9D1F4D37DC0039838C /* BWAddressPickerCell.xib in Resources */,
+				B4C5D8641F4EC17000387B50 /* img_circle1.png in Resources */,
 				B4C1DAA11F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png in Resources */,
 				B4C1DAA71F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png in Resources */,
 				B4C1DAA61F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png in Resources */,
 				B4C5D85D1F4E89B900387B50 /* icon_delete_white@2x.png in Resources */,
+				B4C5D8631F4EC17000387B50 /* img_circle2.png in Resources */,
 				B4C1DAA21F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png in Resources */,
+				B4C5D8621F4EC17000387B50 /* img_circle0.png in Resources */,
 				B4C1DA9B1F4D37DC0039838C /* icon_checked@3x.png in Resources */,
 				B4C1DA991F4D37DC0039838C /* address.db in Resources */,
 				B4C1DA9A1F4D37DC0039838C /* icon_checked@2x.png in Resources */,

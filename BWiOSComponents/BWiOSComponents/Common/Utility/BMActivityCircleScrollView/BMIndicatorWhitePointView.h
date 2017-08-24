@@ -10,4 +10,11 @@
 
 @interface BMIndicatorWhitePointView : UIView
 
+@property (assign, nonatomic) NSInteger selectedIndex;
+
+- (instancetype)initWithFrame:(CGRect)frame pointWidth:(CGFloat)pointWidth maxWidth:(CGFloat)maxWidth centerX:(CGFloat)centerX;
+
+- (void)setViewWithPointCount:(NSInteger)count;
+- (void)setViewWithPointCount:(NSInteger)count selectedIndex:(NSInteger)index;
+
 @end

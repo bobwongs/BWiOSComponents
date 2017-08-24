@@ -7,9 +7,11 @@
 //
 
 #import "BWCirculationRollingVC.h"
+#import "BMActivityCircleScrollViewManager.h"
 
 @interface BWCirculationRollingVC ()
 
+@property (strong, nonatomic) BMActivityCircleScrollViewManager *manager;
 
 @end
 
@@ -21,6 +23,14 @@
 }
 
 - (IBAction)showView:(id)sender {
+    [self.manager showViewWithArray:@[]];
+}
+
+- (BMActivityCircleScrollViewManager *)manager {
+    if (!_manager) {
+        _manager = [BMActivityCircleScrollViewManager new];
+    }
+    return _manager;
 }
 
 @end
