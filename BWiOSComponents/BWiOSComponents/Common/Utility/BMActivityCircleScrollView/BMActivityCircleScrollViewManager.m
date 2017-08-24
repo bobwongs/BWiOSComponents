@@ -9,6 +9,7 @@
 #import "BMActivityCircleScrollViewManager.h"
 #import "BMActivityCircleScrollView.h"
 #import <SDWebImageDownloader.h>
+#import <SDImageCache.h>
 
 @interface BMActivityCircleScrollViewManager ()
 
@@ -39,10 +40,27 @@
     
     NSArray<NSURL *> *urlArray = @[url0, url1, url2];
     NSMutableArray *imagesArrayM = [urlArray mutableCopy];
-//    __block 
-    [urlArray enumerateObjectsUsingBlock:^(NSURL * _Nonnull url, NSUInteger idx, BOOL * _Nonnull stop) {
-        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+    
+    [imagesArrayM enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (![obj isKindOfClass:[NSURL class]]) return;
+        NSURL *url = (NSURL *)obj;
+        UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:url.absoluteString];
+        if (image) {
             imagesArrayM[idx] = image;
+        }
+    }];
+    
+    
+    
+//    __block 
+    [imagesArrayM enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (![obj isKindOfClass:[NSURL class]]) return;
+        
+        NSURL *url = (NSURL *)obj;
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            imagesArrayM[idx] = image;
+            
+            [[SDImageCache sharedImageCache] storeImage:image forKey:url.absoluteString completion:nil];  // Cache
             
             BOOL hasDownloaded = YES;
             for (id object in imagesArrayM) {
