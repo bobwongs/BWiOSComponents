@@ -67,6 +67,7 @@ CGFloat const BMActivityCircleScrollViewDefaultAnimationDuration = .25;
 
 - (void)setViewWithImages:(NSArray<UIImage *> *)imageArray selection:(void (^)(NSInteger))selectionBlock {
     [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    self.selectionBlock = selectionBlock;
     
     CGFloat width = 240, height = CGRectGetHeight(self.scrollView.frame);
     CGFloat space = (BM_ACTIVITY_CIRCLE_VIEW_SCREEN_WIDTH - width) / 2;
@@ -120,10 +121,10 @@ CGFloat const BMActivityCircleScrollViewDefaultAnimationDuration = .25;
     [self addSubview:_indicatorView];
     
     _dismissBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _dismissBtn.frame = CGRectMake(0, CGRectGetMaxY(_scrollView.frame), 26.0, 26.0);
+    _dismissBtn.frame = CGRectMake(0, CGRectGetMaxY(_scrollView.frame) + 10, 26.0, 26.0);
     _dismissBtn.center = CGPointMake(CGRectGetMidX(_scrollView.frame), CGRectGetMidY(_dismissBtn.frame));
     [_dismissBtn setImage:[UIImage imageNamed:@"icon_delete_white"] forState:UIControlStateNormal];
-    [_dismissBtn addTarget:self action:@selector(dismissBtn) forControlEvents:UIControlEventTouchUpInside];
+    [_dismissBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_dismissBtn];
 }
 

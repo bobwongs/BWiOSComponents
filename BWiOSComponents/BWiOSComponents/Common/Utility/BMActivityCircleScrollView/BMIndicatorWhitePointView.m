@@ -52,6 +52,8 @@ alpha:1.0]
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(max_x, 0, pointWidth, pointWidth)];
         view.tag = i;
         view.backgroundColor = BM_INDICATOR_WHITE_POINT_COLOR;
+        view.layer.cornerRadius = pointWidth / 2;
+        view.clipsToBounds = YES;
         [self addSubview:view];
         
         max_x = CGRectGetMaxX(view.frame) + space;

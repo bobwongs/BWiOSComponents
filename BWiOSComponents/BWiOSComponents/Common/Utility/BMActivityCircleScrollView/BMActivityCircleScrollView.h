@@ -14,7 +14,7 @@ typedef void(^BMActivityCircleScrollViewSelectionBlock)(NSInteger);
 
 @property (assign, nonatomic) NSInteger selectedIndex;
 
-+ (instancetype)viewWithImages:(NSArray<UIImage *> *)imageArray selection:(BMActivityCircleScrollViewSelectionBlock)selectionBlock;
+//+ (instancetype)viewWithImages:(NSArray<UIImage *> *)imageArray selection:(BMActivityCircleScrollViewSelectionBlock)selectionBlock;
 //+ (instancetype)viewWithImageURLs:(NSArray<NSURL *> *)urlArray selection:(BMActivityCircleScrollViewSelectionBlock)selectionBlock;
 
 - (void)setViewWithImages:(NSArray<UIImage *> *)imageArray selection:(BMActivityCircleScrollViewSelectionBlock)selectionBlock;
