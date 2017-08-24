@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="382" y="189"/>
         </scene>
-        <!--Data Source-->
+        <!--Circulation RollingVC-->
         <scene sceneID="3KG-oi-0Ko">
             <objects>
                 <viewController id="xPm-hZ-1eC" customClass="BWCirculationRollingVC" sceneMemberID="viewController">
@@ -106,36 +106,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iCarousel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFz-Sp-jsd">
-                                <rect key="frame" x="151" y="81" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vec-2B-t0u" customClass="iCarousel">
-                                <rect key="frame" x="37" y="120" width="300" height="200"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="6p3-7A-402"/>
-                                    <constraint firstAttribute="height" constant="200" id="FaJ-Pb-mti"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYH-6W-FFU">
+                                <rect key="frame" x="100" y="184" width="176" height="30"/>
+                                <state key="normal" title="Custom Circle Scroll View"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="xPm-hZ-1eC" id="v1K-vt-gs1"/>
-                                    <outlet property="delegate" destination="xPm-hZ-1eC" id="7gt-3w-fCm"/>
+                                    <action selector="showView:" destination="xPm-hZ-1eC" eventType="touchUpInside" id="sJ7-u3-gd3"/>
                                 </connections>
-                            </view>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vec-2B-t0u" firstAttribute="top" secondItem="VFz-Sp-jsd" secondAttribute="bottom" constant="18" id="2w8-MT-Wsd"/>
-                            <constraint firstItem="VFz-Sp-jsd" firstAttribute="top" secondItem="Q9X-mI-EQ1" secondAttribute="bottom" constant="17" id="CJv-QS-6UK"/>
-                            <constraint firstItem="VFz-Sp-jsd" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="esX-3F-tno"/>
-                            <constraint firstItem="vec-2B-t0u" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="jDD-OV-emX"/>
+                            <constraint firstItem="tYH-6W-FFU" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="WHg-kR-btf"/>
+                            <constraint firstItem="tYH-6W-FFU" firstAttribute="top" secondItem="Q9X-mI-EQ1" secondAttribute="bottom" constant="120" id="gEf-D1-BZh"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="carousel" destination="vec-2B-t0u" id="e04-xN-s0A"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYk-im-FqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

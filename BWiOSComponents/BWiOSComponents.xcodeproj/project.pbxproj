@@ -34,6 +34,11 @@
 		B4C1DAA61F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA8A1F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png */; };
 		B4C1DAA71F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA8B1F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png */; };
 		B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DAAC1F4D4D460039838C /* BWCirculationRollingVC.m */; };
+		B4C5D8501F4E774C00387B50 /* BMActivityCircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D84F1F4E774C00387B50 /* BMActivityCircleScrollView.m */; };
+		B4C5D8561F4E7CEA00387B50 /* BMIndicatorWhitePointView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D8551F4E7CEA00387B50 /* BMIndicatorWhitePointView.m */; };
+		B4C5D8591F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */; };
+		B4C5D85D1F4E89B900387B50 /* icon_delete_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */; };
+		B4C5D85E1F4E89B900387B50 /* icon_delete_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,14 @@
 		B4C1DAA81F4D4AFA0039838C /* Backup */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backup; sourceTree = "<group>"; };
 		B4C1DAAB1F4D4D460039838C /* BWCirculationRollingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCirculationRollingVC.h; sourceTree = "<group>"; };
 		B4C1DAAC1F4D4D460039838C /* BWCirculationRollingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCirculationRollingVC.m; sourceTree = "<group>"; };
+		B4C5D84E1F4E774C00387B50 /* BMActivityCircleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollView.h; sourceTree = "<group>"; };
+		B4C5D84F1F4E774C00387B50 /* BMActivityCircleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollView.m; sourceTree = "<group>"; };
+		B4C5D8541F4E7CEA00387B50 /* BMIndicatorWhitePointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIndicatorWhitePointView.h; sourceTree = "<group>"; };
+		B4C5D8551F4E7CEA00387B50 /* BMIndicatorWhitePointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIndicatorWhitePointView.m; sourceTree = "<group>"; };
+		B4C5D8571F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollViewManager.h; sourceTree = "<group>"; };
+		B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollViewManager.m; sourceTree = "<group>"; };
+		B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@2x.png"; sourceTree = "<group>"; };
+		B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@3x.png"; sourceTree = "<group>"; };
 		BDF69820B5631A9D91B5E2B1 /* Pods-BWiOSComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.release.xcconfig"; sourceTree = "<group>"; };
 		F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -224,6 +237,7 @@
 		B4C1DA641F4D37DC0039838C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B4C5D84D1F4E773300387B50 /* BMActivityCircleScrollView */,
 				B4C1DA651F4D37DC0039838C /* BMNewAddressPickerView */,
 				B4C1DA771F4D37DC0039838C /* BMSidesMenuView */,
 			);
@@ -352,6 +366,29 @@
 			path = CirculationRolling;
 			sourceTree = "<group>";
 		};
+		B4C5D84D1F4E773300387B50 /* BMActivityCircleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5D8571F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.h */,
+				B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */,
+				B4C5D84E1F4E774C00387B50 /* BMActivityCircleScrollView.h */,
+				B4C5D84F1F4E774C00387B50 /* BMActivityCircleScrollView.m */,
+				B4C5D8541F4E7CEA00387B50 /* BMIndicatorWhitePointView.h */,
+				B4C5D8551F4E7CEA00387B50 /* BMIndicatorWhitePointView.m */,
+				B4C5D85A1F4E89B900387B50 /* Resource */,
+			);
+			path = BMActivityCircleScrollView;
+			sourceTree = "<group>";
+		};
+		B4C5D85A1F4E89B900387B50 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */,
+				B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -468,12 +505,14 @@
 				B4C1DAA11F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png in Resources */,
 				B4C1DAA71F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png in Resources */,
 				B4C1DAA61F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png in Resources */,
+				B4C5D85D1F4E89B900387B50 /* icon_delete_white@2x.png in Resources */,
 				B4C1DAA21F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png in Resources */,
 				B4C1DA9B1F4D37DC0039838C /* icon_checked@3x.png in Resources */,
 				B4C1DA991F4D37DC0039838C /* address.db in Resources */,
 				B4C1DA9A1F4D37DC0039838C /* icon_checked@2x.png in Resources */,
 				B4C1DA2A1F4D377C0039838C /* LaunchScreen.storyboard in Resources */,
 				B4C1DA271F4D377C0039838C /* Assets.xcassets in Resources */,
+				B4C5D85E1F4E89B900387B50 /* icon_delete_white@3x.png in Resources */,
 				B4C1DA251F4D377C0039838C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,12 +596,15 @@
 				B4C1DAA31F4D37DC0039838C /* BWAddressPickerViewController.m in Sources */,
 				B4C1DAA51F4D37DC0039838C /* BWResearchViewController.m in Sources */,
 				B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */,
+				B4C5D8501F4E774C00387B50 /* BMActivityCircleScrollView.m in Sources */,
 				B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */,
+				B4C5D8591F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m in Sources */,
 				B4C1DA1C1F4D377C0039838C /* main.m in Sources */,
 				B4C1DA981F4D37DC0039838C /* BWAddressPickerManager.m in Sources */,
 				B4C1DA971F4D37DC0039838C /* BWAddressModel.m in Sources */,
 				B4C1DA9F1F4D37DC0039838C /* BMSidesMenuCell.m in Sources */,
 				B4C1DA9C1F4D37DC0039838C /* BWAddressPickerCell.m in Sources */,
+				B4C5D8561F4E7CEA00387B50 /* BMIndicatorWhitePointView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
