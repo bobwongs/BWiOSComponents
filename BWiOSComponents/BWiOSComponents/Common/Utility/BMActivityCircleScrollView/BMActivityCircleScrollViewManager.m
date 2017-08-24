@@ -22,6 +22,11 @@
 @implementation BMActivityCircleScrollViewManager
 
 - (void)showViewWithArray:(NSArray *)dataSource {
+    if (_circleScrollView) {
+        [self.circleScrollView show];
+        return;
+    }
+    
     self.dataSource = dataSource;
     
     // To do
@@ -50,6 +55,7 @@
         }
     }];
     
+    if ([self showViewWithImages:imagesArrayM]) return;
     
     
 //    __block 
@@ -62,26 +68,31 @@
             
             [[SDImageCache sharedImageCache] storeImage:image forKey:url.absoluteString completion:nil];  // Cache
             
-            BOOL hasDownloaded = YES;
-            for (id object in imagesArrayM) {
-                if (![object isKindOfClass:[UIImage class]]) {
-                    hasDownloaded = NO;
-                    break;
-                }
-            }
-            
-            if (!hasDownloaded) return;
-            
-            [self.circleScrollView setViewWithImages:imagesArrayM selection:^(NSInteger index) {
-                NSLog(@"index: %ld", (long)index);
-            }];
-            [self.circleScrollView show];
+            [self showViewWithImages:imagesArrayM];
         }];
     }];
     
 //    [self.circleScrollView setViewWithImages:@[image0, image1, image2] selection:^(NSInteger index) {
 //        NSLog(@"index: %ld", (long)index);
 //    }];
+}
+
+- (BOOL)showViewWithImages:(NSArray *)imageArray {
+    BOOL hasDownloaded = YES;
+    for (id object in imageArray) {
+        if (![object isKindOfClass:[UIImage class]]) {
+            hasDownloaded = NO;
+            break;
+        }
+    }
+    
+    if (!hasDownloaded) return NO;
+    
+    [self.circleScrollView setViewWithImages:imageArray selection:^(NSInteger index) {
+        NSLog(@"index: %ld", (long)index);
+    }];
+    [self.circleScrollView show];
+    return YES;
 }
 
 - (BMActivityCircleScrollView *)circleScrollView {
