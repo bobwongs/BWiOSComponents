@@ -113,11 +113,20 @@
                                     <action selector="showView:" destination="xPm-hZ-1eC" eventType="touchUpInside" id="sJ7-u3-gd3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e3-7P-5zG">
+                                <rect key="frame" x="144" y="280" width="88" height="30"/>
+                                <state key="normal" title="System Alert"/>
+                                <connections>
+                                    <action selector="systemAlertAction:" destination="xPm-hZ-1eC" eventType="touchUpInside" id="usp-4O-Y8t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tYH-6W-FFU" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="WHg-kR-btf"/>
+                            <constraint firstItem="6e3-7P-5zG" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="bUj-6H-Jho"/>
                             <constraint firstItem="tYH-6W-FFU" firstAttribute="top" secondItem="Q9X-mI-EQ1" secondAttribute="bottom" constant="120" id="gEf-D1-BZh"/>
+                            <constraint firstItem="6e3-7P-5zG" firstAttribute="top" secondItem="tYH-6W-FFU" secondAttribute="bottom" constant="66" id="wly-dm-i79"/>
                         </constraints>
                     </view>
                 </viewController>

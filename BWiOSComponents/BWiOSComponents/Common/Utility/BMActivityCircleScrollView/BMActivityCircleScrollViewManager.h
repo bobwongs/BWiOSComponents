@@ -10,6 +10,6 @@
 
 @interface BMActivityCircleScrollViewManager : NSObject
 
-- (void)showViewWithArray:(NSArray *)dataSource;
+- (void)showWithURLs:(NSArray<NSURL *> *)urlArray selectionBlock:(void (^)(NSInteger))selectionBlock;
 
 @end

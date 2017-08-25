@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59EAAB449F5A3919F1A37CB5 /* libPods-BWiOSComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */; };
+		B4A87E221F4FCA0C00334506 /* BMHomeActivityViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A87E211F4FCA0C00334506 /* BMHomeActivityViewManager.m */; };
 		B4C1DA1C1F4D377C0039838C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1B1F4D377C0039838C /* main.m */; };
 		B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1E1F4D377C0039838C /* AppDelegate.m */; };
 		B4C1DA251F4D377C0039838C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA231F4D377C0039838C /* Main.storyboard */; };
@@ -63,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		209B7AEB81CE457F36E374EE /* Pods-BWiOSComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		B4A87E201F4FCA0C00334506 /* BMHomeActivityViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMHomeActivityViewManager.h; sourceTree = "<group>"; };
+		B4A87E211F4FCA0C00334506 /* BMHomeActivityViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMHomeActivityViewManager.m; sourceTree = "<group>"; };
 		B4C1DA171F4D377C0039838C /* BWiOSComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DA1B1F4D377C0039838C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C1DA1D1F4D377C0039838C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -378,6 +381,8 @@
 		B4C5D84D1F4E773300387B50 /* BMActivityCircleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				B4A87E201F4FCA0C00334506 /* BMHomeActivityViewManager.h */,
+				B4A87E211F4FCA0C00334506 /* BMHomeActivityViewManager.m */,
 				B4C5D8571F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.h */,
 				B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */,
 				B4C5D84E1F4E774C00387B50 /* BMActivityCircleScrollView.h */,
@@ -602,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C1DA961F4D37DC0039838C /* BWAddressSourceManager.m in Sources */,
+				B4A87E221F4FCA0C00334506 /* BMHomeActivityViewManager.m in Sources */,
 				B4C1DAA41F4D37DC0039838C /* BWHomeTableViewController.m in Sources */,
 				B4C1DA9E1F4D37DC0039838C /* BWAddressPickerView.m in Sources */,
 				B4C1DAA01F4D37DC0039838C /* BMSidesMenuView.m in Sources */,

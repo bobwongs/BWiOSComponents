@@ -66,6 +66,8 @@ CGFloat const BMActivityCircleScrollViewDefaultAnimationDuration = .25;
 }
 
 - (void)setViewWithImages:(NSArray<UIImage *> *)imageArray selection:(void (^)(NSInteger))selectionBlock {
+    if (!imageArray || imageArray.count == 0) return;
+    
     [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     self.selectionBlock = selectionBlock;
     
@@ -86,8 +88,6 @@ CGFloat const BMActivityCircleScrollViewDefaultAnimationDuration = .25;
     }];
     
     self.scrollView.contentSize = CGSizeMake(max_x - space, height);
-    
-    
     [self.indicatorView setViewWithPointCount:imageArray.count];
 }
 
@@ -143,7 +143,5 @@ CGFloat const BMActivityCircleScrollViewDefaultAnimationDuration = .25;
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     [self setIndicatorIndexWithScrollView:scrollView];
 }
-
-#pragma mark - Getter and Setter
 
 @end

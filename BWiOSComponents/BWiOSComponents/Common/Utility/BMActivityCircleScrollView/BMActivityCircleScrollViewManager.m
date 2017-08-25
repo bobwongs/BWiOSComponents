@@ -15,68 +15,58 @@
 
 @property (strong, nonatomic) BMActivityCircleScrollView *circleScrollView;
 
-@property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) NSArray<NSURL *> *dataSource;
+@property (copy, nonatomic) void(^selectionBlock)(NSInteger);
 
 @end
 
 @implementation BMActivityCircleScrollViewManager
 
-- (void)showViewWithArray:(NSArray *)dataSource {
-    if (_circleScrollView) {
-        [self.circleScrollView show];
+#pragma mark - Public Method
+
+- (void)showWithURLs:(NSArray<NSURL *> *)urlArray selectionBlock:(void (^)(NSInteger))selectionBlock {
+    if (!urlArray || urlArray.count == 0) return;
+    
+    if ([self isTheSameDataSource:urlArray]) {
+        [self.circleScrollView show];  // The same, show directedly.
         return;
     }
     
-    self.dataSource = dataSource;
+    self.dataSource = urlArray;
+    self.selectionBlock = selectionBlock;
     
-    // To do
-    // Download image
-    
-    // Finish downloading, set images to circleScrollView, implement block to target page.
-    
-    // Show
-    UIImage *image0 = [UIImage imageNamed:@"img_circle0"];
-    UIImage *image1 = [UIImage imageNamed:@"img_circle1"];
-    UIImage *image2 = [UIImage imageNamed:@"img_circle2"];
-    
-    NSURL *url0 = [NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503573738748&di=439f993530bc4988b069e30e26f7548b&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F86%2F31%2F01300000339824126797317174085.jpg"];
-    NSURL *url1 = [NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503573738748&di=2b71b66affe1ac60843846ca15bf3fcc&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2F201612%2F23%2Ffd203bb955cc47517bc4fc5eb979e815.jpg"];
-    NSURL *url2 = [NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503573738747&di=dd7102e45e4348951c355ff7a95081ab&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fw22%2F38%2Fd%2F95.jpg"];
-    
-    NSArray<NSURL *> *urlArray = @[url0, url1, url2];
-    NSMutableArray *imagesArrayM = [urlArray mutableCopy];
-    
+    NSMutableArray *imagesArrayM = [urlArray mutableCopy];  // Mutable array to edit
     [imagesArrayM enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (![obj isKindOfClass:[NSURL class]]) return;
         NSURL *url = (NSURL *)obj;
-        UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:url.absoluteString];
-        if (image) {
-            imagesArrayM[idx] = image;
-        }
+        UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:url.absoluteString];  // Get cached
+        if (image) imagesArrayM[idx] = image;
     }];
+    if ([self showViewWithImages:imagesArrayM]) return;  // All object is images
     
-    if ([self showViewWithImages:imagesArrayM]) return;
-    
-    
-//    __block 
     [imagesArrayM enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (![obj isKindOfClass:[NSURL class]]) return;
         
         NSURL *url = (NSURL *)obj;
         [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
             imagesArrayM[idx] = image;
-            
-            [[SDImageCache sharedImageCache] storeImage:image forKey:url.absoluteString completion:nil];  // Cache
-            
+            [[SDImageCache sharedImageCache] storeImage:image forKey:url.absoluteString completion:nil];  // To cache
             [self showViewWithImages:imagesArrayM];
         }];
     }];
-    
-//    [self.circleScrollView setViewWithImages:@[image0, image1, image2] selection:^(NSInteger index) {
-//        NSLog(@"index: %ld", (long)index);
-//    }];
 }
 
+#pragma mark - Private Method
+
+- (BOOL)isTheSameDataSource:(NSArray<NSURL *> *)urlArray {
+    if (!self.dataSource || self.dataSource.count == 0) return NO;
+    for (NSInteger i = 0; i < urlArray.count; i++) {
+        if (![urlArray[i].absoluteString isEqualToString:self.dataSource[i].absoluteString]) return NO;  // Use absolute string.
+    }
+    return YES;
+}
+
+/** Show view with image array with whether all object is UIImage instance */
 - (BOOL)showViewWithImages:(NSArray *)imageArray {
     BOOL hasDownloaded = YES;
     for (id object in imageArray) {
@@ -85,15 +75,14 @@
             break;
         }
     }
-    
     if (!hasDownloaded) return NO;
     
-    [self.circleScrollView setViewWithImages:imageArray selection:^(NSInteger index) {
-        NSLog(@"index: %ld", (long)index);
-    }];
+    [self.circleScrollView setViewWithImages:imageArray selection:self.selectionBlock];
     [self.circleScrollView show];
     return YES;
 }
+
+#pragma mark - Setter and Getter
 
 - (BMActivityCircleScrollView *)circleScrollView {
     if (!_circleScrollView) {
