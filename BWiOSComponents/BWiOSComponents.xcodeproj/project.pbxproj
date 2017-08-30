@@ -45,6 +45,7 @@
 		B4C5D8641F4EC17000387B50 /* img_circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8611F4EC17000387B50 /* img_circle1.png */; };
 		B4C70BF41F565B9700777F97 /* BMGifLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C70BF31F565B9700777F97 /* BMGifLoadingHUD.m */; };
 		B4C70BF81F56690B00777F97 /* BWLoadingHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C70BF71F56690B00777F97 /* BWLoadingHUDVC.m */; };
+		B4C70BFB1F566CDC00777F97 /* bm_default_loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B4C70BFA1F566CDC00777F97 /* bm_default_loading.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		B4C70BF31F565B9700777F97 /* BMGifLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMGifLoadingHUD.m; sourceTree = "<group>"; };
 		B4C70BF61F56690B00777F97 /* BWLoadingHUDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoadingHUDVC.h; sourceTree = "<group>"; };
 		B4C70BF71F56690B00777F97 /* BWLoadingHUDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoadingHUDVC.m; sourceTree = "<group>"; };
+		B4C70BFA1F566CDC00777F97 /* bm_default_loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bm_default_loading.gif; sourceTree = "<group>"; };
 		BDF69820B5631A9D91B5E2B1 /* Pods-BWiOSComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.release.xcconfig"; sourceTree = "<group>"; };
 		F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -424,6 +426,7 @@
 			children = (
 				B4C70BF21F565B9700777F97 /* BMGifLoadingHUD.h */,
 				B4C70BF31F565B9700777F97 /* BMGifLoadingHUD.m */,
+				B4C70BF91F566CDC00777F97 /* Resource */,
 			);
 			path = BMLoadingHUD;
 			sourceTree = "<group>";
@@ -435,6 +438,14 @@
 				B4C70BF71F56690B00777F97 /* BWLoadingHUDVC.m */,
 			);
 			path = LoadingHUD;
+			sourceTree = "<group>";
+		};
+		B4C70BF91F566CDC00777F97 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B4C70BFA1F566CDC00777F97 /* bm_default_loading.gif */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,6 +570,7 @@
 				B4C5D8621F4EC17000387B50 /* img_circle0.png in Resources */,
 				B48F5F061F555B73000CFA4D /* BWAddressPickerCell.xib in Resources */,
 				B4C1DA2A1F4D377C0039838C /* LaunchScreen.storyboard in Resources */,
+				B4C70BFB1F566CDC00777F97 /* bm_default_loading.gif in Resources */,
 				B48F5F0B1F555B73000CFA4D /* bm_sides_menu_separated_line@3x.png in Resources */,
 				B48F5F021F555B73000CFA4D /* address.db in Resources */,
 				B4C1DA271F4D377C0039838C /* Assets.xcassets in Resources */,

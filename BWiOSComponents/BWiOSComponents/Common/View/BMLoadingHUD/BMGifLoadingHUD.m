@@ -47,6 +47,7 @@
 
 + (void)showView {
     BMGifLoadingHUD *hud = [self sharedInstance];
+    [hud.gifImageView startAnimating];  // Start corresponding to stop in dismiss, improve performance.
     UIView *keyWindow = [UIApplication sharedApplication].keyWindow;
     if (hud.superview == keyWindow) return;  // 存在Loading
     
@@ -61,6 +62,7 @@
         [self sharedInstance].alpha = 0;
     } completion:^(BOOL finished) {
         [[self sharedInstance] removeFromSuperview];
+        [[self sharedInstance].gifImageView stopAnimating];
     }];
 }
 
@@ -73,14 +75,14 @@
 - (void)setUI {
     self.frame = [UIScreen mainScreen].bounds;
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"loading" ofType:@"gif"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bm_default_loading" ofType:@"gif"];
     FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:filePath]];
     
     FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
     self.gifImageView = imageView;
     if (image) imageView.animatedImage = image;
-    imageView.frame = CGRectMake(0.0, 0.0, 88.0, 88.0);
-    imageView.center = CGPointMake(CGRectGetMidX(self.bounds) / 2, CGRectGetMidY(self.bounds) / 2);
+    imageView.frame = CGRectMake(0.0, 0.0, 44.0, 44.0);
+    imageView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     [self addSubview:imageView];
 }
 

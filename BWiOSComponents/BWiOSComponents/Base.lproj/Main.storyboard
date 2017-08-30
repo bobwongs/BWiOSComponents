@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-S8-LID">
-                                <rect key="frame" x="153" y="191" width="68" height="30"/>
+                                <rect key="frame" x="153" y="182" width="68" height="30"/>
                                 <state key="normal" title="Show hud"/>
                                 <connections>
                                     <action selector="showHUD:" destination="O4B-rl-uDm" eventType="touchUpInside" id="IYH-4N-5et"/>
@@ -179,13 +179,32 @@
                                     <action selector="touchAction:" destination="O4B-rl-uDm" eventType="touchUpInside" id="821-m6-cE2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzZ-ao-AbJ">
+                                <rect key="frame" x="119" y="254" width="136" height="30"/>
+                                <state key="normal" title="Show no interaction"/>
+                                <connections>
+                                    <action selector="showNoInteraction:" destination="O4B-rl-uDm" eventType="touchUpInside" id="KsS-TH-OXX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-bz-v91">
+                                <rect key="frame" x="20" y="407" width="335" height="30"/>
+                                <state key="normal" title="Dismiss hub"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="O4B-rl-uDm" eventType="touchUpInside" id="F5X-bD-PWE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VdZ-jK-gwu" firstAttribute="centerY" secondItem="ic5-qY-mXc" secondAttribute="centerY" id="9nd-qs-6QR"/>
-                            <constraint firstItem="Sna-S8-LID" firstAttribute="centerX" secondItem="VdZ-jK-gwu" secondAttribute="centerX" id="Gye-h1-Ahl"/>
-                            <constraint firstItem="Sna-S8-LID" firstAttribute="centerX" secondItem="ic5-qY-mXc" secondAttribute="centerX" id="uTA-aG-YDa"/>
-                            <constraint firstItem="VdZ-jK-gwu" firstAttribute="top" secondItem="Sna-S8-LID" secondAttribute="bottom" constant="97" id="yBz-DW-S7l"/>
+                            <constraint firstItem="Xsw-bz-v91" firstAttribute="top" secondItem="VdZ-jK-gwu" secondAttribute="bottom" constant="59" id="05n-Qw-Wp6"/>
+                            <constraint firstItem="Sna-S8-LID" firstAttribute="centerX" secondItem="VdZ-jK-gwu" secondAttribute="centerX" id="7ez-lZ-aDz"/>
+                            <constraint firstItem="VdZ-jK-gwu" firstAttribute="centerY" secondItem="ic5-qY-mXc" secondAttribute="centerY" id="FVF-Ur-1zO"/>
+                            <constraint firstItem="mzZ-ao-AbJ" firstAttribute="centerX" secondItem="ic5-qY-mXc" secondAttribute="centerX" id="JQo-6s-4pw"/>
+                            <constraint firstItem="Sna-S8-LID" firstAttribute="centerX" secondItem="ic5-qY-mXc" secondAttribute="centerX" id="Mdm-03-Hfs"/>
+                            <constraint firstItem="Xsw-bz-v91" firstAttribute="leading" secondItem="ic5-qY-mXc" secondAttribute="leading" constant="20" id="c7K-Ev-OB9"/>
+                            <constraint firstItem="VdZ-jK-gwu" firstAttribute="top" secondItem="mzZ-ao-AbJ" secondAttribute="bottom" constant="34" id="vTj-Hp-8IU"/>
+                            <constraint firstAttribute="trailing" secondItem="Xsw-bz-v91" secondAttribute="trailing" constant="20" id="xCn-wf-mrQ"/>
+                            <constraint firstItem="mzZ-ao-AbJ" firstAttribute="top" secondItem="Sna-S8-LID" secondAttribute="bottom" constant="42" id="xo5-ba-hPl"/>
                         </constraints>
                     </view>
                 </viewController>
