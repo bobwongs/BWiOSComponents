@@ -28,6 +28,7 @@
                             <nil key="action"/>
                         </segue>
                         <segue destination="xPm-hZ-1eC" kind="show" identifier="home_to_ circulation_rolling" id="mGS-Br-u7B"/>
+                        <segue destination="O4B-rl-uDm" kind="show" identifier="home_to_loading_hud" id="Hd8-xH-kns"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFn-I0-WT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="1397.5999999999999" y="187.55622188905548"/>
         </scene>
-        <!--View Controller-->
+        <!--LoadingHUDVC-->
         <scene sceneID="siY-eK-JhZ">
             <objects>
-                <viewController id="O4B-rl-uDm" sceneMemberID="viewController">
+                <viewController id="O4B-rl-uDm" customClass="BWLoadingHUDVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X3c-Ly-PCd"/>
                         <viewControllerLayoutGuide type="bottom" id="6dF-FC-T8g"/>
@@ -163,7 +164,29 @@
                     <view key="view" contentMode="scaleToFill" id="ic5-qY-mXc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-S8-LID">
+                                <rect key="frame" x="153" y="191" width="68" height="30"/>
+                                <state key="normal" title="Show hud"/>
+                                <connections>
+                                    <action selector="showHUD:" destination="O4B-rl-uDm" eventType="touchUpInside" id="IYH-4N-5et"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdZ-jK-gwu">
+                                <rect key="frame" x="165" y="318" width="44" height="30"/>
+                                <state key="normal" title="Action"/>
+                                <connections>
+                                    <action selector="touchAction:" destination="O4B-rl-uDm" eventType="touchUpInside" id="821-m6-cE2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VdZ-jK-gwu" firstAttribute="centerY" secondItem="ic5-qY-mXc" secondAttribute="centerY" id="9nd-qs-6QR"/>
+                            <constraint firstItem="Sna-S8-LID" firstAttribute="centerX" secondItem="VdZ-jK-gwu" secondAttribute="centerX" id="Gye-h1-Ahl"/>
+                            <constraint firstItem="Sna-S8-LID" firstAttribute="centerX" secondItem="ic5-qY-mXc" secondAttribute="centerX" id="uTA-aG-YDa"/>
+                            <constraint firstItem="VdZ-jK-gwu" firstAttribute="top" secondItem="Sna-S8-LID" secondAttribute="bottom" constant="97" id="yBz-DW-S7l"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMb-la-J2N" userLabel="First Responder" sceneMemberID="firstResponder"/>

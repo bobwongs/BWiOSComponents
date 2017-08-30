@@ -43,7 +43,8 @@
 		B4C5D8621F4EC17000387B50 /* img_circle0.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85F1F4EC17000387B50 /* img_circle0.png */; };
 		B4C5D8631F4EC17000387B50 /* img_circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8601F4EC17000387B50 /* img_circle2.png */; };
 		B4C5D8641F4EC17000387B50 /* img_circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8611F4EC17000387B50 /* img_circle1.png */; };
-		B4C70BF41F565B9700777F97 /* BMLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C70BF31F565B9700777F97 /* BMLoadingHUD.m */; };
+		B4C70BF41F565B9700777F97 /* BMGifLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C70BF31F565B9700777F97 /* BMGifLoadingHUD.m */; };
+		B4C70BF81F56690B00777F97 /* BWLoadingHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C70BF71F56690B00777F97 /* BWLoadingHUDVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +124,10 @@
 		B4C5D85F1F4EC17000387B50 /* img_circle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle0.png; sourceTree = "<group>"; };
 		B4C5D8601F4EC17000387B50 /* img_circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle2.png; sourceTree = "<group>"; };
 		B4C5D8611F4EC17000387B50 /* img_circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle1.png; sourceTree = "<group>"; };
-		B4C70BF21F565B9700777F97 /* BMLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLoadingHUD.h; sourceTree = "<group>"; };
-		B4C70BF31F565B9700777F97 /* BMLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLoadingHUD.m; sourceTree = "<group>"; };
+		B4C70BF21F565B9700777F97 /* BMGifLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMGifLoadingHUD.h; sourceTree = "<group>"; };
+		B4C70BF31F565B9700777F97 /* BMGifLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMGifLoadingHUD.m; sourceTree = "<group>"; };
+		B4C70BF61F56690B00777F97 /* BWLoadingHUDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoadingHUDVC.h; sourceTree = "<group>"; };
+		B4C70BF71F56690B00777F97 /* BWLoadingHUDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoadingHUDVC.m; sourceTree = "<group>"; };
 		BDF69820B5631A9D91B5E2B1 /* Pods-BWiOSComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.release.xcconfig"; sourceTree = "<group>"; };
 		F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -360,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C1DA831F4D37DC0039838C /* Home */,
+				B4C70BF51F5668F800777F97 /* LoadingHUD */,
 				B4C1DA801F4D37DC0039838C /* AddressPickerView */,
 				B4C1DAAA1F4D4D0B0039838C /* CirculationRolling */,
 				B4C1DA861F4D37DC0039838C /* Research */,
@@ -418,10 +422,19 @@
 		B4C70BF11F565B8500777F97 /* BMLoadingHUD */ = {
 			isa = PBXGroup;
 			children = (
-				B4C70BF21F565B9700777F97 /* BMLoadingHUD.h */,
-				B4C70BF31F565B9700777F97 /* BMLoadingHUD.m */,
+				B4C70BF21F565B9700777F97 /* BMGifLoadingHUD.h */,
+				B4C70BF31F565B9700777F97 /* BMGifLoadingHUD.m */,
 			);
 			path = BMLoadingHUD;
+			sourceTree = "<group>";
+		};
+		B4C70BF51F5668F800777F97 /* LoadingHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B4C70BF61F56690B00777F97 /* BWLoadingHUDVC.h */,
+				B4C70BF71F56690B00777F97 /* BWLoadingHUDVC.m */,
+			);
+			path = LoadingHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,13 +647,14 @@
 				B48F5F091F555B73000CFA4D /* BMSidesMenuView.m in Sources */,
 				B4C1DAA31F4D37DC0039838C /* BWAddressPickerViewController.m in Sources */,
 				B48F5F051F555B73000CFA4D /* BWAddressPickerCell.m in Sources */,
+				B4C70BF81F56690B00777F97 /* BWLoadingHUDVC.m in Sources */,
 				B48F5EFC1F555B73000CFA4D /* BMIndicatorWhitePointView.m in Sources */,
 				B4C1DAA51F4D37DC0039838C /* BWResearchViewController.m in Sources */,
 				B48F5F081F555B73000CFA4D /* BMSidesMenuCell.m in Sources */,
 				B48F5F071F555B73000CFA4D /* BWAddressPickerView.m in Sources */,
 				B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */,
 				B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */,
-				B4C70BF41F565B9700777F97 /* BMLoadingHUD.m in Sources */,
+				B4C70BF41F565B9700777F97 /* BMGifLoadingHUD.m in Sources */,
 				B48F5EFF1F555B73000CFA4D /* BWAddressSourceManager.m in Sources */,
 				B48F5EFB1F555B73000CFA4D /* BMHomeActivityViewManager.m in Sources */,
 				B4C1DA1C1F4D377C0039838C /* main.m in Sources */,

@@ -30,8 +30,12 @@ NSString *const BWCellId = @"BWCellId";
                                              BWKeyTitle: @"BWCirculationRolling",
                                              BWKeySegueId: @"home_to_ circulation_rolling"
                                              };
+    NSDictionary *loadingHudDict = @{
+                                             BWKeyTitle: @"BWLoadingHUD",
+                                             BWKeySegueId: @"home_to_loading_hud"
+                                             };
     
-    _dataSource = @[addressPickerDict, circulationRollingDict];
+    _dataSource = @[addressPickerDict, circulationRollingDict, loadingHudDict];
     
     [self.tableView reloadData];
 }

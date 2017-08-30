@@ -1,30 +1,30 @@
 //
-//  BMLoadingHUD.m
+//  BMGifLoadingHUD.m
 //  BWiOSComponents
 //
 //  Created by BobWong on 2017/8/30.
 //  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
-#import "BMLoadingHUD.h"
+#import "BMGifLoadingHUD.h"
 #import <FLAnimatedImage.h>
 
-#define BM_LOADING_HUD_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-#define BM_LOADING_HUD_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define LOADING_HUD_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define LOADING_HUD_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface BMLoadingHUD ()
+@interface BMGifLoadingHUD ()
 
 @property (strong, nonatomic) FLAnimatedImageView *gifImageView;
 @property (strong, nonatomic) FLAnimatedImage *gifImage;
 
 @end
 
-@implementation BMLoadingHUD
+@implementation BMGifLoadingHUD
 
 #pragma mark - Life Cycle
 
-+ (BMLoadingHUD *)sharedInstance {
-    static BMLoadingHUD *sharedInstance = nil;
++ (BMGifLoadingHUD *)sharedInstance {
+    static BMGifLoadingHUD *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
@@ -35,26 +35,18 @@
 
 #pragma mark - Public Method
 
-+ (void)bmB2B_show {
++ (void)show {
     [self sharedInstance].userInteractionEnabled = NO;
-    [self bm_showGifImage];
+    [self showView];
 }
 
-+ (void)bmB2B_noInteractionShow {
++ (void)showWithoutInteraction {
     [self sharedInstance].userInteractionEnabled = YES;
-    [self bm_showGifImage];
+    [self showView];
 }
 
-+ (void)bm_setGifImage:(FLAnimatedImage *)gifImage {
-    if (gifImage) [self sharedInstance].gifImageView.animatedImage = gifImage;
-}
-
-+ (void)bm_showGifImage {
-    [self bm_show];
-}
-
-+ (void)bm_show {
-    BMLoadingHUD *hud = [self sharedInstance];
++ (void)showView {
+    BMGifLoadingHUD *hud = [self sharedInstance];
     UIView *keyWindow = [UIApplication sharedApplication].keyWindow;
     if (hud.superview == keyWindow) return;  // 存在Loading
     
@@ -64,12 +56,16 @@
     }];
 }
 
-+ (void)bm_dismiss {
++ (void)dismiss {
     [UIView animateWithDuration:.25 animations:^{
         [self sharedInstance].alpha = 0;
     } completion:^(BOOL finished) {
         [[self sharedInstance] removeFromSuperview];
     }];
+}
+
++ (void)setGifImage:(FLAnimatedImage *)gifImage {
+    if (gifImage) [self sharedInstance].gifImageView.animatedImage = gifImage;
 }
 
 #pragma mark - Private Method
