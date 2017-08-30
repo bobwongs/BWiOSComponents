@@ -120,11 +120,29 @@
                                     <action selector="systemAlertAction:" destination="xPm-hZ-1eC" eventType="touchUpInside" id="usp-4O-Y8t"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcK-B3-JT5">
+                                <rect key="frame" x="106" y="359" width="164" height="30"/>
+                                <state key="normal" title="Only show System Alert"/>
+                                <connections>
+                                    <action selector="showAlert" destination="xPm-hZ-1eC" eventType="touchUpInside" id="oBX-3l-00z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x22-OD-l1k">
+                                <rect key="frame" x="123" y="441" width="128" height="30"/>
+                                <state key="normal" title="Show CXAlertView"/>
+                                <connections>
+                                    <action selector="showCXAlertView:" destination="xPm-hZ-1eC" eventType="touchUpInside" id="kxk-5H-Bef"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="x22-OD-l1k" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="27l-Ke-JG7"/>
+                            <constraint firstItem="x22-OD-l1k" firstAttribute="top" secondItem="UcK-B3-JT5" secondAttribute="bottom" constant="52" id="KkE-Jw-HVg"/>
+                            <constraint firstItem="UcK-B3-JT5" firstAttribute="top" secondItem="6e3-7P-5zG" secondAttribute="bottom" constant="49" id="Q3q-hu-PZK"/>
                             <constraint firstItem="tYH-6W-FFU" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="WHg-kR-btf"/>
                             <constraint firstItem="6e3-7P-5zG" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="bUj-6H-Jho"/>
+                            <constraint firstItem="UcK-B3-JT5" firstAttribute="centerX" secondItem="oBK-OH-cri" secondAttribute="centerX" id="c4d-lr-WNc"/>
                             <constraint firstItem="tYH-6W-FFU" firstAttribute="top" secondItem="Q9X-mI-EQ1" secondAttribute="bottom" constant="120" id="gEf-D1-BZh"/>
                             <constraint firstItem="6e3-7P-5zG" firstAttribute="top" secondItem="tYH-6W-FFU" secondAttribute="bottom" constant="66" id="wly-dm-i79"/>
                         </constraints>
@@ -133,6 +151,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYk-im-FqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1397.5999999999999" y="187.55622188905548"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="siY-eK-JhZ">
+            <objects>
+                <viewController id="O4B-rl-uDm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X3c-Ly-PCd"/>
+                        <viewControllerLayoutGuide type="bottom" id="6dF-FC-T8g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ic5-qY-mXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMb-la-J2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298" y="188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VNf-90-RKU">

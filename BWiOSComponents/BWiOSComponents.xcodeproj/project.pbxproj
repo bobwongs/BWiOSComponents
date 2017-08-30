@@ -8,7 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		59EAAB449F5A3919F1A37CB5 /* libPods-BWiOSComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */; };
-		B4A87E221F4FCA0C00334506 /* BMHomeActivityViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A87E211F4FCA0C00334506 /* BMHomeActivityViewManager.m */; };
+		B48F5EF91F555B73000CFA4D /* BMActivityCircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ED51F555B73000CFA4D /* BMActivityCircleScrollView.m */; };
+		B48F5EFA1F555B73000CFA4D /* BMActivityCircleScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ED71F555B73000CFA4D /* BMActivityCircleScrollViewManager.m */; };
+		B48F5EFB1F555B73000CFA4D /* BMHomeActivityViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ED91F555B73000CFA4D /* BMHomeActivityViewManager.m */; };
+		B48F5EFC1F555B73000CFA4D /* BMIndicatorWhitePointView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EDB1F555B73000CFA4D /* BMIndicatorWhitePointView.m */; };
+		B48F5EFD1F555B73000CFA4D /* icon_delete_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EDD1F555B73000CFA4D /* icon_delete_white@2x.png */; };
+		B48F5EFE1F555B73000CFA4D /* icon_delete_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EDE1F555B73000CFA4D /* icon_delete_white@3x.png */; };
+		B48F5EFF1F555B73000CFA4D /* BWAddressSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EE21F555B73000CFA4D /* BWAddressSourceManager.m */; };
+		B48F5F001F555B73000CFA4D /* BWAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EE41F555B73000CFA4D /* BWAddressModel.m */; };
+		B48F5F011F555B73000CFA4D /* BWAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EE61F555B73000CFA4D /* BWAddressPickerManager.m */; };
+		B48F5F021F555B73000CFA4D /* address.db in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EE81F555B73000CFA4D /* address.db */; };
+		B48F5F031F555B73000CFA4D /* icon_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EE91F555B73000CFA4D /* icon_checked@2x.png */; };
+		B48F5F041F555B73000CFA4D /* icon_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EEA1F555B73000CFA4D /* icon_checked@3x.png */; };
+		B48F5F051F555B73000CFA4D /* BWAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EED1F555B73000CFA4D /* BWAddressPickerCell.m */; };
+		B48F5F061F555B73000CFA4D /* BWAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EEE1F555B73000CFA4D /* BWAddressPickerCell.xib */; };
+		B48F5F071F555B73000CFA4D /* BWAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EF01F555B73000CFA4D /* BWAddressPickerView.m */; };
+		B48F5F081F555B73000CFA4D /* BMSidesMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EF31F555B73000CFA4D /* BMSidesMenuCell.m */; };
+		B48F5F091F555B73000CFA4D /* BMSidesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5EF51F555B73000CFA4D /* BMSidesMenuView.m */; };
+		B48F5F0A1F555B73000CFA4D /* bm_sides_menu_separated_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EF71F555B73000CFA4D /* bm_sides_menu_separated_line@2x.png */; };
+		B48F5F0B1F555B73000CFA4D /* bm_sides_menu_separated_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48F5EF81F555B73000CFA4D /* bm_sides_menu_separated_line@3x.png */; };
 		B4C1DA1C1F4D377C0039838C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1B1F4D377C0039838C /* main.m */; };
 		B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1E1F4D377C0039838C /* AppDelegate.m */; };
 		B4C1DA251F4D377C0039838C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA231F4D377C0039838C /* Main.storyboard */; };
@@ -16,33 +34,16 @@
 		B4C1DA2A1F4D377C0039838C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA281F4D377C0039838C /* LaunchScreen.storyboard */; };
 		B4C1DA351F4D377C0039838C /* BWiOSComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA341F4D377C0039838C /* BWiOSComponentsTests.m */; };
 		B4C1DA401F4D377C0039838C /* BWiOSComponentsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA3F1F4D377C0039838C /* BWiOSComponentsUITests.m */; };
-		B4C1DA961F4D37DC0039838C /* BWAddressSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA681F4D37DC0039838C /* BWAddressSourceManager.m */; };
-		B4C1DA971F4D37DC0039838C /* BWAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA6A1F4D37DC0039838C /* BWAddressModel.m */; };
-		B4C1DA981F4D37DC0039838C /* BWAddressPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA6C1F4D37DC0039838C /* BWAddressPickerManager.m */; };
-		B4C1DA991F4D37DC0039838C /* address.db in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA6E1F4D37DC0039838C /* address.db */; };
-		B4C1DA9A1F4D37DC0039838C /* icon_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA6F1F4D37DC0039838C /* icon_checked@2x.png */; };
-		B4C1DA9B1F4D37DC0039838C /* icon_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA701F4D37DC0039838C /* icon_checked@3x.png */; };
-		B4C1DA9C1F4D37DC0039838C /* BWAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA731F4D37DC0039838C /* BWAddressPickerCell.m */; };
-		B4C1DA9D1F4D37DC0039838C /* BWAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA741F4D37DC0039838C /* BWAddressPickerCell.xib */; };
-		B4C1DA9E1F4D37DC0039838C /* BWAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA761F4D37DC0039838C /* BWAddressPickerView.m */; };
-		B4C1DA9F1F4D37DC0039838C /* BMSidesMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA791F4D37DC0039838C /* BMSidesMenuCell.m */; };
-		B4C1DAA01F4D37DC0039838C /* BMSidesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA7B1F4D37DC0039838C /* BMSidesMenuView.m */; };
-		B4C1DAA11F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA7D1F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png */; };
-		B4C1DAA21F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA7E1F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png */; };
 		B4C1DAA31F4D37DC0039838C /* BWAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA821F4D37DC0039838C /* BWAddressPickerViewController.m */; };
 		B4C1DAA41F4D37DC0039838C /* BWHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA851F4D37DC0039838C /* BWHomeTableViewController.m */; };
 		B4C1DAA51F4D37DC0039838C /* BWResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA881F4D37DC0039838C /* BWResearchViewController.m */; };
 		B4C1DAA61F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA8A1F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png */; };
 		B4C1DAA71F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA8B1F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png */; };
 		B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DAAC1F4D4D460039838C /* BWCirculationRollingVC.m */; };
-		B4C5D8501F4E774C00387B50 /* BMActivityCircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D84F1F4E774C00387B50 /* BMActivityCircleScrollView.m */; };
-		B4C5D8561F4E7CEA00387B50 /* BMIndicatorWhitePointView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D8551F4E7CEA00387B50 /* BMIndicatorWhitePointView.m */; };
-		B4C5D8591F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */; };
-		B4C5D85D1F4E89B900387B50 /* icon_delete_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */; };
-		B4C5D85E1F4E89B900387B50 /* icon_delete_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */; };
 		B4C5D8621F4EC17000387B50 /* img_circle0.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D85F1F4EC17000387B50 /* img_circle0.png */; };
 		B4C5D8631F4EC17000387B50 /* img_circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8601F4EC17000387B50 /* img_circle2.png */; };
 		B4C5D8641F4EC17000387B50 /* img_circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D8611F4EC17000387B50 /* img_circle1.png */; };
+		B4C70BF41F565B9700777F97 /* BMLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C70BF31F565B9700777F97 /* BMLoadingHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,36 @@
 
 /* Begin PBXFileReference section */
 		209B7AEB81CE457F36E374EE /* Pods-BWiOSComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.debug.xcconfig"; sourceTree = "<group>"; };
-		B4A87E201F4FCA0C00334506 /* BMHomeActivityViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMHomeActivityViewManager.h; sourceTree = "<group>"; };
-		B4A87E211F4FCA0C00334506 /* BMHomeActivityViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMHomeActivityViewManager.m; sourceTree = "<group>"; };
+		B48F5ED41F555B73000CFA4D /* BMActivityCircleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollView.h; sourceTree = "<group>"; };
+		B48F5ED51F555B73000CFA4D /* BMActivityCircleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollView.m; sourceTree = "<group>"; };
+		B48F5ED61F555B73000CFA4D /* BMActivityCircleScrollViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollViewManager.h; sourceTree = "<group>"; };
+		B48F5ED71F555B73000CFA4D /* BMActivityCircleScrollViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollViewManager.m; sourceTree = "<group>"; };
+		B48F5ED81F555B73000CFA4D /* BMHomeActivityViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMHomeActivityViewManager.h; sourceTree = "<group>"; };
+		B48F5ED91F555B73000CFA4D /* BMHomeActivityViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMHomeActivityViewManager.m; sourceTree = "<group>"; };
+		B48F5EDA1F555B73000CFA4D /* BMIndicatorWhitePointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIndicatorWhitePointView.h; sourceTree = "<group>"; };
+		B48F5EDB1F555B73000CFA4D /* BMIndicatorWhitePointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIndicatorWhitePointView.m; sourceTree = "<group>"; };
+		B48F5EDD1F555B73000CFA4D /* icon_delete_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@2x.png"; sourceTree = "<group>"; };
+		B48F5EDE1F555B73000CFA4D /* icon_delete_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@3x.png"; sourceTree = "<group>"; };
+		B48F5EE11F555B73000CFA4D /* BWAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressSourceManager.h; sourceTree = "<group>"; };
+		B48F5EE21F555B73000CFA4D /* BWAddressSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressSourceManager.m; sourceTree = "<group>"; };
+		B48F5EE31F555B73000CFA4D /* BWAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressModel.h; sourceTree = "<group>"; };
+		B48F5EE41F555B73000CFA4D /* BWAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressModel.m; sourceTree = "<group>"; };
+		B48F5EE51F555B73000CFA4D /* BWAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerManager.h; sourceTree = "<group>"; };
+		B48F5EE61F555B73000CFA4D /* BWAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerManager.m; sourceTree = "<group>"; };
+		B48F5EE81F555B73000CFA4D /* address.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = address.db; sourceTree = "<group>"; };
+		B48F5EE91F555B73000CFA4D /* icon_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_checked@2x.png"; sourceTree = "<group>"; };
+		B48F5EEA1F555B73000CFA4D /* icon_checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_checked@3x.png"; sourceTree = "<group>"; };
+		B48F5EEC1F555B73000CFA4D /* BWAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerCell.h; sourceTree = "<group>"; };
+		B48F5EED1F555B73000CFA4D /* BWAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerCell.m; sourceTree = "<group>"; };
+		B48F5EEE1F555B73000CFA4D /* BWAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWAddressPickerCell.xib; sourceTree = "<group>"; };
+		B48F5EEF1F555B73000CFA4D /* BWAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerView.h; sourceTree = "<group>"; };
+		B48F5EF01F555B73000CFA4D /* BWAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerView.m; sourceTree = "<group>"; };
+		B48F5EF21F555B73000CFA4D /* BMSidesMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSidesMenuCell.h; sourceTree = "<group>"; };
+		B48F5EF31F555B73000CFA4D /* BMSidesMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuCell.m; sourceTree = "<group>"; };
+		B48F5EF41F555B73000CFA4D /* BMSidesMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSidesMenuView.h; sourceTree = "<group>"; };
+		B48F5EF51F555B73000CFA4D /* BMSidesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuView.m; sourceTree = "<group>"; };
+		B48F5EF71F555B73000CFA4D /* bm_sides_menu_separated_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@2x.png"; sourceTree = "<group>"; };
+		B48F5EF81F555B73000CFA4D /* bm_sides_menu_separated_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@3x.png"; sourceTree = "<group>"; };
 		B4C1DA171F4D377C0039838C /* BWiOSComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DA1B1F4D377C0039838C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C1DA1D1F4D377C0039838C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,26 +109,6 @@
 		B4C1DA3B1F4D377C0039838C /* BWiOSComponentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWiOSComponentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DA3F1F4D377C0039838C /* BWiOSComponentsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWiOSComponentsUITests.m; sourceTree = "<group>"; };
 		B4C1DA411F4D377C0039838C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4C1DA671F4D37DC0039838C /* BWAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressSourceManager.h; sourceTree = "<group>"; };
-		B4C1DA681F4D37DC0039838C /* BWAddressSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressSourceManager.m; sourceTree = "<group>"; };
-		B4C1DA691F4D37DC0039838C /* BWAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressModel.h; sourceTree = "<group>"; };
-		B4C1DA6A1F4D37DC0039838C /* BWAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressModel.m; sourceTree = "<group>"; };
-		B4C1DA6B1F4D37DC0039838C /* BWAddressPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerManager.h; sourceTree = "<group>"; };
-		B4C1DA6C1F4D37DC0039838C /* BWAddressPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerManager.m; sourceTree = "<group>"; };
-		B4C1DA6E1F4D37DC0039838C /* address.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = address.db; sourceTree = "<group>"; };
-		B4C1DA6F1F4D37DC0039838C /* icon_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_checked@2x.png"; sourceTree = "<group>"; };
-		B4C1DA701F4D37DC0039838C /* icon_checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_checked@3x.png"; sourceTree = "<group>"; };
-		B4C1DA721F4D37DC0039838C /* BWAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerCell.h; sourceTree = "<group>"; };
-		B4C1DA731F4D37DC0039838C /* BWAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerCell.m; sourceTree = "<group>"; };
-		B4C1DA741F4D37DC0039838C /* BWAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWAddressPickerCell.xib; sourceTree = "<group>"; };
-		B4C1DA751F4D37DC0039838C /* BWAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerView.h; sourceTree = "<group>"; };
-		B4C1DA761F4D37DC0039838C /* BWAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerView.m; sourceTree = "<group>"; };
-		B4C1DA781F4D37DC0039838C /* BMSidesMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSidesMenuCell.h; sourceTree = "<group>"; };
-		B4C1DA791F4D37DC0039838C /* BMSidesMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuCell.m; sourceTree = "<group>"; };
-		B4C1DA7A1F4D37DC0039838C /* BMSidesMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSidesMenuView.h; sourceTree = "<group>"; };
-		B4C1DA7B1F4D37DC0039838C /* BMSidesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSidesMenuView.m; sourceTree = "<group>"; };
-		B4C1DA7D1F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@2x.png"; sourceTree = "<group>"; };
-		B4C1DA7E1F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bm_sides_menu_separated_line@3x.png"; sourceTree = "<group>"; };
 		B4C1DA811F4D37DC0039838C /* BWAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPickerViewController.h; sourceTree = "<group>"; };
 		B4C1DA821F4D37DC0039838C /* BWAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPickerViewController.m; sourceTree = "<group>"; };
 		B4C1DA841F4D37DC0039838C /* BWHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHomeTableViewController.h; sourceTree = "<group>"; };
@@ -111,17 +120,11 @@
 		B4C1DAA81F4D4AFA0039838C /* Backup */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backup; sourceTree = "<group>"; };
 		B4C1DAAB1F4D4D460039838C /* BWCirculationRollingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCirculationRollingVC.h; sourceTree = "<group>"; };
 		B4C1DAAC1F4D4D460039838C /* BWCirculationRollingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCirculationRollingVC.m; sourceTree = "<group>"; };
-		B4C5D84E1F4E774C00387B50 /* BMActivityCircleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollView.h; sourceTree = "<group>"; };
-		B4C5D84F1F4E774C00387B50 /* BMActivityCircleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollView.m; sourceTree = "<group>"; };
-		B4C5D8541F4E7CEA00387B50 /* BMIndicatorWhitePointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIndicatorWhitePointView.h; sourceTree = "<group>"; };
-		B4C5D8551F4E7CEA00387B50 /* BMIndicatorWhitePointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIndicatorWhitePointView.m; sourceTree = "<group>"; };
-		B4C5D8571F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollViewManager.h; sourceTree = "<group>"; };
-		B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollViewManager.m; sourceTree = "<group>"; };
-		B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@2x.png"; sourceTree = "<group>"; };
-		B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_delete_white@3x.png"; sourceTree = "<group>"; };
 		B4C5D85F1F4EC17000387B50 /* img_circle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle0.png; sourceTree = "<group>"; };
 		B4C5D8601F4EC17000387B50 /* img_circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle2.png; sourceTree = "<group>"; };
 		B4C5D8611F4EC17000387B50 /* img_circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_circle1.png; sourceTree = "<group>"; };
+		B4C70BF21F565B9700777F97 /* BMLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLoadingHUD.h; sourceTree = "<group>"; };
+		B4C70BF31F565B9700777F97 /* BMLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLoadingHUD.m; sourceTree = "<group>"; };
 		BDF69820B5631A9D91B5E2B1 /* Pods-BWiOSComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.release.xcconfig"; sourceTree = "<group>"; };
 		F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BWiOSComponents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +170,115 @@
 				BDF69820B5631A9D91B5E2B1 /* Pods-BWiOSComponents.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B48F5ED21F555B73000CFA4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4C70BF11F565B8500777F97 /* BMLoadingHUD */,
+				B48F5ED31F555B73000CFA4D /* BMActivityCircleScrollView */,
+				B48F5EDF1F555B73000CFA4D /* BMNewAddressPickerView */,
+				B48F5EF11F555B73000CFA4D /* BMSidesMenuView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B48F5ED31F555B73000CFA4D /* BMActivityCircleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5ED41F555B73000CFA4D /* BMActivityCircleScrollView.h */,
+				B48F5ED51F555B73000CFA4D /* BMActivityCircleScrollView.m */,
+				B48F5ED61F555B73000CFA4D /* BMActivityCircleScrollViewManager.h */,
+				B48F5ED71F555B73000CFA4D /* BMActivityCircleScrollViewManager.m */,
+				B48F5ED81F555B73000CFA4D /* BMHomeActivityViewManager.h */,
+				B48F5ED91F555B73000CFA4D /* BMHomeActivityViewManager.m */,
+				B48F5EDA1F555B73000CFA4D /* BMIndicatorWhitePointView.h */,
+				B48F5EDB1F555B73000CFA4D /* BMIndicatorWhitePointView.m */,
+				B48F5EDC1F555B73000CFA4D /* Resource */,
+			);
+			path = BMActivityCircleScrollView;
+			sourceTree = "<group>";
+		};
+		B48F5EDC1F555B73000CFA4D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EDD1F555B73000CFA4D /* icon_delete_white@2x.png */,
+				B48F5EDE1F555B73000CFA4D /* icon_delete_white@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B48F5EDF1F555B73000CFA4D /* BMNewAddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EE01F555B73000CFA4D /* AddressSource */,
+				B48F5EE31F555B73000CFA4D /* BWAddressModel.h */,
+				B48F5EE41F555B73000CFA4D /* BWAddressModel.m */,
+				B48F5EE51F555B73000CFA4D /* BWAddressPickerManager.h */,
+				B48F5EE61F555B73000CFA4D /* BWAddressPickerManager.m */,
+				B48F5EE71F555B73000CFA4D /* Resource */,
+				B48F5EEB1F555B73000CFA4D /* View */,
+			);
+			path = BMNewAddressPickerView;
+			sourceTree = "<group>";
+		};
+		B48F5EE01F555B73000CFA4D /* AddressSource */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EE11F555B73000CFA4D /* BWAddressSourceManager.h */,
+				B48F5EE21F555B73000CFA4D /* BWAddressSourceManager.m */,
+			);
+			path = AddressSource;
+			sourceTree = "<group>";
+		};
+		B48F5EE71F555B73000CFA4D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EE81F555B73000CFA4D /* address.db */,
+				B48F5EE91F555B73000CFA4D /* icon_checked@2x.png */,
+				B48F5EEA1F555B73000CFA4D /* icon_checked@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B48F5EEB1F555B73000CFA4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EEC1F555B73000CFA4D /* BWAddressPickerCell.h */,
+				B48F5EED1F555B73000CFA4D /* BWAddressPickerCell.m */,
+				B48F5EEE1F555B73000CFA4D /* BWAddressPickerCell.xib */,
+				B48F5EEF1F555B73000CFA4D /* BWAddressPickerView.h */,
+				B48F5EF01F555B73000CFA4D /* BWAddressPickerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B48F5EF11F555B73000CFA4D /* BMSidesMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EF21F555B73000CFA4D /* BMSidesMenuCell.h */,
+				B48F5EF31F555B73000CFA4D /* BMSidesMenuCell.m */,
+				B48F5EF41F555B73000CFA4D /* BMSidesMenuView.h */,
+				B48F5EF51F555B73000CFA4D /* BMSidesMenuView.m */,
+				B48F5EF61F555B73000CFA4D /* Resource */,
+			);
+			path = BMSidesMenuView;
+			sourceTree = "<group>";
+		};
+		B48F5EF61F555B73000CFA4D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B48F5EF71F555B73000CFA4D /* bm_sides_menu_separated_line@2x.png */,
+				B48F5EF81F555B73000CFA4D /* bm_sides_menu_separated_line@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B48F5F0C1F555B83000CFA4D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		B4C1DA0E1F4D377C0039838C = {
@@ -238,85 +350,10 @@
 		B4C1DA631F4D37DC0039838C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B4C1DA641F4D37DC0039838C /* Utility */,
+				B48F5ED21F555B73000CFA4D /* View */,
+				B48F5F0C1F555B83000CFA4D /* Utility */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		B4C1DA641F4D37DC0039838C /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				B4C5D84D1F4E773300387B50 /* BMActivityCircleScrollView */,
-				B4C1DA651F4D37DC0039838C /* BMNewAddressPickerView */,
-				B4C1DA771F4D37DC0039838C /* BMSidesMenuView */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		B4C1DA651F4D37DC0039838C /* BMNewAddressPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				B4C1DA661F4D37DC0039838C /* AddressSource */,
-				B4C1DA691F4D37DC0039838C /* BWAddressModel.h */,
-				B4C1DA6A1F4D37DC0039838C /* BWAddressModel.m */,
-				B4C1DA6B1F4D37DC0039838C /* BWAddressPickerManager.h */,
-				B4C1DA6C1F4D37DC0039838C /* BWAddressPickerManager.m */,
-				B4C1DA6D1F4D37DC0039838C /* Resource */,
-				B4C1DA711F4D37DC0039838C /* View */,
-			);
-			path = BMNewAddressPickerView;
-			sourceTree = "<group>";
-		};
-		B4C1DA661F4D37DC0039838C /* AddressSource */ = {
-			isa = PBXGroup;
-			children = (
-				B4C1DA671F4D37DC0039838C /* BWAddressSourceManager.h */,
-				B4C1DA681F4D37DC0039838C /* BWAddressSourceManager.m */,
-			);
-			path = AddressSource;
-			sourceTree = "<group>";
-		};
-		B4C1DA6D1F4D37DC0039838C /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B4C1DA6E1F4D37DC0039838C /* address.db */,
-				B4C1DA6F1F4D37DC0039838C /* icon_checked@2x.png */,
-				B4C1DA701F4D37DC0039838C /* icon_checked@3x.png */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		B4C1DA711F4D37DC0039838C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B4C1DA721F4D37DC0039838C /* BWAddressPickerCell.h */,
-				B4C1DA731F4D37DC0039838C /* BWAddressPickerCell.m */,
-				B4C1DA741F4D37DC0039838C /* BWAddressPickerCell.xib */,
-				B4C1DA751F4D37DC0039838C /* BWAddressPickerView.h */,
-				B4C1DA761F4D37DC0039838C /* BWAddressPickerView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B4C1DA771F4D37DC0039838C /* BMSidesMenuView */ = {
-			isa = PBXGroup;
-			children = (
-				B4C1DA781F4D37DC0039838C /* BMSidesMenuCell.h */,
-				B4C1DA791F4D37DC0039838C /* BMSidesMenuCell.m */,
-				B4C1DA7A1F4D37DC0039838C /* BMSidesMenuView.h */,
-				B4C1DA7B1F4D37DC0039838C /* BMSidesMenuView.m */,
-				B4C1DA7C1F4D37DC0039838C /* Resource */,
-			);
-			path = BMSidesMenuView;
-			sourceTree = "<group>";
-		};
-		B4C1DA7C1F4D37DC0039838C /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B4C1DA7D1F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png */,
-				B4C1DA7E1F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		B4C1DA7F1F4D37DC0039838C /* MVC */ = {
@@ -378,29 +415,13 @@
 			path = CirculationRolling;
 			sourceTree = "<group>";
 		};
-		B4C5D84D1F4E773300387B50 /* BMActivityCircleScrollView */ = {
+		B4C70BF11F565B8500777F97 /* BMLoadingHUD */ = {
 			isa = PBXGroup;
 			children = (
-				B4A87E201F4FCA0C00334506 /* BMHomeActivityViewManager.h */,
-				B4A87E211F4FCA0C00334506 /* BMHomeActivityViewManager.m */,
-				B4C5D8571F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.h */,
-				B4C5D8581F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m */,
-				B4C5D84E1F4E774C00387B50 /* BMActivityCircleScrollView.h */,
-				B4C5D84F1F4E774C00387B50 /* BMActivityCircleScrollView.m */,
-				B4C5D8541F4E7CEA00387B50 /* BMIndicatorWhitePointView.h */,
-				B4C5D8551F4E7CEA00387B50 /* BMIndicatorWhitePointView.m */,
-				B4C5D85A1F4E89B900387B50 /* Resource */,
+				B4C70BF21F565B9700777F97 /* BMLoadingHUD.h */,
+				B4C70BF31F565B9700777F97 /* BMLoadingHUD.m */,
 			);
-			path = BMActivityCircleScrollView;
-			sourceTree = "<group>";
-		};
-		B4C5D85A1F4E89B900387B50 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B4C5D85B1F4E89B900387B50 /* icon_delete_white@2x.png */,
-				B4C5D85C1F4E89B900387B50 /* icon_delete_white@3x.png */,
-			);
-			path = Resource;
+			path = BMLoadingHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,22 +536,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C1DA9D1F4D37DC0039838C /* BWAddressPickerCell.xib in Resources */,
 				B4C5D8641F4EC17000387B50 /* img_circle1.png in Resources */,
-				B4C1DAA11F4D37DC0039838C /* bm_sides_menu_separated_line@2x.png in Resources */,
+				B48F5EFD1F555B73000CFA4D /* icon_delete_white@2x.png in Resources */,
 				B4C1DAA71F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png in Resources */,
+				B48F5EFE1F555B73000CFA4D /* icon_delete_white@3x.png in Resources */,
+				B48F5F0A1F555B73000CFA4D /* bm_sides_menu_separated_line@2x.png in Resources */,
 				B4C1DAA61F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png in Resources */,
-				B4C5D85D1F4E89B900387B50 /* icon_delete_white@2x.png in Resources */,
 				B4C5D8631F4EC17000387B50 /* img_circle2.png in Resources */,
-				B4C1DAA21F4D37DC0039838C /* bm_sides_menu_separated_line@3x.png in Resources */,
 				B4C5D8621F4EC17000387B50 /* img_circle0.png in Resources */,
-				B4C1DA9B1F4D37DC0039838C /* icon_checked@3x.png in Resources */,
-				B4C1DA991F4D37DC0039838C /* address.db in Resources */,
-				B4C1DA9A1F4D37DC0039838C /* icon_checked@2x.png in Resources */,
+				B48F5F061F555B73000CFA4D /* BWAddressPickerCell.xib in Resources */,
 				B4C1DA2A1F4D377C0039838C /* LaunchScreen.storyboard in Resources */,
+				B48F5F0B1F555B73000CFA4D /* bm_sides_menu_separated_line@3x.png in Resources */,
+				B48F5F021F555B73000CFA4D /* address.db in Resources */,
 				B4C1DA271F4D377C0039838C /* Assets.xcassets in Resources */,
-				B4C5D85E1F4E89B900387B50 /* icon_delete_white@3x.png in Resources */,
 				B4C1DA251F4D377C0039838C /* Main.storyboard in Resources */,
+				B48F5F031F555B73000CFA4D /* icon_checked@2x.png in Resources */,
+				B48F5F041F555B73000CFA4D /* icon_checked@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,23 +627,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C1DA961F4D37DC0039838C /* BWAddressSourceManager.m in Sources */,
-				B4A87E221F4FCA0C00334506 /* BMHomeActivityViewManager.m in Sources */,
+				B48F5EF91F555B73000CFA4D /* BMActivityCircleScrollView.m in Sources */,
+				B48F5EFA1F555B73000CFA4D /* BMActivityCircleScrollViewManager.m in Sources */,
 				B4C1DAA41F4D37DC0039838C /* BWHomeTableViewController.m in Sources */,
-				B4C1DA9E1F4D37DC0039838C /* BWAddressPickerView.m in Sources */,
-				B4C1DAA01F4D37DC0039838C /* BMSidesMenuView.m in Sources */,
+				B48F5F011F555B73000CFA4D /* BWAddressPickerManager.m in Sources */,
+				B48F5F091F555B73000CFA4D /* BMSidesMenuView.m in Sources */,
 				B4C1DAA31F4D37DC0039838C /* BWAddressPickerViewController.m in Sources */,
+				B48F5F051F555B73000CFA4D /* BWAddressPickerCell.m in Sources */,
+				B48F5EFC1F555B73000CFA4D /* BMIndicatorWhitePointView.m in Sources */,
 				B4C1DAA51F4D37DC0039838C /* BWResearchViewController.m in Sources */,
+				B48F5F081F555B73000CFA4D /* BMSidesMenuCell.m in Sources */,
+				B48F5F071F555B73000CFA4D /* BWAddressPickerView.m in Sources */,
 				B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */,
-				B4C5D8501F4E774C00387B50 /* BMActivityCircleScrollView.m in Sources */,
 				B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */,
-				B4C5D8591F4E7FBB00387B50 /* BMActivityCircleScrollViewManager.m in Sources */,
+				B4C70BF41F565B9700777F97 /* BMLoadingHUD.m in Sources */,
+				B48F5EFF1F555B73000CFA4D /* BWAddressSourceManager.m in Sources */,
+				B48F5EFB1F555B73000CFA4D /* BMHomeActivityViewManager.m in Sources */,
 				B4C1DA1C1F4D377C0039838C /* main.m in Sources */,
-				B4C1DA981F4D37DC0039838C /* BWAddressPickerManager.m in Sources */,
-				B4C1DA971F4D37DC0039838C /* BWAddressModel.m in Sources */,
-				B4C1DA9F1F4D37DC0039838C /* BMSidesMenuCell.m in Sources */,
-				B4C1DA9C1F4D37DC0039838C /* BWAddressPickerCell.m in Sources */,
-				B4C5D8561F4E7CEA00387B50 /* BMIndicatorWhitePointView.m in Sources */,
+				B48F5F001F555B73000CFA4D /* BWAddressModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

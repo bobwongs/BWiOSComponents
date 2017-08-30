@@ -8,6 +8,7 @@
 
 #import "BWCirculationRollingVC.h"
 #import "BMActivityCircleScrollViewManager.h"
+#import <CXAlertView.h>
 
 @interface BWCirculationRollingVC ()
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
 }
 
@@ -41,7 +43,7 @@
     }];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self showAlert];
+//        [self showAlert];
     });
 }
 
@@ -54,10 +56,22 @@
     });
 }
 
-- (void)showAlert {
+- (IBAction)showAlert {
+//    [self showCXAlertView:nil];
+//    return;
+    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title" message:nil preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (IBAction)showCXAlertView:(id)sender {
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Title" message:nil cancelButtonTitle:nil];
+    [alertView addButtonWithTitle:@"确定" type:CXAlertViewButtonTypeDefault handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
+        [alertView dismiss];
+    }];
+    [alertView show];
 }
 
 - (BMActivityCircleScrollViewManager *)manager {
