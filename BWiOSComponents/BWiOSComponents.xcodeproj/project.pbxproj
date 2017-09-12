@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		59EAAB449F5A3919F1A37CB5 /* libPods-BWiOSComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D81AFEAC806E7F965E51B9 /* libPods-BWiOSComponents.a */; };
+		B46F34AD1F67783D002F3631 /* BMValidCodeTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B46F34AA1F67783D002F3631 /* BMValidCodeTimeManager.m */; };
+		B46F34AE1F67783D002F3631 /* BMValidCodeTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B46F34AC1F67783D002F3631 /* BMValidCodeTimeModel.m */; };
 		B48F5EF91F555B73000CFA4D /* BMActivityCircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ED51F555B73000CFA4D /* BMActivityCircleScrollView.m */; };
 		B48F5EFA1F555B73000CFA4D /* BMActivityCircleScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ED71F555B73000CFA4D /* BMActivityCircleScrollViewManager.m */; };
 		B48F5EFB1F555B73000CFA4D /* BMHomeActivityViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48F5ED91F555B73000CFA4D /* BMHomeActivityViewManager.m */; };
@@ -67,6 +69,10 @@
 
 /* Begin PBXFileReference section */
 		209B7AEB81CE457F36E374EE /* Pods-BWiOSComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponents/Pods-BWiOSComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		B46F34A91F67783D002F3631 /* BMValidCodeTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMValidCodeTimeManager.h; sourceTree = "<group>"; };
+		B46F34AA1F67783D002F3631 /* BMValidCodeTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMValidCodeTimeManager.m; sourceTree = "<group>"; };
+		B46F34AB1F67783D002F3631 /* BMValidCodeTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMValidCodeTimeModel.h; sourceTree = "<group>"; };
+		B46F34AC1F67783D002F3631 /* BMValidCodeTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMValidCodeTimeModel.m; sourceTree = "<group>"; };
 		B48F5ED41F555B73000CFA4D /* BMActivityCircleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollView.h; sourceTree = "<group>"; };
 		B48F5ED51F555B73000CFA4D /* BMActivityCircleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMActivityCircleScrollView.m; sourceTree = "<group>"; };
 		B48F5ED61F555B73000CFA4D /* BMActivityCircleScrollViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMActivityCircleScrollViewManager.h; sourceTree = "<group>"; };
@@ -177,6 +183,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B46F34A81F67783D002F3631 /* BMValidCodeManager */ = {
+			isa = PBXGroup;
+			children = (
+				B46F34A91F67783D002F3631 /* BMValidCodeTimeManager.h */,
+				B46F34AA1F67783D002F3631 /* BMValidCodeTimeManager.m */,
+				B46F34AB1F67783D002F3631 /* BMValidCodeTimeModel.h */,
+				B46F34AC1F67783D002F3631 /* BMValidCodeTimeModel.m */,
+			);
+			path = BMValidCodeManager;
+			sourceTree = "<group>";
+		};
 		B48F5ED21F555B73000CFA4D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +299,7 @@
 		B48F5F0C1F555B83000CFA4D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B46F34A81F67783D002F3631 /* BMValidCodeManager */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -664,6 +682,7 @@
 				B4C1DAA51F4D37DC0039838C /* BWResearchViewController.m in Sources */,
 				B48F5F081F555B73000CFA4D /* BMSidesMenuCell.m in Sources */,
 				B48F5F071F555B73000CFA4D /* BWAddressPickerView.m in Sources */,
+				B46F34AE1F67783D002F3631 /* BMValidCodeTimeModel.m in Sources */,
 				B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */,
 				B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */,
 				B4C70BF41F565B9700777F97 /* BMGifLoadingHUD.m in Sources */,
@@ -671,6 +690,7 @@
 				B48F5EFB1F555B73000CFA4D /* BMHomeActivityViewManager.m in Sources */,
 				B4C1DA1C1F4D377C0039838C /* main.m in Sources */,
 				B48F5F001F555B73000CFA4D /* BWAddressModel.m in Sources */,
+				B46F34AD1F67783D002F3631 /* BMValidCodeTimeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
