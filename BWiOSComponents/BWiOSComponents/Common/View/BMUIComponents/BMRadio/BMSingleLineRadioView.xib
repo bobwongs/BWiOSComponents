@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BMSingleLineRadioView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9p-eo-YwX">
+                    <rect key="frame" x="12" y="22" width="58" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="WCd-WQ-n7z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RID-ZY-QeW">
+                    <rect key="frame" x="0.0" y="58" width="320" height="0.0"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="H2B-6d-wkV"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I13-CB-OFM" customClass="BMRadioView">
+                    <rect key="frame" x="94" y="0.0" width="214" height="58"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h9p-eo-YwX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="FjX-wH-zyt"/>
+                <constraint firstItem="RID-ZY-QeW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HGT-2O-4Ur"/>
+                <constraint firstItem="I13-CB-OFM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R8K-hB-swy"/>
+                <constraint firstAttribute="bottom" secondItem="RID-ZY-QeW" secondAttribute="bottom" id="TLe-s5-qEd"/>
+                <constraint firstAttribute="trailing" secondItem="RID-ZY-QeW" secondAttribute="trailing" id="jjL-Zg-gCB"/>
+                <constraint firstAttribute="bottom" secondItem="I13-CB-OFM" secondAttribute="bottom" id="qBM-oS-guz"/>
+                <constraint firstItem="h9p-eo-YwX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rQW-HQ-uno"/>
+                <constraint firstAttribute="trailing" secondItem="I13-CB-OFM" secondAttribute="trailing" constant="12" id="tI0-xa-fs4"/>
+                <constraint firstItem="I13-CB-OFM" firstAttribute="leading" secondItem="h9p-eo-YwX" secondAttribute="trailing" constant="24" id="u4b-Xj-uUd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lineView" destination="RID-ZY-QeW" id="7sO-Ki-rA3"/>
+                <outlet property="radioView" destination="I13-CB-OFM" id="AYE-1h-Lpx"/>
+                <outlet property="titleLabel" destination="h9p-eo-YwX" id="tDY-mW-rcO"/>
+            </connections>
+            <point key="canvasLocation" x="82" y="333"/>
+        </view>
+    </objects>
+</document>

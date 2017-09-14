@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="56" id="KGk-i7-Jjw" customClass="BMTextArrowCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-ox-Qga" customClass="BMTextArrowView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Pt-ox-Qga" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6By-Av-Pk9"/>
+                    <constraint firstAttribute="bottom" secondItem="1Pt-ox-Qga" secondAttribute="bottom" id="BqW-4n-nu2"/>
+                    <constraint firstAttribute="trailing" secondItem="1Pt-ox-Qga" secondAttribute="trailing" id="sJg-rS-Skz"/>
+                    <constraint firstItem="1Pt-ox-Qga" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zRs-Ig-Kus"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="1Pt-ox-Qga" id="1pa-2j-VOZ"/>
+            </connections>
+            <point key="canvasLocation" x="137" y="53"/>
+        </tableViewCell>
+    </objects>
+</document>

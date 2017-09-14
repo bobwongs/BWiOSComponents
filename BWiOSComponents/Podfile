@@ -12,5 +12,11 @@ target 'BWiOSComponents' do
     pod 'FLAnimatedImage', '1.0.12'
     pod 'TMCache', '2.1.0'
     pod 'pop', '1.0.10'
+    pod 'XXNibBridge', '2.3.1'
+    pod 'YYCategories', '1.0.4'
+    pod 'SVProgressHUD', '2.1.2'
+    
+    pod 'UPPaySDK', '3.3.6'  # 银联支付控件
+    pod 'UMengUShare/Social/WeChat', '6.4.5'  # 友盟-微信
 
 end

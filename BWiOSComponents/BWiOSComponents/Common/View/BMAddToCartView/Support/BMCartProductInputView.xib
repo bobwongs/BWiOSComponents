@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BMCartProductInputView">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="119"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3c-Wd-fOc">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="119"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="23D-Kh-W7C"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh3-H8-8CY">
+                    <rect key="frame" x="264" y="0.0" width="24" height="119"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="ZZp-cz-oiY"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-tP-WY7" userLabel="++">
+                    <rect key="frame" x="264" y="47.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="2Ff-XT-A4h"/>
+                        <constraint firstAttribute="width" constant="24" id="J3L-AB-Mgc"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="plus.png"/>
+                    <connections>
+                        <action selector="addButtonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="xAl-7u-1lx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xds-eR-524" userLabel="--">
+                    <rect key="frame" x="0.0" y="47.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="PLW-Cs-6eN"/>
+                        <constraint firstAttribute="height" constant="24" id="xPy-Qu-Rcx"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="minus.png"/>
+                    <connections>
+                        <action selector="subButtonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="JmY-Tz-3u6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edr-ax-DXE">
+                    <rect key="frame" x="24" y="0.0" width="240" height="119"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Gh3-H8-8CY" secondAttribute="trailing" id="0iY-Yj-ZXF"/>
+                <constraint firstItem="YGJ-tP-WY7" firstAttribute="leading" secondItem="edr-ax-DXE" secondAttribute="trailing" id="9hf-YQ-OMC"/>
+                <constraint firstItem="Gh3-H8-8CY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BBf-4T-oNn"/>
+                <constraint firstAttribute="bottom" secondItem="r3c-Wd-fOc" secondAttribute="bottom" id="HbV-RG-cfx"/>
+                <constraint firstAttribute="bottom" secondItem="Gh3-H8-8CY" secondAttribute="bottom" id="LIc-mk-Gst"/>
+                <constraint firstItem="Xds-eR-524" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MFm-Ep-yrV"/>
+                <constraint firstItem="edr-ax-DXE" firstAttribute="leading" secondItem="Xds-eR-524" secondAttribute="trailing" id="MvJ-KC-gEE"/>
+                <constraint firstItem="edr-ax-DXE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Omy-de-gBp"/>
+                <constraint firstItem="r3c-Wd-fOc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Pqd-nN-Yrd"/>
+                <constraint firstAttribute="trailing" secondItem="YGJ-tP-WY7" secondAttribute="trailing" id="TQb-rJ-Oap"/>
+                <constraint firstItem="r3c-Wd-fOc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="auy-lB-hdI"/>
+                <constraint firstAttribute="bottom" secondItem="edr-ax-DXE" secondAttribute="bottom" id="bJm-r9-eeD"/>
+                <constraint firstItem="Xds-eR-524" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lII-ay-GYI"/>
+                <constraint firstItem="YGJ-tP-WY7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wCi-qd-6HS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="YGJ-tP-WY7" id="Su7-Ic-KR0"/>
+                <outlet property="countLabel" destination="edr-ax-DXE" id="Lom-G1-TOK"/>
+                <outlet property="subButton" destination="Xds-eR-524" id="wVq-uI-Atl"/>
+            </connections>
+            <point key="canvasLocation" x="2" y="-522.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="minus.png" width="24" height="24"/>
+        <image name="plus.png" width="24" height="24"/>
+    </resources>
+</document>
