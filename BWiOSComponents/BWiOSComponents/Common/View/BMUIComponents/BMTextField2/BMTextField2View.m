@@ -23,14 +23,14 @@
     [super awakeFromNib];
     
     /* ---------- B2B Style ---------- */
-    self.titleLabel.textColor = BMb2b_text_color2;
+    self.titleLabel.textColor = [UIColor darkGrayColor];
     self.titleLabel.font = [UIFont systemFontOfSize:12.0];
     
     self.placeholderString = @"请输入";
-    self.contentTextField.textColor = BMb2b_text_color1;
+    self.contentTextField.textColor = [UIColor blackColor];
     self.contentTextField.font = [UIFont systemFontOfSize:14.0];
     
-    self.lineView.backgroundColor = BMb2b_line_color;
+    self.lineView.backgroundColor = [UIColor grayColor];
     /* ---------- B2B Style ---------- */
 }
 
@@ -38,7 +38,7 @@
     _placeholderString = placeholderString;
     
     if (!placeholderString || placeholderString.length == 0) return;
-    UIColor *color = BMb2b_text_color3;
+    UIColor *color = [UIColor lightTextColor];
     NSString *text = placeholderString;
     NSDictionary *attr = @{NSFontAttributeName: self.contentTextField.font,
                            NSForegroundColorAttributeName: color};

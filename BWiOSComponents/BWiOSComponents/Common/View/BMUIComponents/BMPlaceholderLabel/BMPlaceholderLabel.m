@@ -23,13 +23,13 @@
 //            make.edges.mas_equalTo(self);
 //        }];
         
-        UIView *superView = self.superview;
-        if (superView) {
-            [superView addSubview:_placeholderLabel];
-            [_placeholderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.mas_equalTo(self);
-            }];
-        }
+//        UIView *superView = self.superview;
+//        if (superView) {
+//            [superView addSubview:_placeholderLabel];
+//            [_placeholderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//                make.edges.mas_equalTo(self);
+//            }];
+//        }
     }
     return _placeholderLabel;
 }

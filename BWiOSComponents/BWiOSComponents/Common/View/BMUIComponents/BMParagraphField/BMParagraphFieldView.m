@@ -16,18 +16,18 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.titleLabel.textColor = BMb2b_text_color2;
+    self.titleLabel.textColor = [UIColor darkGrayColor];
     self.titleLabel.font = [UIFont systemFontOfSize:12.0];
     
-    self.rightLabel.textColor = BMb2b_sub_color2;
+    self.rightLabel.textColor = [UIColor darkTextColor];
     self.rightLabel.font = [UIFont systemFontOfSize:12.0];
     
-    self.contentTextView.textColor = BMb2b_text_color1;
+    self.contentTextView.textColor = [UIColor blackColor];
     self.contentTextView.font = [UIFont systemFontOfSize:14.0];
-    self.contentTextView.placeholderLabel.textColor = BMb2b_text_color3;
+    self.contentTextView.placeholderLabel.textColor = [UIColor lightTextColor];
     self.contentTextView.placeholder = @"请输入";
     
-    self.lineView.backgroundColor = BMb2b_line_color;
+    self.lineView.backgroundColor = [UIColor grayColor];
     
     [self setData];
 }

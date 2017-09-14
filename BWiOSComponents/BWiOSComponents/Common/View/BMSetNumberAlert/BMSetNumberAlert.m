@@ -7,7 +7,7 @@
 //
 
 #import "BMSetNumberAlert.h"
-#import "UIApplication+BWAdd.h"
+//#import "UIApplication+BWAdd.h"
 #import <UIKit/UIKit.h>
 #import <SVProgressHUD.h>
 
@@ -56,7 +56,7 @@
         
         if (self.dismissBlock) self.dismissBlock();
     }]];
-    [[UIApplication bm_topViewController] presentViewController:alertController animated:YES completion:nil];
+//    [[UIApplication bm_topViewController] presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - Private Method

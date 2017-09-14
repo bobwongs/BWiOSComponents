@@ -7,6 +7,7 @@
 //
 
 #import "BMRadioView.h"
+#import <Masonry.h>
 
 NSInteger const BMRadioViewFirstButtonTag = 100;
 NSString *const BMRadioViewTriggleActionNotification = @"BMRadioViewTriggleActionNotification";  // 触发选择事件的通知，使用场景：选择时，取消键盘输入
@@ -66,8 +67,8 @@ NSString *const BMRadioViewTriggleActionNotification = @"BMRadioViewTriggleActio
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.tag = BMRadioViewFirstButtonTag + idx;
         [button setTitle:radioTitle forState:UIControlStateNormal];
-        [button setTitleColor:BMCOMMON_COLOR_333333 forState:UIControlStateNormal];
-        [button setTitleColor:BMCOMMON_COLOR_999999 forState:UIControlStateDisabled];
+        [button setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor lightTextColor] forState:UIControlStateDisabled];
         button.titleLabel.font = [UIFont systemFontOfSize:14.0];
         [button setImage:[UIImage imageNamed:@"bm_ui_components_radio_normal"] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:@"bm_ui_components_radio_selected"] forState:UIControlStateSelected];

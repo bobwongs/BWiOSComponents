@@ -21,7 +21,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.lineView.backgroundColor = BMb2b_line_color;
+    self.lineView.backgroundColor = [UIColor grayColor];
     self.placeholderString = @"请输入";
 }
 
@@ -29,7 +29,7 @@
     _placeholderString = placeholderString;
     
     if (!placeholderString || placeholderString.length == 0) return;
-    UIColor *color = BMb2b_text_color3;
+    UIColor *color = [UIColor lightTextColor];
     NSString *text = placeholderString;
     NSDictionary *attr = @{NSFontAttributeName: self.contentTextField.font,
                            NSForegroundColorAttributeName: color};

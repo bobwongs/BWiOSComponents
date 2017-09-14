@@ -23,30 +23,30 @@
 
 - (void)bmB2B_setButtonWithType:(BMb2bButtonType)type {
     switch (type) {
-        case BMb2bButtonType_btn1_1:
-            [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8];
-            break;
-        case BMb2bButtonType_btn1_2:
-            [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:BMb2b_sub_color2 disabledBgColor:BMb2b_F8C4AF];
-            break;
-        case BMb2bButtonType_btn2_1:
-            [self bm_setB2bButton2WithNormalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8];
-            break;
-        case BMb2bButtonType_btn2_2:
-            [self bm_setB2bButton2WithNormalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:BMb2b_sub_color2 disabledBgColor:BMb2b_F8C4AF];
-            break;
-        case BMb2bButtonType_btn3_1:
-            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:[UIColor whiteColor] normalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:BMb2b_sub_color2 disabledBgColor:BMb2b_F8C4AF cornerRadius:BM_BUTTON_COMMON_CORNER_RADIUS borderColor:nil borderWidth:0];
-            break;
-        case BMb2bButtonType_btn3_2:
-            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:BMb2b_sub_color2 normalBgGradientColorArray:BMb2b_brand_white_colors highlightedBgColor:BMb2b_FFEDDF disabledBgColor:BMb2b_F8C4AF cornerRadius:BM_BUTTON_COMMON_CORNER_RADIUS borderColor:BMb2b_sub_color2 borderWidth:1.0];
-            break;
-        case BMb2bButtonType_btn3_3:
-            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:[UIColor whiteColor] normalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8 cornerRadius:BM_BUTTON_COMMON_CORNER_RADIUS borderColor:nil borderWidth:0.0];
-            break;
-        case BMb2bButtonType_btn3_4:
-            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:BMb2b_sub_color1 normalBgGradientColorArray:BMb2b_brand_white_colors highlightedBgColor:BMb2b_DBECFF disabledBgColor:[UIColor whiteColor] cornerRadius:4.0 borderColor:BMb2b_sub_color1 borderWidth:1.0];
-            break;
+//        case BMb2bButtonType_btn1_1:
+//            [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8];
+//            break;
+//        case BMb2bButtonType_btn1_2:
+//            [self bm_setB2bButton1WithNormalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:[UIColor darkTextColor] disabledBgColor:BMb2b_F8C4AF];
+//            break;
+//        case BMb2bButtonType_btn2_1:
+//            [self bm_setB2bButton2WithNormalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8];
+//            break;
+//        case BMb2bButtonType_btn2_2:
+//            [self bm_setB2bButton2WithNormalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:[UIColor darkTextColor] disabledBgColor:BMb2b_F8C4AF];
+//            break;
+//        case BMb2bButtonType_btn3_1:
+//            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:[UIColor whiteColor] normalBgGradientColorArray:BMb2b_brand_color2 highlightedBgColor:[UIColor darkTextColor] disabledBgColor:BMb2b_F8C4AF cornerRadius:BM_BUTTON_COMMON_CORNER_RADIUS borderColor:nil borderWidth:0];
+//            break;
+//        case BMb2bButtonType_btn3_2:
+//            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:[UIColor darkTextColor] normalBgGradientColorArray:BMb2b_brand_white_colors highlightedBgColor:BMb2b_FFEDDF disabledBgColor:BMb2b_F8C4AF cornerRadius:BM_BUTTON_COMMON_CORNER_RADIUS borderColor:[UIColor darkTextColor] borderWidth:1.0];
+//            break;
+//        case BMb2bButtonType_btn3_3:
+//            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:[UIColor whiteColor] normalBgGradientColorArray:BMb2b_brand_color1 highlightedBgColor:BMb2b_sub_color1 disabledBgColor:BMb2b_AFD0F8 cornerRadius:BM_BUTTON_COMMON_CORNER_RADIUS borderColor:nil borderWidth:0.0];
+//            break;
+//        case BMb2bButtonType_btn3_4:
+//            [self bm_setButtonWithTitleFont:BM_BUTTON3_COMMON_FONT titleColor:BMb2b_sub_color1 normalBgGradientColorArray:BMb2b_brand_white_colors highlightedBgColor:BMb2b_DBECFF disabledBgColor:[UIColor whiteColor] cornerRadius:4.0 borderColor:BMb2b_sub_color1 borderWidth:1.0];
+//            break;
     }
 }
 

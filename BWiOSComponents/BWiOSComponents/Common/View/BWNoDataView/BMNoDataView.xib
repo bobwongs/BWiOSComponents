@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BMNoDataView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="z5M-oq-VCr">
+                    <rect key="frame" x="147" y="85" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="81W-yD-5o5"/>
+                        <constraint firstAttribute="height" constant="80" id="gP5-CA-eBs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无数据，请点击页面刷新！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EY-gF-H8o">
+                    <rect key="frame" x="12" y="169" width="351" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-nD-uas">
+                    <rect key="frame" x="70" y="214" width="235" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="gev-bI-RuF"/>
+                    </constraints>
+                    <state key="normal" title="刷新">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="AV2-ah-8yn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vf4-nD-uas" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="1xQ-Dy-0N1"/>
+                <constraint firstItem="z5M-oq-VCr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="85" id="2nP-Ls-aXn"/>
+                <constraint firstItem="5EY-gF-H8o" firstAttribute="top" secondItem="z5M-oq-VCr" secondAttribute="bottom" constant="4" id="2yy-iB-wh5"/>
+                <constraint firstAttribute="trailing" secondItem="5EY-gF-H8o" secondAttribute="trailing" constant="12" id="LiW-L5-1Wl"/>
+                <constraint firstItem="z5M-oq-VCr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XJr-dz-bgY"/>
+                <constraint firstItem="Vf4-nD-uas" firstAttribute="top" secondItem="5EY-gF-H8o" secondAttribute="bottom" constant="24" id="eDf-vX-qYI"/>
+                <constraint firstAttribute="trailing" secondItem="Vf4-nD-uas" secondAttribute="trailing" constant="70" id="epO-Gc-Vgl"/>
+                <constraint firstItem="5EY-gF-H8o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="f9W-wK-Trq"/>
+            </constraints>
+            <connections>
+                <outlet property="eventButton" destination="Vf4-nD-uas" id="ecT-ln-n3X"/>
+                <outlet property="iconImageView" destination="z5M-oq-VCr" id="z3H-t9-M4M"/>
+                <outlet property="iconImageViewTopConstraint" destination="2nP-Ls-aXn" id="u5j-4I-os1"/>
+                <outlet property="titleLabel" destination="5EY-gF-H8o" id="wom-E1-XRT"/>
+            </connections>
+            <point key="canvasLocation" x="85.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_box.png" width="80" height="80"/>
+    </resources>
+</document>

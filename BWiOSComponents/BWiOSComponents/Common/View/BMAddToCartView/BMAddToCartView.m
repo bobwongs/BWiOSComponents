@@ -7,10 +7,10 @@
 //
 
 #import "BMAddToCartView.h"
-#import "UIImageView+BMExtension.h"
+//#import "UIImageView+BMExtension.h"
 #import "UIButton+BMExtension.h"
 #import "BMSetNumberAlert.h"
-#import "NSString+BMExtension.h"
+//#import "NSString+BMExtension.h"
 
 CGFloat const BMAddToCartViewAnimationDuration = 0.25;
 
@@ -45,16 +45,16 @@ CGFloat const BMAddToCartViewAnimationDuration = 0.25;
     
     self.showImageView.layer.cornerRadius = 4.0;
     self.showImageView.layer.borderWidth = 0.5;
-    self.showImageView.layer.borderColor = BMb2b_line_color.CGColor;
+    self.showImageView.layer.borderColor = [UIColor grayColor].CGColor;
     self.showImageView.clipsToBounds = YES;
     
-    self.nameLabel.textColor = BMb2b_text_color1;
-    self.nameLabel.font = BMb2b_t3_b;
+    self.nameLabel.textColor = [UIColor blackColor];
+    self.nameLabel.font = [UIFont boldSystemFontOfSize:14.0];
     
     NSArray<UILabel *> *labelArray = @[self.countLabel, self.singletonPriceLabel, self.totalPriceLabel];
     for (UILabel *label in labelArray) {
-        label.textColor = BMb2b_sub_color2;
-        label.font = BMb2b_t3;
+        label.textColor = [UIColor darkTextColor];
+        label.font = [UIFont systemFontOfSize:14.0];
     }
     
     [self.bottomButton bmB2B_setButtonWithType:BMb2bButtonType_btn2_2];
@@ -90,9 +90,9 @@ CGFloat const BMAddToCartViewAnimationDuration = 0.25;
     _itemModel = addressModel;
     if (!addressModel) return;
     
-    [self.showImageView bm_setImageWithURL:[NSURL URLWithString:addressModel.itemImage.picUrl]];
+//    [self.showImageView bm_setImageWithURL:[NSURL URLWithString:addressModel.itemImage.picUrl]];
     self.nameLabel.text = addressModel.name;
-    self.singletonPriceLabel.text = [NSString stringWithFormat:@"单价：%@", [NSString bm_moneyStringWithFen:addressModel.buyingPrice]];
+//    self.singletonPriceLabel.text = [NSString stringWithFormat:@"单价：%@", [NSString bm_moneyStringWithFen:addressModel.buyingPrice]];
     
     // 初始数量为1
     self.count = 1;
@@ -131,7 +131,7 @@ CGFloat const BMAddToCartViewAnimationDuration = 0.25;
     _count = count;
     
     self.countLabel.text = [NSString stringWithFormat:@"数量：%ld", (long)count];
-    self.totalPriceLabel.text = [NSString stringWithFormat:@"总价：%@", [NSString bm_moneyStringWithFen:self.itemModel.buyingPrice * count]];
+//    self.totalPriceLabel.text = [NSString stringWithFormat:@"总价：%@", [NSString bm_moneyStringWithFen:self.itemModel.buyingPrice * count]];
     self.countSettingView.num = count;
     
     self.countSettingView.subButton.enabled = (count <= 1) ? NO : YES;

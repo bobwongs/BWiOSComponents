@@ -15,11 +15,11 @@ NSString *const BMNOTIFICATION_PAY_SUCCESS = @"BMNOTIFICATION_PAY_SUCCESS";
 NSString *const BMNOTIFICATION_PAY_FAILURE = @"BMNOTIFICATION_PAY_FAILURE";
 
 // 支付宝
-#define kAlipayAppScheme @"cn.com.bluemoon.bluehouse.AliPay"
+#define kAlipayAppScheme @"bundleId.AliPay"
 #define kAlipayURLHostSafePay @"safepay"  // 从支付宝App跳转回来的支付URL Host
 
 // 微信
-#define kWeiXinDescription @"月亮小屋"
+#define kWeiXinDescription @"BWiOSComponents"
 #define kWeiXinPackage @"Sign=WXPay"
 //#define kWeiXinMchid @""  // 微信商户号，不用前端传
 #define kWeChatPaySign @"sign"
@@ -29,7 +29,7 @@ NSString *const BMNOTIFICATION_PAY_FAILURE = @"BMNOTIFICATION_PAY_FAILURE";
 #define kWeChatPayTimeStamp @"timeStamp"
 
 // 银联
-NSString *const BMUnionPayAppScheme = @"cn.com.bluemoon.bluehouse.UPPay";  // 跳转回来的App Scheme
+NSString *const BMUnionPayAppScheme = @"bundleId.UPPay";  // 跳转回来的App Scheme
 NSString *const BMUnionPayModeProduction = @"00";  // 生产环境（正式），当前后端银联支付的测试环境和生产环境都为生产Mode
 //NSString *const BMUnionPayModeDevelopment = @"01";  // 开发环境（测试）
 

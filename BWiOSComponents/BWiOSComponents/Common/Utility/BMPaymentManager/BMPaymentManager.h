@@ -6,7 +6,7 @@
 //  Copyright © 2016年 elvin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 extern NSString *const BMNOTIFICATION_PAY_SUCCESS;
 extern NSString *const BMNOTIFICATION_PAY_FAILURE;

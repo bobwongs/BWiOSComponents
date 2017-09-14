@@ -32,12 +32,12 @@
     [super awakeFromNib];
     
     /* ---------- B2B Style ---------- */
-    self.titleLabel.textColor = BMb2b_text_color2;
+    self.titleLabel.textColor = [UIColor darkGrayColor];
     self.titleLabel.font = [UIFont systemFontOfSize:12.0];
     
-    self.contentTextField.textColor = BMb2b_text_color1;
+    self.contentTextField.textColor = [UIColor blackColor];
     
-    self.lineView.backgroundColor = BMb2b_line_color;
+    self.lineView.backgroundColor = [UIColor grayColor];
     /* ---------- B2B Style ---------- */
     
     [self addNotification];
@@ -63,7 +63,7 @@
     _inputEnabled = inputEnabled;
     self.contentTextField.userInteractionEnabled = inputEnabled;
     
-    UIColor *color = inputEnabled ? BMb2b_text_color3 : BMb2b_text_color1;
+    UIColor *color = inputEnabled ? [UIColor lightTextColor] : [UIColor blackColor];
     NSString *text = inputEnabled ? @"请输入" : @"未填写";
     NSDictionary *attr = @{NSFontAttributeName: self.contentTextField.font,
                            NSForegroundColorAttributeName: color};

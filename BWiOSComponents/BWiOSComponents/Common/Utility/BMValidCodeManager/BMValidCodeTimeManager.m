@@ -1,6 +1,6 @@
 //
 //  BMValidCodeTimeManager.m
-//  B2BMall
+//  BWiOSComponents
 //
 //  Created by BobWong on 2016/10/24.
 //  Copyright © 2016年 月亮小屋（中国）有限公司. All rights reserved.

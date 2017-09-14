@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Components-->
+        <!--BWiOSComponents-->
         <scene sceneID="sIs-6e-xwD">
             <objects>
                 <tableViewController id="aJb-G5-Pno" customClass="BWHomeTableViewController" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="aJb-G5-Pno" id="SmP-tQ-hMC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Components" id="I0y-c5-pSR"/>
+                    <navigationItem key="navigationItem" title="BWiOSComponents" id="I0y-c5-pSR"/>
                     <connections>
                         <segue destination="dtQ-Pq-zcW" kind="show" identifier="home_to_address_picker" id="Ruf-Cz-V3P">
                             <nil key="action"/>
