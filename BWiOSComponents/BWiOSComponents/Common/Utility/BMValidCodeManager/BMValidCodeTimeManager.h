@@ -14,9 +14,7 @@ typedef NS_ENUM(NSInteger, BMValidCodeTimeType) {
     BMValidCodeTimeTypeForgetPassword,
 };
 
-/**
- * 描述:验证码管理类,多个地方用到验证码倒计时功能，所以封装此类以复用
- */
+/** 描述:验证码管理类,多个地方用到验证码倒计时功能，所以封装此类以复用 */
 @interface BMValidCodeTimeManager : NSObject
 
 + (instancetype)sharedInstance;
@@ -26,11 +24,5 @@ typedef NS_ENUM(NSInteger, BMValidCodeTimeType) {
 
 //继续上一次倒计时,例如：上一次倒计时还没有完成，用户返回或者退出
 - (void)continuteLastCountDownAnimation:(UIButton *)btn withType:(BMValidCodeTimeType)type;
-
-//缓存到本地
-- (void)cacheToDisk;
-
-//重置倒计时
-- (void)resetCountDown;
 
 @end

@@ -7,15 +7,12 @@
 //
 
 #import "BMValidCodeTimeManager.h"
-#import "BMValidCodeTimeModel.h"
-#import <TMCache.h>
 #import <POP.h>
 
 #define BMDefaultIntervalSeconds 6
 
 @interface BMValidCodeTimeManager ()
 
-@property (nonatomic, strong) BMValidCodeTimeModel *validCodeTimeModel;//验证码时间model
 @property (strong, nonatomic) NSMutableDictionary *remainTimeDictM;  ///< 剩余时间记录
 @property (strong, nonatomic) NSTimer *timer;
 
@@ -30,16 +27,8 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[BMValidCodeTimeManager alloc] init];
         sharedInstance.remainTimeDictM = [NSMutableDictionary new];
-        [sharedInstance initDataFromDiskCache];
     });
     return sharedInstance;
-}
-
-//缓存到磁盘
-- (void)cacheToDisk
-{
-    NSLog(@"缓存BMValidCodeTimeModel到本地:%@", self.validCodeTimeModel);
-    [[TMCache sharedCache] setObject:self.validCodeTimeModel forKey:@"BMValidCodeTimeModelKey"];
 }
 
 //继续上一次倒计时
@@ -121,35 +110,6 @@
     }];
     
     [btn pop_addAnimation:anBasic forKey:@"BMFetchValidCodeCountDownAnim"];
-}
-
-#pragma mark - 私有方法
-
-//重置倒计时
-- (void)resetCountDown
-{
-    self.validCodeTimeModel.intervalSeconds = 0;
-    [self cacheToDisk];
-}
-
-- (void)initDataFromDiskCache
-{
-    BMValidCodeTimeModel *validCodeTimeModel = [[TMCache sharedCache] objectForKey:@"BMValidCodeTimeModelKey"];
-    if (validCodeTimeModel) {
-        self.validCodeTimeModel = validCodeTimeModel;
-    }
-    NSLog(@"从本地缓存获取validCodeTimeModel:%@",self.validCodeTimeModel);
-}
-
-#pragma mark - getters and setters
-
-- (BMValidCodeTimeModel *)validCodeTimeModel
-{
-    if (_validCodeTimeModel == nil) {
-        _validCodeTimeModel = [[BMValidCodeTimeModel alloc] init];
-        _validCodeTimeModel.intervalSeconds = BMDefaultIntervalSeconds;
-    }
-    return _validCodeTimeModel;
 }
 
 @end
