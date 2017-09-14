@@ -110,6 +110,9 @@
 		B404647C1F6A77550074B89E /* function_html_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40464711F6A77550074B89E /* function_html_refresh@2x.png */; };
 		B404647D1F6A77550074B89E /* function_html_urgent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40464721F6A77550074B89E /* function_html_urgent@2x.png */; };
 		B404647E1F6A77550074B89E /* function_html_urgent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40464731F6A77550074B89E /* function_html_urgent@3x.png */; };
+		B40464831F6A7A270074B89E /* BWNavigationStyleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B40464821F6A7A270074B89E /* BWNavigationStyleVC.m */; };
+		B40464871F6A7A5F0074B89E /* BWUIComponentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B40464861F6A7A5F0074B89E /* BWUIComponentsVC.m */; };
+		B404648B1F6A7ABE0074B89E /* BWVerifyCodeManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B404648A1F6A7ABE0074B89E /* BWVerifyCodeManagerVC.m */; };
 		B4C1DA1C1F4D377C0039838C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1B1F4D377C0039838C /* main.m */; };
 		B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1E1F4D377C0039838C /* AppDelegate.m */; };
 		B4C1DA251F4D377C0039838C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1DA231F4D377C0039838C /* Main.storyboard */; };
@@ -296,6 +299,12 @@
 		B40464711F6A77550074B89E /* function_html_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "function_html_refresh@2x.png"; sourceTree = "<group>"; };
 		B40464721F6A77550074B89E /* function_html_urgent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "function_html_urgent@2x.png"; sourceTree = "<group>"; };
 		B40464731F6A77550074B89E /* function_html_urgent@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "function_html_urgent@3x.png"; sourceTree = "<group>"; };
+		B40464811F6A7A270074B89E /* BWNavigationStyleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavigationStyleVC.h; sourceTree = "<group>"; };
+		B40464821F6A7A270074B89E /* BWNavigationStyleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavigationStyleVC.m; sourceTree = "<group>"; };
+		B40464851F6A7A5F0074B89E /* BWUIComponentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUIComponentsVC.h; sourceTree = "<group>"; };
+		B40464861F6A7A5F0074B89E /* BWUIComponentsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUIComponentsVC.m; sourceTree = "<group>"; };
+		B40464891F6A7ABE0074B89E /* BWVerifyCodeManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVerifyCodeManagerVC.h; sourceTree = "<group>"; };
+		B404648A1F6A7ABE0074B89E /* BWVerifyCodeManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVerifyCodeManagerVC.m; sourceTree = "<group>"; };
 		B4C1DA171F4D377C0039838C /* BWiOSComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DA1B1F4D377C0039838C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C1DA1D1F4D377C0039838C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -857,6 +866,33 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B40464801F6A79FF0074B89E /* NavigationStyle */ = {
+			isa = PBXGroup;
+			children = (
+				B40464811F6A7A270074B89E /* BWNavigationStyleVC.h */,
+				B40464821F6A7A270074B89E /* BWNavigationStyleVC.m */,
+			);
+			path = NavigationStyle;
+			sourceTree = "<group>";
+		};
+		B40464841F6A7A440074B89E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B40464851F6A7A5F0074B89E /* BWUIComponentsVC.h */,
+				B40464861F6A7A5F0074B89E /* BWUIComponentsVC.m */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		B40464881F6A7AAF0074B89E /* VerifyCodeManager */ = {
+			isa = PBXGroup;
+			children = (
+				B40464891F6A7ABE0074B89E /* BWVerifyCodeManagerVC.h */,
+				B404648A1F6A7ABE0074B89E /* BWVerifyCodeManagerVC.m */,
+			);
+			path = VerifyCodeManager;
+			sourceTree = "<group>";
+		};
 		B4C1DA0E1F4D377C0039838C = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +977,9 @@
 				B4C1DA801F4D37DC0039838C /* AddressPickerView */,
 				B4C70BF51F5668F800777F97 /* LoadingHUD */,
 				B4C1DAAA1F4D4D0B0039838C /* CirculationRolling */,
+				B40464801F6A79FF0074B89E /* NavigationStyle */,
+				B40464841F6A7A440074B89E /* UIComponents */,
+				B40464881F6A7AAF0074B89E /* VerifyCodeManager */,
 				B4C1DA861F4D37DC0039838C /* Research */,
 			);
 			path = MVC;
@@ -1246,6 +1285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40464871F6A7A5F0074B89E /* BWUIComponentsVC.m in Sources */,
 				B40463D41F6A589F0074B89E /* BMIndicatorWhitePointView.m in Sources */,
 				B4C1DAA41F4D37DC0039838C /* BWHomeTableViewController.m in Sources */,
 				B40463E51F6A589F0074B89E /* BWAddressPickerCell.m in Sources */,
@@ -1276,11 +1316,13 @@
 				B40464021F6A589F0074B89E /* BMTextFieldCell.m in Sources */,
 				B404645D1F6A73220074B89E /* UINavigationController+BMExtension.m in Sources */,
 				B4C1DAA51F4D37DC0039838C /* BWResearchViewController.m in Sources */,
+				B404648B1F6A7ABE0074B89E /* BWVerifyCodeManagerVC.m in Sources */,
 				B40463E91F6A589F0074B89E /* BMSidesMenuCell.m in Sources */,
 				B40463DF1F6A589F0074B89E /* BWAddressSourceManager.m in Sources */,
 				B40463D91F6A589F0074B89E /* BMCartProductInputView.m in Sources */,
 				B40463CF1F6A589F0074B89E /* BMPaymentManager.m in Sources */,
 				B40464761F6A77550074B89E /* BMWebViewController.m in Sources */,
+				B40464831F6A7A270074B89E /* BWNavigationStyleVC.m in Sources */,
 				B40463D11F6A589F0074B89E /* BMActivityCircleScrollView.m in Sources */,
 				B4C1DAAD1F4D4D460039838C /* BWCirculationRollingVC.m in Sources */,
 				B40463F71F6A589F0074B89E /* BMParagraphFieldView.m in Sources */,
