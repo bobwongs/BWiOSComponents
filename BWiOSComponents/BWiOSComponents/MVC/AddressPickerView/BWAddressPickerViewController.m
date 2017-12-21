@@ -7,7 +7,7 @@
 //
 
 #import "BWAddressPickerViewController.h"
-#import "BWAddressPickerManager.h"
+#import "BWAddressPicker.h"
 #import "BWAddressModel.h"
 
 @interface BWAddressPickerViewController ()

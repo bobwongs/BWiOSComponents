@@ -1,0 +1,82 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CXAlertView (1.1.0)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - iCarousel (1.8.3)
+  - Masonry (1.0.2)
+  - pop (1.0.10)
+  - SDCycleScrollView (1.73):
+    - SDWebImage (~> 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SVProgressHUD (2.1.2)
+  - TMCache (2.1.0)
+  - UMengUShare/Core (6.4.5):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.5)
+  - UMengUShare/Social/ReducedWeChat (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.4.5):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UPPaySDK (3.3.6)
+  - XXNibBridge (2.3.1)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (= 3.1.0)
+  - CXAlertView (= 1.1.0)
+  - FLAnimatedImage (= 1.0.12)
+  - FMDB (= 2.6.2)
+  - iCarousel (= 1.8.3)
+  - Masonry (= 1.0.2)
+  - pop (= 1.0.10)
+  - SDCycleScrollView (= 1.73)
+  - SDWebImage (= 4.0.0)
+  - SVProgressHUD (= 2.1.2)
+  - TMCache (= 2.1.0)
+  - UMengUShare/Social/WeChat (= 6.4.5)
+  - UPPaySDK (= 3.3.6)
+  - XXNibBridge (= 2.3.1)
+  - YYCategories (= 1.0.4)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CXAlertView: 7387ca9af81796ab22d26ff2fc3cfcb082f3ee09
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SDCycleScrollView: d0fd5fe40a80918371fd8939214eb3be81033d83
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
+  UPPaySDK: 452a12dfedd0240b28e9f73cdc5fa9664c81a908
+  XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: dffcdacef8fc3574e03954d384bb1fe9fa08204d
+
+COCOAPODS: 1.3.1
