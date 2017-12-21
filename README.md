@@ -182,7 +182,7 @@ BWAddressSourceManager 负责从数据库获取数据源，本项目用本地获
 
 ## Reference
 
-Blog: http://www.bobwongs.com
+Blog: https://bobwongs.coding.me
 
 Github: https://github.com/bobwongs
 
