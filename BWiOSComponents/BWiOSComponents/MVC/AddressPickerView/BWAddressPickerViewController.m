@@ -8,15 +8,15 @@
 
 #import "BWAddressPickerViewController.h"
 #import "BWAddressPicker.h"
-#import "BWAddressModel.h"
+#import "BWRegionModel.h"
 
 @interface BWAddressPickerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UIButton *secondButton;
 
-@property (strong, nonatomic) BWAddressPickerManager *addressPickerManager;  ///< Address picker manager
-@property (strong, nonatomic) BWAddressPickerManager *selectedAddressPickerManager;
+@property (strong, nonatomic) BWAddressPicker *addressPicker;  ///< Address picker manager
+@property (strong, nonatomic) BWAddressPicker *selectedAddressPicker;
 
 @end
 
@@ -29,8 +29,6 @@
     
     self.button.layer.cornerRadius = 10.0;
     self.secondButton.layer.cornerRadius = 10.0;
-    
-    [self initSelectedAddressPickerManager];
 }
 
 - (void)dealloc {
@@ -40,68 +38,71 @@
 #pragma mark - Action
 
 - (IBAction)pickAddressAction:(id)sender {
-    [self.addressPickerManager show];
+    [self.addressPicker show];
 }
 
 - (IBAction)pickSelectedAddressAction:(id)sender {
-    [self.selectedAddressPickerManager show];
+    [self.selectedAddressPicker show];
 }
 
 #pragma mark - Setter and Getter
 
-- (BWAddressPickerManager *)addressPickerManager {
-    if (!_addressPickerManager) {
-        _addressPickerManager = [BWAddressPickerManager new];
+- (BWAddressPicker *)addressPicker {
+    if (!_addressPicker) {
+        _addressPicker = [BWAddressPicker new];
         
         __weak typeof(self) weakSelf = self;
-        _addressPickerManager.didSelectBlock = ^(NSArray<BWAddressModel *> *selectedArray) {
+        _addressPicker.didSelectBlock = ^(NSArray<BWRegionModel *> *selectedArray) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             
             NSMutableString *addressStr = [NSMutableString new];
-            [selectedArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
-                [addressStr appendString:model.name];
+            [selectedArray enumerateObjectsUsingBlock:^(BWRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+                [addressStr appendString:model.dname];
             }];
             
             [strongSelf.button setTitle:addressStr forState:UIControlStateNormal];
         };
     }
-    return _addressPickerManager;
+    return _addressPicker;
 }
 
-- (void)initSelectedAddressPickerManager {
-    self.selectedAddressPickerManager = [BWAddressPickerManager new];
-    
-    __weak typeof(self) weakSelf = self;
-    _selectedAddressPickerManager.didSelectBlock = ^(NSArray<BWAddressModel *> *selectedArray) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
+- (BWAddressPicker *)selectedAddressPicker {
+    if (!_selectedAddressPicker) {
+        _selectedAddressPicker = [BWAddressPicker new];
         
-        NSMutableString *addressStr = [NSMutableString new];
-        [selectedArray enumerateObjectsUsingBlock:^(BWAddressModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
-            [addressStr appendString:model.name];
-        }];
+        __weak typeof(self) weakSelf = self;
+        _selectedAddressPicker.didSelectBlock = ^(NSArray<BWRegionModel *> *selectedArray) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            
+            NSMutableString *addressStr = [NSMutableString new];
+            [selectedArray enumerateObjectsUsingBlock:^(BWRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+                [addressStr appendString:model.dname];
+            }];
+            
+            [strongSelf.secondButton setTitle:addressStr forState:UIControlStateNormal];
+        };
         
-        [strongSelf.secondButton setTitle:addressStr forState:UIControlStateNormal];
-    };
-    
-    BWAddressModel *provinceModel = [BWAddressModel new];
-    provinceModel.code = 44;
-    provinceModel.type = @"province";
-    provinceModel.name = @"广东";
-    
-    BWAddressModel *cityModel = [BWAddressModel new];
-    cityModel.code = 4401;
-    cityModel.type = @"city";
-    cityModel.name = @"广州";
-    
-    BWAddressModel *countyModel = [BWAddressModel new];
-    countyModel.code = 440106;
-    countyModel.type = @"county";
-    countyModel.name = @"天河区";
-    
-    [_selectedAddressPickerManager setAddressWithSelectedAddressArray:@[provinceModel, cityModel, countyModel]];
-    
-    NSString *secondTitle = [NSString stringWithFormat:@"%@%@%@", provinceModel.name, cityModel.name, countyModel.name];
-    [_secondButton setTitle:secondTitle forState:UIControlStateNormal];
+        BWRegionModel *provinceModel = [BWRegionModel new];
+        provinceModel.dcode = @(44).stringValue;
+        provinceModel.type = @"province";
+        provinceModel.dname = @"广东";
+        
+        BWRegionModel *cityModel = [BWRegionModel new];
+        cityModel.dcode = @(4401).stringValue;
+        cityModel.type = @"city";
+        cityModel.dname = @"广州";
+        
+        BWRegionModel *countyModel = [BWRegionModel new];
+        countyModel.dcode = @(440106).stringValue;
+        countyModel.type = @"county";
+        countyModel.dname = @"天河区";
+        
+        [_selectedAddressPicker setAddressWithSelectedAddressArray:@[provinceModel, cityModel, countyModel]];
+        
+        NSString *secondTitle = [NSString stringWithFormat:@"%@%@%@", provinceModel.dname, cityModel.dname, countyModel.dname];
+        [_secondButton setTitle:secondTitle forState:UIControlStateNormal];
+    }
+    return _selectedAddressPicker;
 }
 
 @end

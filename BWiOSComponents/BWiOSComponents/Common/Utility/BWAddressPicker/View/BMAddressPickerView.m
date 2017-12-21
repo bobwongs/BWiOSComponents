@@ -32,7 +32,7 @@ NSString *const BMAddressPickerTextToSelect = @"请选择";
 NSInteger const BMAddressPickerFirstTableViewTag = 100;  // 第一个TableView的Tag值为100，之后的+1
 NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值为200，为了找寻选中Label
 
-@interface BMNewAddressPickerView () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface BMAddressPickerView () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
 /* UI */
 @property (strong, nonatomic) UIView *shadowView;  ///< Shadow
@@ -56,7 +56,7 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
 
 @end
 
-@implementation BMNewAddressPickerView
+@implementation BMAddressPickerView
 
 #pragma mark - View Life
 
@@ -372,10 +372,10 @@ NSInteger const BMAddressPickerFirstButtonTag = 200;  // 第一个Label的Tag值
     tableView.rowHeight = 40;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    NSBundle *bundle = [NSBundle bundleForClass:[BMAddressPickerCell class]];
-    NSURL *url = [bundle URLForResource:@"BMAddressPicker" withExtension:@"bundle"];
-    NSBundle *pickerBundle = [NSBundle bundleWithURL:url];
-    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BMAddressPickerCell class]) bundle:pickerBundle] forCellReuseIdentifier:BMAddressPickerCellId];
+//    NSBundle *bundle = [NSBundle bundleForClass:[BMAddressPickerCell class]];
+//    NSURL *url = [bundle URLForResource:@"BMAddressPicker" withExtension:@"bundle"];
+//    NSBundle *pickerBundle = [NSBundle bundleWithURL:url];
+    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BMAddressPickerCell class]) bundle:nil] forCellReuseIdentifier:BMAddressPickerCellId];
     
     [_bottomScrollView addSubview:tableView];
     

@@ -15,7 +15,7 @@
 @property (strong, nonatomic) BMAddressPickerView *pickerView;
 
 /* Data */
-@property (strong, nonatomic) NSMutableArray<NSArray<BMRegionModel *> *> *addressArray;  ///< 地址数据源
+@property (strong, nonatomic) NSMutableArray<NSArray<BWRegionModel *> *> *addressArray;  ///< 地址数据源
 
 @end
 
@@ -45,15 +45,15 @@
     [self.pickerView dismiss];
 }
 
-- (void)setAddressWithSelectedAddressArray:(NSArray<BMRegionModel *> *)addressArray {
+- (void)setAddressWithSelectedAddressArray:(NSArray<BWRegionModel *> *)addressArray {
     NSMutableArray *arrayM = [NSMutableArray arrayWithArray:addressArray];
-    for (BMRegionModel *model in addressArray) {
+    for (BWRegionModel *model in addressArray) {
         if (model.dcode.length == 0 || model.dname.length == 0 || model.type.length == 0) [arrayM removeObject:model];  // 移除无效的选中序列
     }
     [self.addressSourceManager getSelectedAddressSourceWithRegionArray:arrayM];
 }
 
-- (void)setPickerViewSelectedArrayWithSelectedArray:(NSArray<BMRegionModel *> *)selectedArray DataSource:(NSArray<NSArray<BMRegionModel *> *> *)selectedDataSource {
+- (void)setPickerViewSelectedArrayWithSelectedArray:(NSArray<BWRegionModel *> *)selectedArray DataSource:(NSArray<NSArray<BWRegionModel *> *> *)selectedDataSource {
     BOOL validValue = !selectedArray || selectedArray.count == 0 || !selectedDataSource || selectedDataSource.count == 0 ;
     if (validValue || selectedArray.count < selectedDataSource.count) {  // 数量不对等时，重新进行选择，如果需要支持数据源不相等时，也能有个初始选择状态，则需要重新设计，这种情况较少，暂时不处理
         [self show];
@@ -63,14 +63,14 @@
     NSMutableArray<NSArray<NSString *> *> *namesArray = [NSMutableArray new];
     NSMutableArray<NSNumber *> *selectedNumberArray = [NSMutableArray new];
 
-    [selectedDataSource enumerateObjectsUsingBlock:^(NSArray<BMRegionModel *> * _Nonnull modelArray, NSUInteger idx, BOOL * _Nonnull stop) {
+    [selectedDataSource enumerateObjectsUsingBlock:^(NSArray<BWRegionModel *> * _Nonnull modelArray, NSUInteger idx, BOOL * _Nonnull stop) {
         [namesArray addObject:[[self class] getNameArrayWithModelArray:modelArray]];
     }];
     
     self.addressArray = [NSMutableArray arrayWithArray:selectedDataSource];
 
-    [selectedDataSource enumerateObjectsUsingBlock:^(NSArray<BMRegionModel *> * _Nonnull modelArray, NSUInteger arrayIdx, BOOL * _Nonnull arrayStop) {
-        [modelArray enumerateObjectsUsingBlock:^(BMRegionModel * _Nonnull model, NSUInteger modelIdx, BOOL * _Nonnull modelStop) {
+    [selectedDataSource enumerateObjectsUsingBlock:^(NSArray<BWRegionModel *> * _Nonnull modelArray, NSUInteger arrayIdx, BOOL * _Nonnull arrayStop) {
+        [modelArray enumerateObjectsUsingBlock:^(BWRegionModel * _Nonnull model, NSUInteger modelIdx, BOOL * _Nonnull modelStop) {
             if ([model.dcode isEqualToString:selectedArray[arrayIdx].dcode]) {
                 [selectedNumberArray addObject:@(modelIdx)];
             }
@@ -87,7 +87,7 @@
     self.addressArray = [NSMutableArray new];
 }
 
-- (void)getRegionDataWithParentModel:(BMRegionModel *)parentModel {
+- (void)getRegionDataWithParentModel:(BWRegionModel *)parentModel {
     NSArray *typeArray = BM_ADDRESS_TYPE_ARRAY;
     NSInteger typeIndex = _addressArray.count;
     if (typeIndex > typeArray.count - 1) return;
@@ -95,13 +95,13 @@
     [self.addressSourceManager getAddressSourceArrayWithParentCode:parentModel.dcode addressType:typeArray[typeIndex]];
 }
 
-- (void)addNextAddressData:(NSArray<BMRegionModel *> *)regionArray {
+- (void)addNextAddressData:(NSArray<BWRegionModel *> *)regionArray {
     if (regionArray && regionArray.count > 0) {  // 有数据才添加，跟PickerView中的数据保持一致
         [self.addressArray addObject:regionArray];
     }
     
     NSMutableArray *nameArray = [NSMutableArray new];
-    [regionArray enumerateObjectsUsingBlock:^(BMRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+    [regionArray enumerateObjectsUsingBlock:^(BWRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
         [nameArray addObject:model.dname];
     }];
     
@@ -113,9 +113,9 @@
     }
 }
 
-+ (NSArray<NSString *> *)getNameArrayWithModelArray:(NSArray<BMRegionModel *> *)modelArray {
++ (NSArray<NSString *> *)getNameArrayWithModelArray:(NSArray<BWRegionModel *> *)modelArray {
     NSMutableArray<NSString *> *nameArray = [NSMutableArray new];
-    [modelArray enumerateObjectsUsingBlock:^(BMRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+    [modelArray enumerateObjectsUsingBlock:^(BWRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
         [nameArray addObject:model.dname];
     }];
     return nameArray;
@@ -131,7 +131,7 @@
         _pickerView.getDataBlock = ^(NSUInteger selectedSection, NSUInteger selectedRow) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             
-            BMRegionModel *model = strongSelf.addressArray[selectedSection][selectedRow];
+            BWRegionModel *model = strongSelf.addressArray[selectedSection][selectedRow];
             [strongSelf getRegionDataWithParentModel:model];
         };
         
@@ -144,7 +144,7 @@
             __strong typeof(weakSelf) strongSelf = weakSelf;
             NSLog(@"selected index array is %@", selectedIndexArray);
             
-            // 选中的BMRegionModel添加进数组
+            // 选中的BWRegionModel添加进数组
             NSMutableArray *arrayM = [NSMutableArray new];
             [strongSelf.addressArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull selectedAddressSourceArray, NSUInteger idx, BOOL * _Nonnull stop) {
                 if (idx >= selectedIndexArray.count) return;  // 容错判断
@@ -171,12 +171,12 @@
         _addressSourceManager = [BMAddressSourceManager new];
         
         __weak typeof(self) weakSelf = self;
-        _addressSourceManager.finishedGetRegionBlock = ^(NSArray<BMRegionModel *> *regionArray) {
+        _addressSourceManager.finishedGetRegionBlock = ^(NSArray<BWRegionModel *> *regionArray) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             [strongSelf addNextAddressData:regionArray];
         };
         
-        _addressSourceManager.finishedGetSelectedDataSourceBlock = ^(NSArray<BMRegionModel *> *selectedArray, NSArray<NSArray<BMRegionModel *> *> *selectedDataSource) {
+        _addressSourceManager.finishedGetSelectedDataSourceBlock = ^(NSArray<BWRegionModel *> *selectedArray, NSArray<NSArray<BWRegionModel *> *> *selectedDataSource) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             [strongSelf setPickerViewSelectedArrayWithSelectedArray:selectedArray DataSource:selectedDataSource];
         };

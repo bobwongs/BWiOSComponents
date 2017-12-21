@@ -7,19 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BMRegionModel.h"
+#import "BWRegionModel.h"
 #import "BMAddressSourceManager.h"
 
 @interface BWAddressPicker : NSObject
 
 @property (strong, nonatomic) BMAddressSourceManager *addressSourceManager;  ///< Address source manager
-@property (copy, nonatomic) void(^didSelectBlock)(NSArray<BMRegionModel *> *selectedModelArray);  ///< Finish select callback block.
+@property (copy, nonatomic) void(^didSelectBlock)(NSArray<BWRegionModel *> *selectedModelArray);  ///< Finish select callback block.
 @property (nonatomic, copy) dispatch_block_t cancelBlock;  ///< Cancel action.
 
 - (void)show;
 - (void)dismiss;
 
 /** 设置选中地址 */
-- (void)setAddressWithSelectedAddressArray:(NSArray<BMRegionModel *> *)addressArray;
+- (void)setAddressWithSelectedAddressArray:(NSArray<BWRegionModel *> *)addressArray;
 
 @end

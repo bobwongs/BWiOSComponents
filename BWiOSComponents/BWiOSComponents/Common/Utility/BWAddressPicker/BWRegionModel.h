@@ -1,5 +1,5 @@
 //
-//  BMRegionModel.h
+//  BWRegionModel.h
 //  BMiOSUIComponents
 //
 //  Created by BobWong on 2017/6/1.
@@ -12,7 +12,7 @@ extern NSString *const BMAddressTypeProvince;
 extern NSString *const BMAddressTypeCity;
 extern NSString *const BMAddressTypeCounty;
 
-@interface BMRegionModel : NSObject
+@interface BWRegionModel : NSObject
 
 @property (strong, nonatomic) NSString *dcode;  ///< 区域编码
 @property (strong, nonatomic) NSString *dname;  ///< 区域名称，使用String类型，为了兼容SAP的地址

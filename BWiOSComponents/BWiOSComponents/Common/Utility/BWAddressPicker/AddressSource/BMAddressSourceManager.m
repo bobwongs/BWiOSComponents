@@ -7,7 +7,7 @@
 //
 
 #import "BMAddressSourceManager.h"
-#import "BMRegionModel.h"
+#import "BWRegionModel.h"
 #import "BMAddressPickerAppearance.h"
 #import <FMDB.h>
 
@@ -19,8 +19,8 @@ NSString *const BWAddressTypeCounty = @"county";
 
 @property (strong, nonatomic) FMDatabase *database;
 
-@property (strong, nonatomic) NSArray<BMRegionModel *> *selectedRegionArray;
-@property (strong, nonatomic) NSMutableArray<NSArray<BMRegionModel *> *> *selectedRegionDataSource;
+@property (strong, nonatomic) NSArray<BWRegionModel *> *selectedRegionArray;
+@property (strong, nonatomic) NSMutableArray<NSArray<BWRegionModel *> *> *selectedRegionDataSource;
 
 @end
 
@@ -39,23 +39,34 @@ NSString *const BWAddressTypeCounty = @"county";
 
 - (void)getAddressSourceArrayWithParentCode:(NSString *)parentCode addressType:(NSString *)addressType {
     switch (self.dataSourceType) {
-//        case BMAddressDataSourceTypeNormal:
+        case BMAddressDataSourceTypeNormal: {
+            NSMutableArray<BWRegionModel *> *arrayM = [self db_returnAddressSourceArrayWithParentCode:parentCode addressType:addressType];
+            if (self.finishedGetRegionBlock) self.finishedGetRegionBlock(arrayM);
+            break;
+        }
     }
 }
 
-- (void)getSelectedAddressSourceWithRegionArray:(NSArray<BMRegionModel *> *)regionArray {
+- (void)getSelectedAddressSourceWithRegionArray:(NSArray<BWRegionModel *> *)regionArray {
     self.selectedRegionArray = regionArray;
     [self.selectedRegionDataSource removeAllObjects];  // 先移除原来的
     
-    NSMutableArray<BMRegionModel *> *arrayM = [NSMutableArray arrayWithArray:regionArray];
+    NSMutableArray<BWRegionModel *> *arrayM = [NSMutableArray arrayWithArray:regionArray];
     [arrayM removeLastObject];  // 不用去加载最后一级的数据
     
-    BMRegionModel *topRegionModel = [BMRegionModel new];
+    BWRegionModel *topRegionModel = [BWRegionModel new];
     topRegionModel.dcode = @"";
     [arrayM insertObject:topRegionModel atIndex:0];  // 需要加载省份数据
     
     switch (self.dataSourceType) {
-
+        case BMAddressDataSourceTypeNormal: {
+            NSArray<NSString *> *typeArray = @[BMAddressTypeProvince, BMAddressTypeCity, BMAddressTypeCounty];
+            [arrayM enumerateObjectsUsingBlock:^(BWRegionModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSArray<BWRegionModel *> *regionArray = [self db_returnAddressSourceArrayWithParentCode:model.dcode addressType:typeArray[idx]];
+                [self.selectedRegionDataSource addObject:regionArray];
+            }];
+            [self finishedGetSelectedDataSource];
+        }
     }
 }
 
@@ -72,7 +83,7 @@ NSString *const BWAddressTypeCounty = @"county";
     }
     
     // 排序，Province-City-County
-    [self.selectedRegionDataSource sortUsingComparator:^NSComparisonResult(NSArray<BMRegionModel *> * _Nonnull array1, NSArray<BMRegionModel *> * _Nonnull array2) {
+    [self.selectedRegionDataSource sortUsingComparator:^NSComparisonResult(NSArray<BWRegionModel *> * _Nonnull array1, NSArray<BWRegionModel *> * _Nonnull array2) {
         NSString *type1 = array1.firstObject.type;
         NSString *type2 = array2.firstObject.type;
         
@@ -90,22 +101,22 @@ NSString *const BWAddressTypeCounty = @"county";
     if (self.finishedGetSelectedDataSourceBlock) self.finishedGetSelectedDataSourceBlock(self.selectedRegionArray, self.selectedRegionDataSource);
 }
 
-- (NSArray<BMRegionModel *> *)addressSourceArrayWithParentCode:(NSInteger)parentCode addressType:(NSString *)addressType {
-    NSMutableArray *arrayM = [NSMutableArray new];
+- (NSMutableArray<BWRegionModel *> *)db_returnAddressSourceArrayWithParentCode:(NSString *)parentCode addressType:(NSString *)addressType {
+    NSMutableArray<BWRegionModel *> *arrayM = [NSMutableArray new];
     if (![self.database open]) {
         NSLog(@"数据库打开失败");
         return arrayM;
     }
     
     NSString *sqlString;
-    if ([addressType isEqualToString:BWAddressTypeProvince]) {
+    if ([addressType isEqualToString:BMAddressTypeProvince]) {
         sqlString = [NSString stringWithFormat:@"select * from province"];
     }
-    else if ([addressType isEqualToString:BWAddressTypeCity]) {
-        sqlString = [NSString stringWithFormat:@"select * from city where pcode = %ld", (long)parentCode];
+    else if ([addressType isEqualToString:BMAddressTypeCity]) {
+        sqlString = [NSString stringWithFormat:@"select * from city where pcode = %ld", (long)parentCode.integerValue];
     }
-    else if ([addressType isEqualToString:BWAddressTypeCounty]) {
-        sqlString = [NSString stringWithFormat:@"select * from county where pcode = %ld", (long)parentCode];
+    else if ([addressType isEqualToString:BMAddressTypeCounty]) {
+        sqlString = [NSString stringWithFormat:@"select * from county where pcode = %ld", (long)parentCode.integerValue];
     }
     else {
         return arrayM;
@@ -113,7 +124,7 @@ NSString *const BWAddressTypeCounty = @"county";
     
     FMResultSet *set = [self.database executeQuery:sqlString];
     while ([set next]) {
-        BMRegionModel *model = [BMRegionModel new];
+        BWRegionModel *model = [BWRegionModel new];
         model.dcode = @([set intForColumn:@"dcode"]).stringValue;
         model.dname = [set stringForColumn:@"dname"];
         model.type = [set stringForColumn:@"type"];
@@ -126,7 +137,6 @@ NSString *const BWAddressTypeCounty = @"county";
 }
 
 #pragma mark - Setter and Getter
-
 
 - (FMDatabase *)database {
     if (!_database) {

@@ -109,9 +109,9 @@
 		B44948A51FEA00B9007BF712 /* BMAddressPickerAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = B449489B1FEA00B9007BF712 /* BMAddressPickerAppearance.m */; };
 		B44948A61FEA00B9007BF712 /* BMAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B449489C1FEA00B9007BF712 /* BMAddressPickerView.m */; };
 		B44948A71FEA00B9007BF712 /* BMAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B449489D1FEA00B9007BF712 /* BMAddressPickerCell.m */; };
-		B44948A81FEA00B9007BF712 /* BMRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B449489E1FEA00B9007BF712 /* BMRegionModel.m */; };
-		B44948AE1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44948AB1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@3x.png */; };
-		B44948AF1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44948AC1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@2x.png */; };
+		B44948A81FEA00B9007BF712 /* BWRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B449489E1FEA00B9007BF712 /* BWRegionModel.m */; };
+		B44948AE1FEA015E007BF712 /* icon_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44948AB1FEA015E007BF712 /* icon_checked@3x.png */; };
+		B44948AF1FEA015E007BF712 /* icon_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44948AC1FEA015E007BF712 /* icon_checked@2x.png */; };
 		B44948B11FEA0393007BF712 /* BMAddressPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44948B01FEA0393007BF712 /* BMAddressPickerCell.xib */; };
 		B4C1DA1C1F4D377C0039838C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1B1F4D377C0039838C /* main.m */; };
 		B4C1DA1F1F4D377C0039838C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1DA1E1F4D377C0039838C /* AppDelegate.m */; };
@@ -295,17 +295,17 @@
 		B449488C1FEA00B9007BF712 /* BMAddressSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAddressSourceManager.m; sourceTree = "<group>"; };
 		B44948901FEA00B9007BF712 /* BMAddressSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAddressSourceManager.h; sourceTree = "<group>"; };
 		B44948941FEA00B9007BF712 /* BWAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddressPicker.m; sourceTree = "<group>"; };
-		B44948961FEA00B9007BF712 /* BMRegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMRegionModel.h; sourceTree = "<group>"; };
+		B44948961FEA00B9007BF712 /* BWRegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRegionModel.h; sourceTree = "<group>"; };
 		B44948981FEA00B9007BF712 /* BMAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAddressPickerView.h; sourceTree = "<group>"; };
 		B44948991FEA00B9007BF712 /* BMAddressPickerAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAddressPickerAppearance.h; sourceTree = "<group>"; };
 		B449489A1FEA00B9007BF712 /* BMAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAddressPickerCell.h; sourceTree = "<group>"; };
 		B449489B1FEA00B9007BF712 /* BMAddressPickerAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAddressPickerAppearance.m; sourceTree = "<group>"; };
 		B449489C1FEA00B9007BF712 /* BMAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAddressPickerView.m; sourceTree = "<group>"; };
 		B449489D1FEA00B9007BF712 /* BMAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAddressPickerCell.m; sourceTree = "<group>"; };
-		B449489E1FEA00B9007BF712 /* BMRegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMRegionModel.m; sourceTree = "<group>"; };
+		B449489E1FEA00B9007BF712 /* BWRegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRegionModel.m; sourceTree = "<group>"; };
 		B449489F1FEA00B9007BF712 /* BWAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddressPicker.h; sourceTree = "<group>"; };
-		B44948AB1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@3x.png"; sourceTree = "<group>"; };
-		B44948AC1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_address_picker_checkbox_blue@2x.png"; sourceTree = "<group>"; };
+		B44948AB1FEA015E007BF712 /* icon_checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_checked@3x.png"; sourceTree = "<group>"; };
+		B44948AC1FEA015E007BF712 /* icon_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_checked@2x.png"; sourceTree = "<group>"; };
 		B44948B01FEA0393007BF712 /* BMAddressPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMAddressPickerCell.xib; sourceTree = "<group>"; };
 		B4C1DA171F4D377C0039838C /* BWiOSComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C1DA1B1F4D377C0039838C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -855,8 +855,8 @@
 			children = (
 				B449489F1FEA00B9007BF712 /* BWAddressPicker.h */,
 				B44948941FEA00B9007BF712 /* BWAddressPicker.m */,
-				B44948961FEA00B9007BF712 /* BMRegionModel.h */,
-				B449489E1FEA00B9007BF712 /* BMRegionModel.m */,
+				B44948961FEA00B9007BF712 /* BWRegionModel.h */,
+				B449489E1FEA00B9007BF712 /* BWRegionModel.m */,
 				B449488B1FEA00B9007BF712 /* AddressSource */,
 				B44948971FEA00B9007BF712 /* View */,
 				B44948A91FEA015E007BF712 /* Resource */,
@@ -891,8 +891,8 @@
 			isa = PBXGroup;
 			children = (
 				B4F294641FEB736C00EB85F7 /* address.db */,
-				B44948AB1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@3x.png */,
-				B44948AC1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@2x.png */,
+				B44948AC1FEA015E007BF712 /* icon_checked@2x.png */,
+				B44948AB1FEA015E007BF712 /* icon_checked@3x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1162,7 +1162,7 @@
 				B40464171F6A589F0074B89E /* bm_ui_components_right_arrow@3x.png in Resources */,
 				B40464751F6A77550074B89E /* BMFunctionHtmlBottomView.xib in Resources */,
 				B40464781F6A77550074B89E /* function_html_expand@3x.png in Resources */,
-				B44948AE1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@3x.png in Resources */,
+				B44948AE1FEA015E007BF712 /* icon_checked@3x.png in Resources */,
 				B40464151F6A589F0074B89E /* bm_ui_components_radio_selected@3x.png in Resources */,
 				B40464141F6A589F0074B89E /* bm_ui_components_radio_selected@2x.png in Resources */,
 				B40463EB1F6A589F0074B89E /* bm_sides_menu_separated_line@2x.png in Resources */,
@@ -1180,7 +1180,7 @@
 				B4C1DAA71F4D37DC0039838C /* icon_arrow_right_gray_light@3x.png in Resources */,
 				B40464111F6A589F0074B89E /* bm_ui_components_radio_disable@3x.png in Resources */,
 				B40464051F6A589F0074B89E /* BMTextFieldView.xib in Resources */,
-				B44948AF1FEA015E007BF712 /* icon_new_address_picker_checkbox_blue@2x.png in Resources */,
+				B44948AF1FEA015E007BF712 /* icon_checked@2x.png in Resources */,
 				B404640F1F6A589F0074B89E /* BMTextMultilineCell.xib in Resources */,
 				B40463D61F6A589F0074B89E /* icon_delete_white@3x.png in Resources */,
 				B4C1DAA61F4D37DC0039838C /* icon_arrow_right_gray_light@2x.png in Resources */,
@@ -1288,7 +1288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B44948A81FEA00B9007BF712 /* BMRegionModel.m in Sources */,
+				B44948A81FEA00B9007BF712 /* BWRegionModel.m in Sources */,
 				B40464871F6A7A5F0074B89E /* BWUIComponentsVC.m in Sources */,
 				B40463D41F6A589F0074B89E /* BMIndicatorWhitePointView.m in Sources */,
 				B4C1DAA41F4D37DC0039838C /* BWHomeTableViewController.m in Sources */,
