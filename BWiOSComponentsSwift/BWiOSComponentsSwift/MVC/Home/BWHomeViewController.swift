@@ -1,18 +1,21 @@
 //
-//  ViewController.swift
+//  BWHomeViewController.swift
 //  BWiOSComponentsSwift
 //
-//  Created by BobWong on 2017/9/14.
+//  Created by BobWong on 2017/12/26.
 //  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class BWHomeViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

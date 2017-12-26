@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B40463061F6A52660074B89E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40463051F6A52660074B89E /* AppDelegate.swift */; };
-		B40463081F6A52660074B89E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40463071F6A52660074B89E /* ViewController.swift */; };
 		B404630B1F6A52660074B89E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40463091F6A52660074B89E /* Main.storyboard */; };
 		B404630D1F6A52660074B89E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B404630C1F6A52660074B89E /* Assets.xcassets */; };
 		B40463101F6A52660074B89E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B404630E1F6A52660074B89E /* LaunchScreen.storyboard */; };
 		B404631B1F6A52660074B89E /* BWiOSComponentsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B404631A1F6A52660074B89E /* BWiOSComponentsSwiftTests.swift */; };
 		B40463261F6A52660074B89E /* BWiOSComponentsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40463251F6A52660074B89E /* BWiOSComponentsSwiftUITests.swift */; };
+		B49CB1571FF24D3700305B16 /* BWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB1561FF24D3700305B16 /* BWHomeViewController.swift */; };
+		D2F80D4D1207988326FE3E17 /* Pods_BWiOSComponentsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D586D3453855C7052D9AFE99 /* Pods_BWiOSComponentsSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78CDE0FEC8906BC97C5388C5 /* Pods-BWiOSComponentsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponentsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B40463021F6A52660074B89E /* BWiOSComponentsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSComponentsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40463051F6A52660074B89E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B40463071F6A52660074B89E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B404630A1F6A52660074B89E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B404630C1F6A52660074B89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B404630F1F6A52660074B89E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		B40463211F6A52660074B89E /* BWiOSComponentsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWiOSComponentsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40463251F6A52660074B89E /* BWiOSComponentsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWiOSComponentsSwiftUITests.swift; sourceTree = "<group>"; };
 		B40463271F6A52660074B89E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49CB1561FF24D3700305B16 /* BWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWHomeViewController.swift; sourceTree = "<group>"; };
+		D586D3453855C7052D9AFE99 /* Pods_BWiOSComponentsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWiOSComponentsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DDC4823E135B8909665283 /* Pods-BWiOSComponentsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponentsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F80D4D1207988326FE3E17 /* Pods_BWiOSComponentsSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4790BD6C180CDE6D80B7D999 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8DDC4823E135B8909665283 /* Pods-BWiOSComponentsSwift.debug.xcconfig */,
+				78CDE0FEC8906BC97C5388C5 /* Pods-BWiOSComponentsSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C1D9F2572EBD5642C1FF93E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D586D3453855C7052D9AFE99 /* Pods_BWiOSComponentsSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B40462F91F6A52660074B89E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				B40463191F6A52660074B89E /* BWiOSComponentsSwiftTests */,
 				B40463241F6A52660074B89E /* BWiOSComponentsSwiftUITests */,
 				B40463031F6A52660074B89E /* Products */,
+				4790BD6C180CDE6D80B7D999 /* Pods */,
+				7C1D9F2572EBD5642C1FF93E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				B40463051F6A52660074B89E /* AppDelegate.swift */,
-				B40463071F6A52660074B89E /* ViewController.swift */,
 				B40463091F6A52660074B89E /* Main.storyboard */,
+				B49CB1521FF24C9600305B16 /* MVC */,
+				B49CB1531FF24C9600305B16 /* Common */,
+				B49CB1511FF24C9600305B16 /* Resource */,
 				B404630C1F6A52660074B89E /* Assets.xcassets */,
 				B404630E1F6A52660074B89E /* LaunchScreen.storyboard */,
 				B40463111F6A52660074B89E /* Info.plist */,
@@ -125,6 +151,44 @@
 			path = BWiOSComponentsSwiftUITests;
 			sourceTree = "<group>";
 		};
+		B49CB1511FF24C9600305B16 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B49CB1521FF24C9600305B16 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B49CB1551FF24CDE00305B16 /* Home */,
+				B49CB1541FF24CDE00305B16 /* AddressPickerView */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B49CB1531FF24C9600305B16 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B49CB1541FF24CDE00305B16 /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddressPickerView;
+			sourceTree = "<group>";
+		};
+		B49CB1551FF24CDE00305B16 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B49CB1561FF24D3700305B16 /* BWHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B404632A1F6A52660074B89E /* Build configuration list for PBXNativeTarget "BWiOSComponentsSwift" */;
 			buildPhases = (
+				FF7FEFD5E850F6C9574983D5 /* [CP] Check Pods Manifest.lock */,
 				B40462FE1F6A52660074B89E /* Sources */,
 				B40462FF1F6A52660074B89E /* Frameworks */,
 				B40463001F6A52660074B89E /* Resources */,
+				5CDCA09D0758C744FC2836B9 /* [CP] Embed Pods Frameworks */,
+				D70C8FA60F9A27E371195A51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +324,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CDCA09D0758C744FC2836B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D70C8FA60F9A27E371195A51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF7FEFD5E850F6C9574983D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BWiOSComponentsSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B40462FE1F6A52660074B89E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B40463081F6A52660074B89E /* ViewController.swift in Sources */,
+				B49CB1571FF24D3700305B16 /* BWHomeViewController.swift in Sources */,
 				B40463061F6A52660074B89E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +540,7 @@
 		};
 		B404632B1F6A52660074B89E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8DDC4823E135B8909665283 /* Pods-BWiOSComponentsSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
@@ -426,6 +554,7 @@
 		};
 		B404632C1F6A52660074B89E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CDE0FEC8906BC97C5388C5 /* Pods-BWiOSComponentsSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
@@ -514,6 +643,7 @@
 				B404632C1F6A52660074B89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B404632D1F6A52660074B89E /* Build configuration list for PBXNativeTarget "BWiOSComponentsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +652,7 @@
 				B404632F1F6A52660074B89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B40463301F6A52660074B89E /* Build configuration list for PBXNativeTarget "BWiOSComponentsSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +661,7 @@
 				B40463321F6A52660074B89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

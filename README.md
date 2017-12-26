@@ -1,7 +1,7 @@
-# BWiOSUIComponents
-iOS UI组件的开发
+# BWiOSComponents
+iOS 组件的开发
 
-Github: https://github.com/bobwongs/BWiOSUIComponents
+Github: https://github.com/bobwongs/BWiOSComponents
 
 ## 内容
 
