@@ -13,7 +13,13 @@
 		B40463101F6A52660074B89E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B404630E1F6A52660074B89E /* LaunchScreen.storyboard */; };
 		B404631B1F6A52660074B89E /* BWiOSComponentsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B404631A1F6A52660074B89E /* BWiOSComponentsSwiftTests.swift */; };
 		B40463261F6A52660074B89E /* BWiOSComponentsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40463251F6A52660074B89E /* BWiOSComponentsSwiftUITests.swift */; };
+		B49A348E1FF3883E0071B642 /* BWAddressPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A348D1FF3883E0071B642 /* BWAddressPickerViewController.swift */; };
+		B49A34901FF3884D0071B642 /* BWCirculationRollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A348F1FF3884D0071B642 /* BWCirculationRollingViewController.swift */; };
 		B49CB1571FF24D3700305B16 /* BWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49CB1561FF24D3700305B16 /* BWHomeViewController.swift */; };
+		B4B4717D1FF39DD900DFB45A /* BWActivityCircleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4717C1FF39DD900DFB45A /* BWActivityCircleScrollView.swift */; };
+		B4B4717F1FF39DEB00DFB45A /* BWActivityCircleScrollViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4717E1FF39DEB00DFB45A /* BWActivityCircleScrollViewManager.swift */; };
+		B4B471811FF39DF800DFB45A /* BWHomeActivityViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B471801FF39DF800DFB45A /* BWHomeActivityViewManager.swift */; };
+		B4B471831FF39E2100DFB45A /* BWIndicatorWhitePointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B471821FF39E2100DFB45A /* BWIndicatorWhitePointView.swift */; };
 		D2F80D4D1207988326FE3E17 /* Pods_BWiOSComponentsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D586D3453855C7052D9AFE99 /* Pods_BWiOSComponentsSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +54,13 @@
 		B40463211F6A52660074B89E /* BWiOSComponentsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWiOSComponentsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40463251F6A52660074B89E /* BWiOSComponentsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWiOSComponentsSwiftUITests.swift; sourceTree = "<group>"; };
 		B40463271F6A52660074B89E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49A348D1FF3883E0071B642 /* BWAddressPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWAddressPickerViewController.swift; sourceTree = "<group>"; };
+		B49A348F1FF3884D0071B642 /* BWCirculationRollingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWCirculationRollingViewController.swift; sourceTree = "<group>"; };
 		B49CB1561FF24D3700305B16 /* BWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWHomeViewController.swift; sourceTree = "<group>"; };
+		B4B4717C1FF39DD900DFB45A /* BWActivityCircleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWActivityCircleScrollView.swift; sourceTree = "<group>"; };
+		B4B4717E1FF39DEB00DFB45A /* BWActivityCircleScrollViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWActivityCircleScrollViewManager.swift; sourceTree = "<group>"; };
+		B4B471801FF39DF800DFB45A /* BWHomeActivityViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWHomeActivityViewManager.swift; sourceTree = "<group>"; };
+		B4B471821FF39E2100DFB45A /* BWIndicatorWhitePointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWIndicatorWhitePointView.swift; sourceTree = "<group>"; };
 		D586D3453855C7052D9AFE99 /* Pods_BWiOSComponentsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWiOSComponentsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DDC4823E135B8909665283 /* Pods-BWiOSComponentsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWiOSComponentsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +163,22 @@
 			path = BWiOSComponentsSwiftUITests;
 			sourceTree = "<group>";
 		};
+		B49A348B1FF387F90071B642 /* CirculationRolling */ = {
+			isa = PBXGroup;
+			children = (
+				B49A348F1FF3884D0071B642 /* BWCirculationRollingViewController.swift */,
+			);
+			path = CirculationRolling;
+			sourceTree = "<group>";
+		};
+		B49A348C1FF3881A0071B642 /* AddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				B49A348D1FF3883E0071B642 /* BWAddressPickerViewController.swift */,
+			);
+			path = AddressPicker;
+			sourceTree = "<group>";
+		};
 		B49CB1511FF24C9600305B16 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				B49CB1551FF24CDE00305B16 /* Home */,
-				B49CB1541FF24CDE00305B16 /* AddressPickerView */,
+				B49A348C1FF3881A0071B642 /* AddressPicker */,
+				B49A348B1FF387F90071B642 /* CirculationRolling */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -170,15 +199,12 @@
 		B49CB1531FF24C9600305B16 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B4B4717A1FF39CE200DFB45A /* Category */,
+				B4B471781FF39CE200DFB45A /* Class */,
+				B4B471791FF39CE200DFB45A /* Utility */,
+				B4B471761FF39CE200DFB45A /* View */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		B49CB1541FF24CDE00305B16 /* AddressPickerView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddressPickerView;
 			sourceTree = "<group>";
 		};
 		B49CB1551FF24CDE00305B16 /* Home */ = {
@@ -187,6 +213,46 @@
 				B49CB1561FF24D3700305B16 /* BWHomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B4B471761FF39CE200DFB45A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4B4717B1FF39DC400DFB45A /* ActivityCircleScrollView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4B471781FF39CE200DFB45A /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		B4B471791FF39CE200DFB45A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B4B4717A1FF39CE200DFB45A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B4B4717B1FF39DC400DFB45A /* ActivityCircleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B4B4717C1FF39DD900DFB45A /* BWActivityCircleScrollView.swift */,
+				B4B4717E1FF39DEB00DFB45A /* BWActivityCircleScrollViewManager.swift */,
+				B4B471801FF39DF800DFB45A /* BWHomeActivityViewManager.swift */,
+				B4B471821FF39E2100DFB45A /* BWIndicatorWhitePointView.swift */,
+			);
+			path = ActivityCircleScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,14 +400,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BWiOSComponentsSwift/Pods-BWiOSComponentsSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,8 +453,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49A348E1FF3883E0071B642 /* BWAddressPickerViewController.swift in Sources */,
 				B49CB1571FF24D3700305B16 /* BWHomeViewController.swift in Sources */,
+				B4B471811FF39DF800DFB45A /* BWHomeActivityViewManager.swift in Sources */,
+				B4B4717D1FF39DD900DFB45A /* BWActivityCircleScrollView.swift in Sources */,
+				B4B4717F1FF39DEB00DFB45A /* BWActivityCircleScrollViewManager.swift in Sources */,
 				B40463061F6A52660074B89E /* AppDelegate.swift in Sources */,
+				B4B471831FF39E2100DFB45A /* BWIndicatorWhitePointView.swift in Sources */,
+				B49A34901FF3884D0071B642 /* BWCirculationRollingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,10 +615,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				INFOPLIST_FILE = BWiOSComponentsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSComponentsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -559,10 +630,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3E8GUFW32;
 				INFOPLIST_FILE = BWiOSComponentsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bws.BWiOSComponentsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AMap2DMap-NO-IDFA (4.6.0):
+    - AMapFoundation-NO-IDFA (~> 1.3)
+  - AMapFoundation-NO-IDFA (1.4.2)
   - CXAlertView (1.1.0)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
@@ -45,6 +48,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
+  - AMap2DMap-NO-IDFA (= 4.6.0)
   - CXAlertView (= 1.1.0)
   - FLAnimatedImage (= 1.0.12)
   - FMDB (= 2.6.2)
@@ -62,6 +66,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap2DMap-NO-IDFA: 01c80e7e93568617b1b1b452cfec71f974f5bc8a
+  AMapFoundation-NO-IDFA: 3b9ce87abc6a37c718cc320687469d0b74d5c953
   CXAlertView: 7387ca9af81796ab22d26ff2fc3cfcb082f3ee09
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -77,6 +83,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: dffcdacef8fc3574e03954d384bb1fe9fa08204d
+PODFILE CHECKSUM: 91118ddc8cd1455d87fe10c124c15ea99e4e6b8a
 
 COCOAPODS: 1.3.1

@@ -26,16 +26,13 @@ NSString *const BWCellId = @"BWCellId";
     
     NSDictionary *addressPickerDict = @{BWKeyTitle: @"BWAddressPicker",
                                         BWKeySegueId: @"home_to_address_picker"};
-    NSDictionary *circulationRollingDict = @{
-                                             BWKeyTitle: @"BWCirculationRolling",
-                                             BWKeySegueId: @"home_to_ circulation_rolling"
-                                             };
-    NSDictionary *loadingHudDict = @{
-                                             BWKeyTitle: @"BWLoadingHUD",
-                                             BWKeySegueId: @"home_to_loading_hud"
-                                             };
-    
-    _dataSource = @[addressPickerDict, circulationRollingDict, loadingHudDict];
+    NSDictionary *circulationRollingDict = @{BWKeyTitle: @"BWCirculationRolling",
+                                             BWKeySegueId: @"home_to_ circulation_rolling"};
+    NSDictionary *loadingHudDict = @{BWKeyTitle: @"BWLoadingHUD",
+                                     BWKeySegueId: @"home_to_loading_hud"};
+    NSDictionary *mapDict = @{BWKeyTitle: @"Map",
+                              BWKeySegueId: @"home_to_map"};
+    _dataSource = @[addressPickerDict, circulationRollingDict, loadingHudDict, mapDict];
     
     [self.tableView reloadData];
 }

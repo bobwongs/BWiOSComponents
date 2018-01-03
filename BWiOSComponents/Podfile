@@ -18,5 +18,8 @@ target 'BWiOSComponents' do
     
     pod 'UPPaySDK', '3.3.6'  # 银联支付控件
     pod 'UMengUShare/Social/WeChat', '6.4.5'  # 友盟-微信
+    
+    # 高德地图，无IDFA
+    pod 'AMap2DMap-NO-IDFA', '4.6.0'  # 2D地图SDK
 
 end

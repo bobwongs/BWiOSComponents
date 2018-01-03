@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DHK-16-YFr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--BWiOSComponentsSwift-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BWHomeViewController" customModule="BWiOSComponentsSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,6 +24,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cyl-83-mvj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0Jz-fq-EmM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mK7-wp-wuk"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,13 +38,70 @@
                             <constraint firstItem="cyl-83-mvj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xkK-qM-9n2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="BWiOSComponentsSwift" id="OGy-8c-uy7"/>
                     <connections>
                         <outlet property="tableView" destination="cyl-83-mvj" id="dnT-85-3x1"/>
+                        <segue destination="0w5-kD-Bvu" kind="show" identifier="home_to_address_picker" id="hXw-V5-w7I"/>
+                        <segue destination="aOu-9y-Oil" kind="show" identifier="home_to_ circulation_rolling" id="F6o-wS-Duw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="33.733133433283363"/>
+            <point key="canvasLocation" x="452" y="33.733133433283363"/>
+        </scene>
+        <!--Address Picker View Controller-->
+        <scene sceneID="gRw-AX-xLG">
+            <objects>
+                <viewController id="0w5-kD-Bvu" customClass="BWAddressPickerViewController" customModule="BWiOSComponentsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GuU-na-wyD"/>
+                        <viewControllerLayoutGuide type="bottom" id="wZJ-z9-PfC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E1e-OQ-fgT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sh2-ve-N0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="878"/>
+        </scene>
+        <!--Circulation Rolling View Controller-->
+        <scene sceneID="vEm-uB-gTV">
+            <objects>
+                <viewController id="aOu-9y-Oil" customClass="BWCirculationRollingViewController" customModule="BWiOSComponentsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mUL-wW-Qrh"/>
+                        <viewControllerLayoutGuide type="bottom" id="2g5-gc-Vwx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGU-Df-978">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4d-sc-lz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="878"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lpc-Qa-GDc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DHK-16-YFr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E40-ME-V6i">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6dg-Pt-YSh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMY-aY-lTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="-708"/>
         </scene>
     </scenes>
 </document>
