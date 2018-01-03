@@ -27,6 +27,7 @@
     annotation.subtitle = @"大学城校区";
     
     BMAmapViewController *amapViewController = [BMAmapViewController new];
+    amapViewController.title = @"导航";
     amapViewController.amapAnnotationArray = @[annotation];
     [self.navigationController pushViewController:amapViewController animated:YES];
 }

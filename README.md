@@ -12,9 +12,9 @@ Github: https://github.com/bobwongs/BWiOSComponents
 
 ## 组件内容
 
-[地图导航](Document/地图导航/地图导航.md)
-
 [仿京东地址选择器](Document/仿京东地址选择器/仿京东地址选择器.md)
+
+[地图导航](Document/地图导航/地图导航.md)
 
 ## 概述
 

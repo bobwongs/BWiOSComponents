@@ -938,11 +938,11 @@
 		B4A564AC1FFC7EC70069E019 /* BMMapView */ = {
 			isa = PBXGroup;
 			children = (
+				B4A564B61FFC7EC70069E019 /* BMCustomAnnotationView.h */,
 				B4A564AD1FFC7EC70069E019 /* BMCustomAnnotationView.m */,
 				B4A564AE1FFC7EC70069E019 /* BMAmapView.h */,
-				B4A564AF1FFC7EC70069E019 /* Resource */,
 				B4A564B51FFC7EC70069E019 /* BMAmapView.m */,
-				B4A564B61FFC7EC70069E019 /* BMCustomAnnotationView.h */,
+				B4A564AF1FFC7EC70069E019 /* Resource */,
 			);
 			path = BMMapView;
 			sourceTree = "<group>";
